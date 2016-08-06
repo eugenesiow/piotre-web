@@ -11,13 +11,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+<ul id="dropdown1" class="dropdown-content">
+  <li><a href="$WebPath.getLOGIN()" class="well-padded">$msg.get("COMMON_NAV_LOGIN")</a></li>
+</ul>
+<ul id="dropdown2" class="dropdown-content">
+  <li><a href="$WebPath.getLOGOUT()" class="well-padded">$msg.get("COMMON_NAV_LOGOUT")</a></li>
+</ul>
 <header>
   <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="material-icons">menu</i></a></div>
   <ul id="nav-mobile" class="side-nav fixed">
     <li class="logo"><a id="logo-container" href="$WebPath.getINDEX()" class="brand-logo">
     	 <object id="front-page-logo" type="image/svg+xml" data="/img/piotre.svg">Your browser does not support SVG</object></a></li>
+   	<li>
+   	 <div class="col s12 user-menu user-menu-container">
+      <div class="row valign-wrapper user-menu" style="margin-bottom: 0px;">
+      	<div class="col s3 user-menu">
+          <img src="/img/default_avatar.jpg" alt="" class="circle responsive-img">
+        </div>
+        <div class="col s9">
+         <div class="row valign-wrapper user-menu">
+          <span class="black-text user-menu">
+          	#if($currentUser)
+          		<a class="dropdown-button" href="#!" data-activates="dropdown2">$currentUser<i class="material-icons right user-menu">arrow_drop_down</i></a>
+          	#else
+				<a class="dropdown-button" href="#!" data-activates="dropdown1">Anonymous User<i class="material-icons right user-menu">arrow_drop_down</i></a>
+			#end
+          </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    </li>
     <li class="bold"><a href="/overview/" class="waves-effect waves-teal">Overview</a></li>
-    <li class="bold active"><a href="getting-started.html" class="waves-effect waves-teal">Getting Started</a></li>
+    <li class="bold active"><a href="$WebPath.getINDEX()" class="waves-effect waves-teal">Getting Started</a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
         <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Data</a>
