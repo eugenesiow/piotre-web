@@ -94,3 +94,15 @@ a.button-collapse.top-nav {
     font-weight: 300;
     margin-bottom: 30px;
 }
+.dropdown-content button.well-padded {
+	font-size: 16px;
+	font-weight: 500;
+	text-align: left !important;
+	min-width: 110px !important;
+	border: none;
+    line-height: 22px;
+    background: transparent;
+}
+.page-container {
+	margin-top: 15px;
+}

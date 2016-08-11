@@ -20,10 +20,18 @@ public class Path {
 		public static String getONE_BOOK() {
 			return ONE_BOOK;
 		}
+		public static String getACCOUNT() {
+			return ACCOUNT;
+		}
+		public static String getDATA() {
+			return DATA;
+		}
 		public static final String INDEX = "/index/";
         public static final String LOGIN = "/login/";
         public static final String LOGOUT = "/logout/";
+        public static final String ACCOUNT = "/account/";
         public static final String BOOKS = "/books/";
+        public static final String DATA = "/data/";
         public static final String ONE_BOOK = "/books/:isbn/";
     }
 
@@ -33,6 +41,34 @@ public class Path {
         public final static String BOOKS_ALL = "/velocity/book/all.vm";
         public static final String BOOKS_ONE = "/velocity/book/one.vm";
         public static final String NOT_FOUND = "/velocity/notFound.vm";
+        public final static String DATA = "/velocity/data/data.vm";
+    }
+    
+    public static class PageNames {
+        public final static String INDEX = "Getting Started";
+        public final static String DATA = "Data";
+        public final static String LOGIN = "Login";
+        public static final String BOOKS_ALL = "Books";
+        public static String getIndex() {
+			return INDEX;
+		}
+		public static String getData() {
+			return DATA;
+		}
+		public static String getLogin() {
+			return LOGIN;
+		}
+		public static String getBooksAll() {
+			return BOOKS_ALL;
+		}
+		public static String getBooksOne() {
+			return BOOKS_ONE;
+		}
+		public static String getNotFound() {
+			return NOT_FOUND;
+		}
+		public static final String BOOKS_ONE = "Book";
+        public static final String NOT_FOUND = "Not Found";
     }
 
 }

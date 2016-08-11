@@ -12,6 +12,6 @@ public class IndexController {
         Map<String, Object> model = new HashMap<>();
         model.put("users", userDao.getAllUserNames());
         model.put("book", bookDao.getRandomBook());
-        return ViewUtil.render(request, model, Path.Template.INDEX);
+        return ViewUtil.render(request, model, Path.Template.INDEX, Path.PageNames.INDEX);
     };
 }

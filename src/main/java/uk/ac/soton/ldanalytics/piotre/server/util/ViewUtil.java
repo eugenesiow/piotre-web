@@ -15,10 +15,12 @@ public class ViewUtil {
     // Renders a template given a model and a request
     // The request is needed to check the user session for language settings
     // and to see if the user is logged in
-    public static String render(Request request, Map<String, Object> model, String templatePath) {
+    public static String render(Request request, Map<String, Object> model, String templatePath, String pageName) {
         model.put("msg", new MessageBundle(getSessionLocale(request)));
         model.put("currentUser", getSessionCurrentUser(request));
         model.put("WebPath", Path.Web.class); // Access application URLs from templates
+        model.put("PageNames", Path.PageNames.class); // Access application URLs from templates
+        model.put("currentPage", pageName);
         return strictVelocityEngine().render(new ModelAndView(model, templatePath));
     }
 
@@ -29,7 +31,7 @@ public class ViewUtil {
 
     public static Route notFound = (Request request, Response response) -> {
         response.status(HttpStatus.NOT_FOUND_404);
-        return render(request, new HashMap<>(), Path.Template.NOT_FOUND);
+        return render(request, new HashMap<>(), Path.Template.NOT_FOUND, Path.PageNames.NOT_FOUND);
     };
 
     private static VelocityTemplateEngine strictVelocityEngine() {

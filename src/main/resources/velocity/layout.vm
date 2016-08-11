@@ -15,7 +15,12 @@
   <li><a href="$WebPath.getLOGIN()" class="well-padded">$msg.get("COMMON_NAV_LOGIN")</a></li>
 </ul>
 <ul id="dropdown2" class="dropdown-content">
-  <li><a href="$WebPath.getLOGOUT()" class="well-padded">$msg.get("COMMON_NAV_LOGOUT")</a></li>
+	<li><a href="$WebPath.getACCOUNT()" class="well-padded">Account</a></li>
+	<li class="divider"></li>
+  <li>
+  	<form method="post" action="$WebPath.getLOGOUT()">
+        <button id="logout" class="well-padded">$msg.get("COMMON_NAV_LOGOUT")</button>
+    </form></li>
 </ul>
 <header>
   <div class="container"><a href="#" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="material-icons">menu</i></a></div>
@@ -42,24 +47,11 @@
       </div>
     </div>
     </li>
-    <li class="bold"><a href="/overview/" class="waves-effect waves-teal">Overview</a></li>
-    <li class="bold active"><a href="$WebPath.getINDEX()" class="waves-effect waves-teal">Getting Started</a></li>
+    <li class="bold #if("Overview" == $currentPage)active#end"><a href="/overview/" class="waves-effect waves-teal">Overview</a></li>
+    <li class="bold #if($PageNames.getIndex() == $currentPage)active#end"><a href="$WebPath.getINDEX()" class="waves-effect waves-teal">$PageNames.getIndex()</a></li>
+    <li class="bold #if($PageNames.getData() == $currentPage)active#end"><a href="/data/" class="waves-effect waves-teal">$PageNames.getData()</a></li>
     <li class="no-padding">
       <ul class="collapsible collapsible-accordion">
-        <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Data</a>
-          <div class="collapsible-body">
-            <ul>
-              <li><a href="color.html">Color</a></li>
-              <li><a href="grid.html">Grid</a></li>
-              <li><a href="helpers.html">Helpers</a></li>
-              <li><a href="media-css.html">Media</a></li>
-              <li><a href="sass.html">Sass</a></li>
-              <li><a href="shadow.html">Shadow</a></li>
-              <li><a href="table.html">Table</a></li>
-              <li><a href="typography.html">Typography</a></li>
-            </ul>
-          </div>
-        </li>
         <li class="bold"><a class="collapsible-header  waves-effect waves-teal">Mappings</a>
           <div class="collapsible-body">
             <ul>
@@ -119,13 +111,6 @@
 <main>
     $bodyContent
 </main>
-<footer class="page-footer">
-  <div class="footer-copyright">
-    <div class="container">
-    $msg.get("COMMON_FOOTER_TEXT")
-    </div>
-  </div>
-</footer>
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="/js/materialize.min.js"></script>
 <script>

@@ -17,7 +17,7 @@ public class BookController {
         if (clientAcceptsHtml(request)) {
             HashMap<String, Object> model = new HashMap<>();
             model.put("books", bookDao.getAllBooks());
-            return ViewUtil.render(request, model, Path.Template.BOOKS_ALL);
+            return ViewUtil.render(request, model, Path.Template.BOOKS_ALL, Path.PageNames.BOOKS_ALL);
         }
         if (clientAcceptsJson(request)) {
             return dataToJson(bookDao.getAllBooks());
@@ -31,7 +31,7 @@ public class BookController {
             HashMap<String, Object> model = new HashMap<>();
             Book book = bookDao.getBookByIsbn(getParamIsbn(request));
             model.put("book", book);
-            return ViewUtil.render(request, model, Path.Template.BOOKS_ONE);
+            return ViewUtil.render(request, model, Path.Template.BOOKS_ONE, Path.PageNames.BOOKS_ONE);
         }
         if (clientAcceptsJson(request)) {
             return dataToJson(bookDao.getBookByIsbn(getParamIsbn(request)));
