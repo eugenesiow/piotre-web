@@ -25,4 +25,14 @@ public class DataController {
         }
         return ViewUtil.notAcceptable.handle(request, response);
     };
+    
+    public static Route addData = (Request request, Response response) -> {
+    	LoginController.ensureUserIsLoggedIn(request, response);
+    	if (clientAcceptsHtml(request)) {
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("data", dataDao.getAllData());
+            return ViewUtil.render(request, model, Path.Template.DATA_ADD, Path.PageNames.DATA);
+        }
+    	return ViewUtil.notAcceptable.handle(request, response);
+    };
 }
