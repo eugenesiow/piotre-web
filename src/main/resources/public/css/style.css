@@ -1,6 +1,9 @@
 header, main, footer {
     padding-left: 300px;
 }
+.container {
+    width: 85% !important;
+}
 .header {
 	font-weight: 300;
 }

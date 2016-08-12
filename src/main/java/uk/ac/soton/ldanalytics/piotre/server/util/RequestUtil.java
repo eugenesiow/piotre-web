@@ -11,6 +11,10 @@ public class RequestUtil {
     public static String getParamIsbn(Request request) {
         return request.params("isbn");
     }
+    
+    public static String getParamDataType(Request request) {
+        return request.params("type");
+    }
 
     public static String getQueryUsername(Request request) {
         return request.queryParams("username");

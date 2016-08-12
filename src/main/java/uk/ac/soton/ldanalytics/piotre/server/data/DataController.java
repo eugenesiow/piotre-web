@@ -35,7 +35,9 @@ public class DataController {
     	LoginController.ensureUserIsLoggedIn(request, response);
     	if (clientAcceptsHtml(request)) {
             HashMap<String, Object> model = new HashMap<>();
-            model.put("data", dataDao.getAllData());
+//            System.out.println(getParamDataType(request));
+            
+            //model.put("data", dataDao.getAllData());
             return ViewUtil.render(request, model, Path.Template.DATA_ADD, Path.PageNames.DATA);
         }
     	return ViewUtil.notAcceptable.handle(request, response);

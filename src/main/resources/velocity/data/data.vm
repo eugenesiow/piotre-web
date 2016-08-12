@@ -8,7 +8,7 @@
 <div class="container page-container">
 	<div class="row">
     #foreach($dataItem in $data)
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6">
 	        <div class="card horizontal">
 	        	<div class="card-image">
 	        		#if($dataItem.getType()=="STREAM")
@@ -21,7 +21,7 @@
 		            <div class="card-content">
 		              <span class="card-title">$displayTool.truncate($dataItem.getName(),20)</span>&nbsp;
 		              <span class="card-subtitle grey-text">By $dataItem.getAuthor()</span>
-		              <p #if($dataItem.getDescription().length()>50) class="tooltipped" data-tooltip="$dataItem.getDescription()"#end>$displayTool.truncate($dataItem.getDescription(),50)</p>
+		              <p #if($dataItem.getDescription().length()>70) class="tooltipped" data-tooltip="$dataItem.getDescription()"#end>$displayTool.truncate($dataItem.getDescription(),70)</p>
 		            </div>
 		            <div class="card-action">
 		            	<a href="$WebPath.getDATA()$dataItem.getId()">More</a>
