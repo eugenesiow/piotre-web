@@ -1,13 +1,28 @@
 package uk.ac.soton.ldanalytics.piotre.server;
 
-import uk.ac.soton.ldanalytics.piotre.server.book.*;
-import uk.ac.soton.ldanalytics.piotre.server.data.*;
-import uk.ac.soton.ldanalytics.piotre.server.index.*;
-import uk.ac.soton.ldanalytics.piotre.server.login.*;
-import uk.ac.soton.ldanalytics.piotre.server.user.*;
-import uk.ac.soton.ldanalytics.piotre.server.util.*;
-import static spark.Spark.*;
-import static spark.debug.DebugScreen.*;
+import static spark.Spark.after;
+import static spark.Spark.before;
+import static spark.Spark.get;
+import static spark.Spark.port;
+import static spark.Spark.post;
+import static spark.Spark.staticFiles;
+import static spark.debug.DebugScreen.enableDebugScreen;
+
+import org.sql2o.Sql2o;
+
+import uk.ac.soton.ldanalytics.piotre.server.book.BookController;
+import uk.ac.soton.ldanalytics.piotre.server.book.BookDao;
+import uk.ac.soton.ldanalytics.piotre.server.data.DataController;
+import uk.ac.soton.ldanalytics.piotre.server.data.DataDao;
+import uk.ac.soton.ldanalytics.piotre.server.index.IndexController;
+import uk.ac.soton.ldanalytics.piotre.server.login.LoginController;
+import uk.ac.soton.ldanalytics.piotre.server.model.Model;
+import uk.ac.soton.ldanalytics.piotre.server.user.UserDao;
+import uk.ac.soton.ldanalytics.piotre.server.util.Filters;
+import uk.ac.soton.ldanalytics.piotre.server.util.Path;
+import uk.ac.soton.ldanalytics.piotre.server.util.ViewUtil;
+
+import com.beust.jcommander.JCommander;
 
 public class Application {
 
@@ -17,11 +32,17 @@ public class Application {
     public static DataDao dataDao;
 
     public static void main(String[] args) {
-
+    	CommandLineOptions options = new CommandLineOptions();
+        new JCommander(options, args);
+    	
+    	//DB connection
+    	Sql2o sql2o = new Sql2o("jdbc:h2:" + options.db, options.username, options.password);
+    	Model.prepareDB(sql2o);
+    	
         // Instantiate your dependencies
         bookDao = new BookDao();
         userDao = new UserDao();
-        dataDao = new DataDao();
+        dataDao = new DataDao(sql2o);
 
         // Configure Spark
         port(4567);

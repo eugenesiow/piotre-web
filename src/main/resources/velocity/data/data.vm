@@ -19,9 +19,9 @@
 	      		</div>
 	      		<div class="card-stacked">
 		            <div class="card-content">
-		              <span class="card-title">$dataItem.getName()</span>
+		              <span class="card-title">$displayTool.truncate($dataItem.getName(),20)</span>&nbsp;
 		              <span class="card-subtitle grey-text">By $dataItem.getAuthor()</span>
-		              <p></p>
+		              <p #if($dataItem.getDescription().length()>50) class="tooltipped" data-tooltip="$dataItem.getDescription()"#end>$displayTool.truncate($dataItem.getDescription(),50)</p>
 		            </div>
 		            <div class="card-action">
 		            	<a href="$WebPath.getDATA()$dataItem.getId()">More</a>

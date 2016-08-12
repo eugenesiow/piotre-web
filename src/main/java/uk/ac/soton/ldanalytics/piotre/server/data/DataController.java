@@ -1,6 +1,13 @@
 package uk.ac.soton.ldanalytics.piotre.server.data;
 
+import static uk.ac.soton.ldanalytics.piotre.server.Application.dataDao;
+import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.dataToJson;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsHtml;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
+
 import java.util.HashMap;
+
+import org.apache.velocity.tools.generic.DisplayTool;
 
 import spark.Request;
 import spark.Response;
@@ -8,9 +15,6 @@ import spark.Route;
 import uk.ac.soton.ldanalytics.piotre.server.login.LoginController;
 import uk.ac.soton.ldanalytics.piotre.server.util.Path;
 import uk.ac.soton.ldanalytics.piotre.server.util.ViewUtil;
-import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.*;
-import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.*;
-import static uk.ac.soton.ldanalytics.piotre.server.Application.dataDao;
 
 public class DataController {
 	public static Route fetchData = (Request request, Response response) -> {
@@ -18,6 +22,7 @@ public class DataController {
         if (clientAcceptsHtml(request)) {
             HashMap<String, Object> model = new HashMap<>();
             model.put("data", dataDao.getAllData());
+            model.put("displayTool", new DisplayTool());
             return ViewUtil.render(request, model, Path.Template.DATA, Path.PageNames.DATA);
         }
         if (clientAcceptsJson(request)) {
