@@ -38,6 +38,9 @@ public class Model {
         		.addParameter("hashedPassword",adminHashedPassword)
         		.executeUpdate();
 			
+			conn.createQuery("CREATE TABLE data_meta (name varchar,type varchar,order int,value_type varchar);")
+        		.executeUpdate();
+			
 			List<Data> data = new ArrayList<Data>();
 			data.add(new Data(UUID.randomUUID(),"A Sample Store",adminName,"An example H2 relational database with sample weather data and corresponding mappings.",DataType.STORE));
 			data.add(new Data(UUID.randomUUID(),"A Sample Stream",adminName,"An example stream from a smart home and corresponding mappings.",DataType.STREAM));

@@ -31,7 +31,7 @@
 		    
 		    <p class="caption">$msg.get("LOGIN_INSTRUCTIONS")</p>
 		    <label>$msg.get("LOGIN_LABEL_USERNAME")</label>
-		    <input type="text" name="username" placeholder="$msg.get("LOGIN_LABEL_USERNAME")" value="" required>
+		    <input type="text" name="username" placeholder="$msg.get("LOGIN_LABEL_USERNAME")" value="" required autofocus>
 		    <label>$msg.get("LOGIN_LABEL_PASSWORD")</label>
 		    <input type="password" name="password" placeholder="$msg.get("LOGIN_LABEL_PASSWORD")" value="" required>
 		    #if($loginRedirect)

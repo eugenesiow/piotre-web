@@ -2,8 +2,7 @@ package uk.ac.soton.ldanalytics.piotre.server.data;
 
 import static uk.ac.soton.ldanalytics.piotre.server.Application.dataDao;
 import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.dataToJson;
-import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsHtml;
-import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.*;
 
 import java.util.HashMap;
 
@@ -35,6 +34,7 @@ public class DataController {
     	LoginController.ensureUserIsLoggedIn(request, response);
     	if (clientAcceptsHtml(request)) {
             HashMap<String, Object> model = new HashMap<>();
+            model.put("type", getParamDataType(request));
 //            System.out.println(getParamDataType(request));
             
             //model.put("data", dataDao.getAllData());
