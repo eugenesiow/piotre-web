@@ -6,11 +6,13 @@ import java.util.UUID;
 
 import org.mindrot.jbcrypt.BCrypt;
 import org.sql2o.Connection;
+import org.sql2o.Query;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
 import uk.ac.soton.ldanalytics.piotre.server.data.Data;
 import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
+import uk.ac.soton.ldanalytics.piotre.server.metadata.SchemaItem;
 
 public class Model {	
 	public static void prepareDB(Sql2o sql2o) {
@@ -38,8 +40,19 @@ public class Model {
         		.addParameter("hashedPassword",adminHashedPassword)
         		.executeUpdate();
 			
-			conn.createQuery("CREATE TABLE data_meta (name varchar,type varchar,order int,value_type varchar);")
+			conn.createQuery("CREATE TABLE metadata_schema (category varchar, name varchar,type varchar,sortorder int,data varchar);")
         		.executeUpdate();
+			
+			//Add add data store
+			String dataCategory = "data";
+			String storeType = "store";
+			List<SchemaItem> schema = new ArrayList<SchemaItem>();
+			schema.add(new SchemaItem(dataCategory,"jdbc_url",storeType,0,"{\"caption\":\"JDBC URL\",\"type\":\"text\",placeholder\":\"e.g. jdbc:postgresql://host:port/database\"}"));
+			schema.add(new SchemaItem(dataCategory,"username",storeType,1,"{\"caption\":\"Username\",\"type\":\"text\",placeholder\":\"e.g. sa\"}"));
+			schema.add(new SchemaItem(dataCategory,"password",storeType,2,"{\"caption\":\"Password\",\"type\":\"password\",placeholder\":\"\"}"));
+			schema.forEach((schemaItem)->conn.createQuery("insert into metadata_schema(category, name, type, sortorder, data) VALUES (:category, :name, :type, :sortorder, :data)")
+					.bind(schemaItem)
+					.executeUpdate());
 			
 			List<Data> data = new ArrayList<Data>();
 			data.add(new Data(UUID.randomUUID(),"A Sample Store",adminName,"An example H2 relational database with sample weather data and corresponding mappings.",DataType.STORE));

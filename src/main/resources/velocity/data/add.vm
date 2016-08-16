@@ -27,6 +27,14 @@
 					<label for="description">Description</label>
 			  	</div>
 			</div>
+			#foreach( $schemata in $schema )
+				<div class="row">
+					<div class="input-field col s12">
+						<input id="$schemata.getName()" type="text" class="validate" required>
+						<label for="description">Description</label>
+				  	</div>
+				</div>
+			#end
 			<input class="btn" type="submit" value="Add">
 	    </form>
 	</div>
