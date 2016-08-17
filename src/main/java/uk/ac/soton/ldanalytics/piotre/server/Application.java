@@ -53,6 +53,7 @@ public class Application {
         // Set up routes
         get(Path.Web.INDEX,			IndexController.serveIndexPage);
         get(Path.Web.DATA,			DataController.fetchData);
+        get(Path.Web.DATUM,			DataController.fetchDatum);
         get(Path.Web.DATA_ADD,		DataController.addData);
         get(Path.Web.LOGIN,			LoginController.serveLoginPage);
         post(Path.Web.LOGIN,		LoginController.handleLoginPost);

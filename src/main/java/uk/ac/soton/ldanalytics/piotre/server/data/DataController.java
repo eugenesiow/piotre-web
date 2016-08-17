@@ -32,6 +32,23 @@ public class DataController {
         return ViewUtil.notAcceptable.handle(request, response);
     };
     
+    public static Route fetchDatum = (Request request, Response response) -> {
+        LoginController.ensureUserIsLoggedIn(request, response);
+        String id = getParamId(request);
+        if (clientAcceptsHtml(request)) {
+            HashMap<String, Object> model = new HashMap<>();
+            Data datum = dataDao.getDatum(id);
+            model.put("datum", datum);
+            model.put("schema", dataDao.getAllSchema("data", datum.getType().toString().toLowerCase()));
+            model.put("metadata", dataDao.getMetadata(id));
+            return ViewUtil.render(request, model, Path.Template.DATUM, Path.PageNames.DATA);
+        }
+        if (clientAcceptsJson(request)) {
+            return dataToJson(dataDao.getDatum(id));
+        }
+        return ViewUtil.notAcceptable.handle(request, response);
+    };
+    
     public static Route addData = (Request request, Response response) -> {
     	LoginController.ensureUserIsLoggedIn(request, response);
     	if (clientAcceptsHtml(request)) {

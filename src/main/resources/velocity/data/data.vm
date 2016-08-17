@@ -24,7 +24,7 @@
 		              <p #if($dataItem.getDescription().length()>70) class="tooltipped" data-tooltip="$dataItem.getDescription()"#end>$displayTool.truncate($dataItem.getDescription(),70)</p>
 		            </div>
 		            <div class="card-action">
-		            	<a href="$WebPath.getDATA()$dataItem.getId()">More</a>
+		            	<a href="$WebPath.getDATA()$dataItem.getId()">View</a>
 		              	<a href="$WebPath.getDATA()$dataItem.getId()">Map</a>
 		              	<a href="$WebPath.getDATA()$dataItem.getId()">Query</a>
 		            </div>

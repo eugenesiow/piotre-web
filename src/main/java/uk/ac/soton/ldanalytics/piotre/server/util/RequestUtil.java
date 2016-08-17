@@ -10,6 +10,10 @@ public class RequestUtil {
     public static String getQueryLocale(Request request) {
         return request.queryParams("locale");
     }
+    
+    public static String getParamId(Request request) {
+        return request.params("id");
+    }
   
     public static String getParamDataType(Request request) {
         return request.params("type");

@@ -1,0 +1,54 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<nav class="top-nav">
+	<div class="container">
+  		<div class="nav-wrapper"><a class="page-title">$datum.getName()</a></div>
+    </div>
+</nav>
+<div class="container page-container">
+	  <div class="row">
+		    <div class="col s12">
+		      <ul class="tabs tabs-demo">
+		        <li class="tab col s6"><a class="active" href="#metadata">Metadata</a></li>
+		        <li class="tab col s6"><a href="#statistics">Statistics</a></li>
+		      </ul>
+		    </div>
+		   	<div id="metadata" class="col s12">
+		   		<form id="dataEditForm" method="post" class="col s12">
+					<input type="hidden" name="name" value="$datum.getName()">
+					<p class="caption grey-text">By $datum.getAuthor() </p>
+					<input type="hidden" name="author" value="$datum.getAuthor()">
+					<div class="row">
+						<div class="input-field col s12">
+							<input disabled name="type" value="$datum.getType()" type="text">
+							<label for="type">Type</label>
+					  	</div>
+					</div>
+					<div class="row">
+						<div class="input-field col s12">
+							<textarea name="description" class="materialize-textarea">$datum.getDescription()</textarea>
+							<label for="description">Description</label>
+					  	</div>
+					</div>
+					#foreach( $schemata in $schema )
+						#set( $meta = $schemata.decodeJson() )
+						#set( $name = $schemata.getName() )
+						<div class="row">
+							<div class="input-field col s12">
+								<input name="$name" value="$metadata.get($name)" type="$meta.getString("type")" placeholder="$meta.getString("placeholder")" class="validate" required>
+								<label for="$name">$meta.getString("caption")</label>
+						  	</div>
+						</div>
+					#end
+					<input class="btn" type="submit" value="Save">
+					<a href="$WebPath.getDATA()" class="waves-effect waves-light btn">Cancel</a>
+			    </form>
+			</div>
+		    <div id="statistics" class="col s12"><p class="caption">Can't connect</p></div>
+  </div>
+        
+	<div class="row">
+		
+	</div>
+</div>
+#end

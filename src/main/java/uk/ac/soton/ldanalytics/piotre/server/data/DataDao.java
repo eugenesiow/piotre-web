@@ -1,5 +1,6 @@
 package uk.ac.soton.ldanalytics.piotre.server.data;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
@@ -34,6 +35,26 @@ public class DataDao {
             return data;
         }
     }
+	
+	public Data getDatum(String id) {
+		try (Connection conn = sql2o.open()) {
+			List<Data> data = conn.createQuery("select * from data where id='"+id+"'")
+	                .executeAndFetch(Data.class);
+	        return data.get(0);
+		}
+	}
+	
+	public Map<String,String> getMetadata(String id) {
+		try (Connection conn = sql2o.open()) {
+			Map<String,String> metadata = new HashMap<String,String>();
+			List<Map<String,Object>> results = conn.createQuery("select * from metadata where itemId='"+id+"'")
+					.executeAndFetchTable().asList();
+			for(Map<String,Object> result:results) {
+				metadata.put(result.get("name").toString(), result.get("data").toString());
+			}
+			return metadata;
+	    }
+	}
 	
 	public boolean addData(String type,String name, String author, String description, Map<String,String> metadata) {
 		UUID id = UUID.randomUUID();
