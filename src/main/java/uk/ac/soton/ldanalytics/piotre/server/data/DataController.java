@@ -5,6 +5,7 @@ import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.dataToJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.*;
 
 import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.velocity.tools.generic.DisplayTool;
 
@@ -12,6 +13,7 @@ import spark.Request;
 import spark.Response;
 import spark.Route;
 import uk.ac.soton.ldanalytics.piotre.server.login.LoginController;
+import uk.ac.soton.ldanalytics.piotre.server.user.UserController;
 import uk.ac.soton.ldanalytics.piotre.server.util.Path;
 import uk.ac.soton.ldanalytics.piotre.server.util.ViewUtil;
 
@@ -36,10 +38,19 @@ public class DataController {
             HashMap<String, Object> model = new HashMap<>();
             String type = getParamDataType(request);
             model.put("type", type);
-//            System.out.println(getParamDataType(type));
+//            System.out.println(getParamDataType(request));
             model.put("schema", dataDao.getAllSchema("data", type));
             return ViewUtil.render(request, model, Path.Template.DATA_ADD, Path.PageNames.DATA);
         }
     	return ViewUtil.notAcceptable.handle(request, response);
+    };
+    
+    public static Route handleAddDataPost = (Request request, Response response) -> {
+    	LoginController.ensureUserIsLoggedIn(request, response);
+    	Boolean success = dataDao.addData(getParamDataType(request),getQueryName(request),getQueryAuthor(request),getQueryDescription(request),getQueryMetadata(request));
+    	if(success) {
+    		response.redirect(Path.Web.DATA);
+    	} //TODO: handle error
+        return ViewUtil.notAcceptable.handle(request, response);
     };
 }

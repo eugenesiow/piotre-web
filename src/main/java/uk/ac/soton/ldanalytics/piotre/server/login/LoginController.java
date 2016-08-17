@@ -6,6 +6,8 @@ import uk.ac.soton.ldanalytics.piotre.server.util.*;
 
 import java.util.*;
 
+import org.sql2o.logging.SysOutLogger;
+
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.*;
 
 public class LoginController {

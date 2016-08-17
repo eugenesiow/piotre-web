@@ -10,8 +10,6 @@ import static spark.debug.DebugScreen.enableDebugScreen;
 
 import org.sql2o.Sql2o;
 
-import uk.ac.soton.ldanalytics.piotre.server.book.BookController;
-import uk.ac.soton.ldanalytics.piotre.server.book.BookDao;
 import uk.ac.soton.ldanalytics.piotre.server.data.DataController;
 import uk.ac.soton.ldanalytics.piotre.server.data.DataDao;
 import uk.ac.soton.ldanalytics.piotre.server.index.IndexController;
@@ -27,7 +25,6 @@ import com.beust.jcommander.JCommander;
 public class Application {
 
     // Declare dependencies
-    public static BookDao bookDao;
     public static UserDao userDao;
     public static DataDao dataDao;
 
@@ -40,7 +37,6 @@ public class Application {
     	Model.prepareDB(sql2o);
     	
         // Instantiate your dependencies
-        bookDao = new BookDao();
         userDao = new UserDao();
         dataDao = new DataDao(sql2o);
 
@@ -56,14 +52,13 @@ public class Application {
 
         // Set up routes
         get(Path.Web.INDEX,			IndexController.serveIndexPage);
-        get(Path.Web.BOOKS,			BookController.fetchAllBooks);
-        get(Path.Web.ONE_BOOK,		BookController.fetchOneBook);
         get(Path.Web.DATA,			DataController.fetchData);
         get(Path.Web.DATA_ADD,		DataController.addData);
         get(Path.Web.LOGIN,			LoginController.serveLoginPage);
         post(Path.Web.LOGIN,		LoginController.handleLoginPost);
+        post(Path.Web.DATA_ADD,		DataController.handleAddDataPost);
         post(Path.Web.LOGOUT,		LoginController.handleLogoutPost);
-        get("*",                     ViewUtil.notFound);
+        get("*",                    ViewUtil.notFound);
 
         //Set up after-filters (called after each get/post)
         after("*",                   Filters.addGzipHeader);

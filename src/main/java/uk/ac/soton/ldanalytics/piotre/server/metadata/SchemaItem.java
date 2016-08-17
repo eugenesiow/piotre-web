@@ -1,5 +1,7 @@
 package uk.ac.soton.ldanalytics.piotre.server.metadata;
 
+import org.json.JSONObject;
+
 public class SchemaItem {
 	private String category;
 	private String name;
@@ -45,7 +47,7 @@ public class SchemaItem {
 	public void setData(String data) {
 		this.data = data;
 	}
-	public void decodeJson() {
-		
+	public JSONObject decodeJson() {
+		return new JSONObject(data);
 	}
 }

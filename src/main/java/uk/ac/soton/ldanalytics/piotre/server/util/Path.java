@@ -35,6 +35,9 @@ public class Path {
 		public static String getDATUM() {
 			return DATUM;
 		}
+		public static String getMETADATA() {
+			return METADATA;
+		}
 		public static String getMAPPINGS() {
 			return MAPPINGS;
 		}
@@ -52,6 +55,7 @@ public class Path {
         public static final String DATA = "/data/";
         public static final String DATA_ADD = "/data/add/:type/";
         public static final String DATUM = "/data/:id/";
+        public static final String METADATA = "/metadata/";
         public static final String APPS = "/apps/";
         public static final String MAPPINGS = "/mappings/";
         public static final String QUERY_STORE = "/query/";
@@ -77,6 +81,7 @@ public class Path {
     public static class PageNames {
         public final static String INDEX = "Getting Started";
         public final static String DATA = "Data";
+        public final static String METADATA = "Metadata";
         public final static String APPS = "Applications";
         public final static String MAPPINGS = "Mappings";
         public final static String LOGIN = "Login";
@@ -96,6 +101,9 @@ public class Path {
 		}
 		public static String getMappings() {
 			return MAPPINGS;
+		}
+		public static String getMetadata() {
+			return METADATA;
 		}
 		public static String getLogin() {
 			return LOGIN;

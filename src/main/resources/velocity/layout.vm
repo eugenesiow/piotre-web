@@ -64,6 +64,7 @@
       </ul>
     </li>
     <li class="bold #if($PageNames.getApps() == $currentPage)active#end"><a href="$WebPath.getAPPS()" class="waves-effect waves-teal">$PageNames.getApps()</a></li>
+    <li class="bold #if($PageNames.getMetadata() == $currentPage)active#end"><a href="$WebPath.getMETADATA()" class="waves-effect waves-teal">$PageNames.getMetadata()</a></li>
   </ul>
 </header>
 <main>

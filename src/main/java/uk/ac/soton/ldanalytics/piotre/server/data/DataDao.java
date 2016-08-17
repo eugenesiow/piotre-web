@@ -1,10 +1,15 @@
 package uk.ac.soton.ldanalytics.piotre.server.data;
 
 import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.UUID;
 
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
+import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.SchemaItem;
 
 public class DataDao {
@@ -16,7 +21,7 @@ public class DataDao {
 	
 	public Iterable<SchemaItem> getAllSchema(String category, String type) {
 		try (Connection conn = sql2o.open()) {
-            List<SchemaItem> schema = conn.createQuery("select * from metadata_schema where category='"+category+"' AND type='"+type+"'")
+            List<SchemaItem> schema = conn.createQuery("select * from metadata_schema where category='"+category+"' AND type='"+type+"' ORDER BY sortorder")
                     .executeAndFetch(SchemaItem.class);
             return schema;
         }
@@ -29,4 +34,21 @@ public class DataDao {
             return data;
         }
     }
+	
+	public boolean addData(String type,String name, String author, String description, Map<String,String> metadata) {
+		UUID id = UUID.randomUUID();
+		try (Connection conn = sql2o.open()) {
+			conn.createQuery("insert into data(id, name, author, description, type) VALUES (:id, :name, :author, :description, :type)")
+				.bind(new Data(id,name,author,description,DataType.valueOf(type.toUpperCase())))
+				.executeUpdate();
+			for(Entry<String,String> item:metadata.entrySet()) {
+				conn.createQuery("insert into metadata(itemId, name, data) VALUES (:itemId, :name, :data)")
+					.bind(new MetadataItem(id,item.getKey(),item.getValue()))
+					.executeUpdate();
+			}
+		} catch(Exception e) {
+			return false;
+		}
+		return true;
+	}
 }

@@ -1,19 +1,40 @@
 package uk.ac.soton.ldanalytics.piotre.server.util;
 
-import spark.*;
+import java.util.HashMap;
+import java.util.Map;
+
+import spark.Request;
 
 public class RequestUtil {
 
     public static String getQueryLocale(Request request) {
         return request.queryParams("locale");
     }
-
-    public static String getParamIsbn(Request request) {
-        return request.params("isbn");
-    }
-    
+  
     public static String getParamDataType(Request request) {
         return request.params("type");
+    }
+    
+    public static String getQueryName(Request request) {
+        return request.queryParams("name");
+    }
+    
+    public static String getQueryAuthor(Request request) {
+        return request.queryParams("author");
+    }
+    
+    public static String getQueryDescription(Request request) {
+        return request.queryParams("description");
+    }
+    
+    public static Map<String,String> getQueryMetadata(Request request) {
+    	Map<String,String> map = new HashMap<String,String>();
+    	for(String param:request.queryParams()) {
+    		if(!param.equals("name")&&!param.equals("description")&&!param.equals("author")) {
+    			map.put(param, request.queryParams(param));
+    		}
+    	}
+    	return map;
     }
 
     public static String getQueryUsername(Request request) {

@@ -40,19 +40,24 @@ public class Model {
         		.addParameter("hashedPassword",adminHashedPassword)
         		.executeUpdate();
 			
+			//Add metadata schema store
 			conn.createQuery("CREATE TABLE metadata_schema (category varchar, name varchar,type varchar,sortorder int,data varchar);")
-        		.executeUpdate();
-			
-			//Add add data store
+    			.executeUpdate();
 			String dataCategory = "data";
 			String storeType = "store";
 			List<SchemaItem> schema = new ArrayList<SchemaItem>();
-			schema.add(new SchemaItem(dataCategory,"jdbc_url",storeType,0,"{\"caption\":\"JDBC URL\",\"type\":\"text\",placeholder\":\"e.g. jdbc:postgresql://host:port/database\"}"));
-			schema.add(new SchemaItem(dataCategory,"username",storeType,1,"{\"caption\":\"Username\",\"type\":\"text\",placeholder\":\"e.g. sa\"}"));
-			schema.add(new SchemaItem(dataCategory,"password",storeType,2,"{\"caption\":\"Password\",\"type\":\"password\",placeholder\":\"\"}"));
+			schema.add(new SchemaItem(dataCategory,"jdbc_url",storeType,0,"{\"caption\":\"JDBC URL\",\"type\":\"text\",\"placeholder\":\"e.g. jdbc:postgresql://host:port/database\"}"));
+			schema.add(new SchemaItem(dataCategory,"username",storeType,1,"{\"caption\":\"Username\",\"type\":\"text\",\"placeholder\":\"e.g. sa\"}"));
+			schema.add(new SchemaItem(dataCategory,"password",storeType,2,"{\"caption\":\"Password\",\"type\":\"password\",\"placeholder\":\"\"}"));
+			storeType = "stream";
+			schema.add(new SchemaItem(dataCategory,"jdbc_url",storeType,0,"{\"caption\":\"Stream URI\",\"type\":\"text\",\"placeholder\":\"e.g. http://www.cwi.nl/SRBench/observations\"}"));
 			schema.forEach((schemaItem)->conn.createQuery("insert into metadata_schema(category, name, type, sortorder, data) VALUES (:category, :name, :type, :sortorder, :data)")
 					.bind(schemaItem)
 					.executeUpdate());
+			
+			//Add metadata store
+			conn.createQuery("CREATE TABLE metadata (itemId uuid, name varchar,data varchar);")
+    			.executeUpdate();
 			
 			List<Data> data = new ArrayList<Data>();
 			data.add(new Data(UUID.randomUUID(),"A Sample Store",adminName,"An example H2 relational database with sample weather data and corresponding mappings.",DataType.STORE));
