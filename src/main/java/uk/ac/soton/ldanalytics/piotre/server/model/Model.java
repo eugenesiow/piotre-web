@@ -10,6 +10,7 @@ import org.sql2o.Query;
 import org.sql2o.Sql2o;
 import org.sql2o.Sql2oException;
 
+import uk.ac.soton.ldanalytics.piotre.server.app.App;
 import uk.ac.soton.ldanalytics.piotre.server.data.Data;
 import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
@@ -33,6 +34,7 @@ public class Model {
 		String adminHashedPassword = BCrypt.hashpw(adminPassword,adminSalt);
 		
 		try (Connection conn = sql2o.beginTransaction()) {
+			//create user table and add admin
 			conn.createQuery("CREATE TABLE user (username varchar,salt varchar,hashedPassword varchar);")
             	.executeUpdate();
 			conn.createQuery("insert into user(username, salt, hashedPassword) VALUES (:username, :salt, :hashedPassword)")
@@ -83,6 +85,19 @@ public class Model {
 			metadata.forEach((metadatum) -> conn.createQuery("insert into metadata(itemId, name, data) VALUES (:itemId, :name, :data)")
 	            	.bind(metadatum)
 	            	.executeUpdate());
+			
+			//create apps table and add samples
+			conn.createQuery("CREATE TABLE apps (id uuid primary key,name varchar,author varchar,description varchar,uri varchar);")
+	        	.executeUpdate();
+			List<App> apps = new ArrayList<App>();
+			UUID sampleStoreAppId = UUID.randomUUID();
+			UUID sampleStreamAppId = UUID.randomUUID();			
+			apps.add(new App(sampleStoreAppId,"Smart Home Historical Analytics",adminName,"Visual Analytics for Historical Smart Home Data","http://pi.webobservatory.me/"));
+			apps.add(new App(sampleStreamAppId,"Smart Home Real-time Dashboard",adminName,"An example, highly extensible, real-time dashboard based on FreeBoard.","http://freeboard.io/"));
+			apps.forEach((app) -> conn.createQuery("insert into apps(id, name, author, description, uri) VALUES (:id, :name, :author, :description, :uri)")
+            	.bind(app)
+            	.executeUpdate());
+			
 			conn.commit();
 		}
 	}

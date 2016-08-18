@@ -72,4 +72,22 @@ public class DataDao {
 		}
 		return true;
 	}
+	
+	public boolean updateData(String strId, String type,String name, String author, String description, Map<String,String> metadata) {
+		UUID id = UUID.fromString(strId);
+		try (Connection conn = sql2o.open()) {
+			conn.createQuery("update data set name=:name,author=:author,description=:description,type=:type where id=:id")
+				.bind(new Data(id,name,author,description,DataType.valueOf(type.toUpperCase())))
+				.executeUpdate();
+			for(Entry<String,String> item:metadata.entrySet()) {
+				conn.createQuery("update metadata set data=:data where itemId=:itemId AND name=:name")
+					.bind(new MetadataItem(id,item.getKey(),item.getValue()))
+					.executeUpdate();
+			}
+		} catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
 }

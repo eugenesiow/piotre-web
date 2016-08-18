@@ -1,0 +1,34 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<nav class="top-nav">
+	<div class="container">
+  		<div class="nav-wrapper"><a class="page-title">Apps</a></div>
+    </div>
+</nav>
+<div class="container page-container">
+	<div class="row">
+    #foreach($app in $apps)
+        <div class="col s12 m12 l6">
+	        <div class="card horizontal">
+	      		<div class="card-stacked">
+		            <div class="card-content">
+		              <span class="card-title">$app.getName()</span>&nbsp;
+		              <span class="card-subtitle grey-text">By $app.getAuthor()</span>
+		              <p #if($app.getDescription().length()>70) class="tooltipped" data-tooltip="$app.getDescription()"#end>$displayTool.truncate($app.getDescription(),70)</p>
+		            </div>
+		            <div class="card-action">
+		            	<a href="$WebPath.getAPPS()$app.getId()">View</a>
+		              	<a href="$app.getUri()" target="_blank">Open</a>
+		            </div>
+	            </div>
+			</div>
+        </div>
+    #end
+    </div>
+</div>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+	<a href="$WebPath.getAPPS_ADD()" class="btn-floating btn-large waves-effect waves-light blue">
+		<i class="material-icons">add</i>
+	</a>
+</div>
+#end

@@ -70,4 +70,13 @@ public class DataController {
     	} //TODO: handle error
         return ViewUtil.notAcceptable.handle(request, response);
     };
+    
+    public static Route handleUpdateDataPost = (Request request, Response response) -> {
+    	LoginController.ensureUserIsLoggedIn(request, response);
+    	Boolean success = dataDao.updateData(getParamId(request),getQueryDataType(request),getQueryName(request),getQueryAuthor(request),getQueryDescription(request),getQueryMetadata(request));
+    	if(success) {
+    		response.redirect(Path.Web.DATA);
+    	} //TODO: handle error
+        return ViewUtil.notAcceptable.handle(request, response);
+    };
 }

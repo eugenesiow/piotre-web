@@ -20,6 +20,9 @@ public class Path {
 		public static String getAPPS() {
 			return APPS;
 		}
+		public static String getAPPS_ADD() {
+			return APPS_ADD;
+		}
 		public static String getONE_BOOK() {
 			return ONE_BOOK;
 		}
@@ -57,6 +60,8 @@ public class Path {
         public static final String DATUM = "/data/:id/";
         public static final String METADATA = "/metadata/";
         public static final String APPS = "/apps/";
+        public static final String APPS_ADD = "/apps/add/";
+        public static final String APP = "/apps/:id/";
         public static final String MAPPINGS = "/mappings/";
         public static final String QUERY_STORE = "/query/";
         public static final String QUERY_STREAM = "/query_stream/";
@@ -73,6 +78,8 @@ public class Path {
         public final static String DATA_ADD = "/velocity/data/add.vm";
         public final static String DATUM = "/velocity/data/datum.vm";
         public final static String APPS = "/velocity/apps/apps.vm";
+        public final static String APPS_ADD = "/velocity/apps/add.vm";
+        public final static String APP = "/velocity/apps/app.vm";
         public final static String QUERY_STORE = "/velocity/query/sparql.vm";
         public final static String QUERY_STREAM = "/velocity/query/stream.vm";
         public final static String MAPPINGS = "/velocity/mappings/mappings.vm";

@@ -10,6 +10,8 @@ import static spark.debug.DebugScreen.enableDebugScreen;
 
 import org.sql2o.Sql2o;
 
+import uk.ac.soton.ldanalytics.piotre.server.app.AppController;
+import uk.ac.soton.ldanalytics.piotre.server.app.AppDao;
 import uk.ac.soton.ldanalytics.piotre.server.data.DataController;
 import uk.ac.soton.ldanalytics.piotre.server.data.DataDao;
 import uk.ac.soton.ldanalytics.piotre.server.index.IndexController;
@@ -27,6 +29,7 @@ public class Application {
     // Declare dependencies
     public static UserDao userDao;
     public static DataDao dataDao;
+    public static AppDao appDao;
 
     public static void main(String[] args) {
     	CommandLineOptions options = new CommandLineOptions();
@@ -39,6 +42,7 @@ public class Application {
         // Instantiate your dependencies
         userDao = new UserDao();
         dataDao = new DataDao(sql2o);
+        appDao = new AppDao(sql2o);
 
         // Configure Spark
         port(4567);
@@ -55,9 +59,15 @@ public class Application {
         get(Path.Web.DATA,			DataController.fetchData);
         get(Path.Web.DATUM,			DataController.fetchDatum);
         get(Path.Web.DATA_ADD,		DataController.addData);
+        get(Path.Web.APPS,			AppController.fetchApps);
+        get(Path.Web.APPS_ADD,		AppController.addApps);
+        get(Path.Web.APP,			AppController.fetchApp);
         get(Path.Web.LOGIN,			LoginController.serveLoginPage);
         post(Path.Web.LOGIN,		LoginController.handleLoginPost);
         post(Path.Web.DATA_ADD,		DataController.handleAddDataPost);
+        post(Path.Web.APPS_ADD,		AppController.handleAddAppPost);
+        post(Path.Web.DATUM,		DataController.handleUpdateDataPost);
+        post(Path.Web.APP,			AppController.handleUpdateAppPost);
         post(Path.Web.LOGOUT,		LoginController.handleLogoutPost);
         get("*",                    ViewUtil.notFound);
 

@@ -10,7 +10,7 @@
 		    <div class="col s12">
 		      <ul class="tabs tabs-demo">
 		        <li class="tab col s6"><a class="active" href="#metadata">Metadata</a></li>
-		        <li class="tab col s6"><a href="#statistics">Statistics</a></li>
+		        <li class="tab col s6"><a href="#data">Data</a></li>
 		      </ul>
 		    </div>
 		   	<div id="metadata" class="col s12">
@@ -20,8 +20,9 @@
 					<input type="hidden" name="author" value="$datum.getAuthor()">
 					<div class="row">
 						<div class="input-field col s12">
-							<input disabled name="type" value="$datum.getType()" type="text">
-							<label for="type">Type</label>
+							<input disabled name="typeD" value="$datum.getType()" type="text">
+							<label for="typeD">Type</label>
+							<input type="hidden" name="type" value="$datum.getType()">
 					  	</div>
 					</div>
 					<div class="row">
@@ -44,7 +45,7 @@
 					<a href="$WebPath.getDATA()" class="waves-effect waves-light btn">Cancel</a>
 			    </form>
 			</div>
-		    <div id="statistics" class="col s12"><p class="caption">Can't connect</p></div>
+		    <div id="data" class="col s12"><p class="caption">Can't connect</p></div>
   </div>
         
 	<div class="row">

@@ -19,8 +19,16 @@ public class RequestUtil {
         return request.params("type");
     }
     
+    public static String getQueryDataType(Request request) {
+        return request.queryParams("type");
+    }
+    
     public static String getQueryName(Request request) {
         return request.queryParams("name");
+    }
+    
+    public static String getQueryUri(Request request) {
+        return request.queryParams("uri");
     }
     
     public static String getQueryAuthor(Request request) {
