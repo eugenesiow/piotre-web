@@ -14,17 +14,11 @@ public class Path {
 		public static String getLOGOUT() {
 			return LOGOUT;
 		}
-		public static String getBOOKS() {
-			return BOOKS;
-		}
 		public static String getAPPS() {
 			return APPS;
 		}
 		public static String getAPPS_ADD() {
 			return APPS_ADD;
-		}
-		public static String getONE_BOOK() {
-			return ONE_BOOK;
 		}
 		public static String getACCOUNT() {
 			return ACCOUNT;
@@ -37,6 +31,12 @@ public class Path {
 		}
 		public static String getDATUM() {
 			return DATUM;
+		}
+		public static String getMAPPING() {
+			return MAPPING;
+		}
+		public static String getMAPPINGS_ADD() {
+			return MAPPINGS_ADD;
 		}
 		public static String getMETADATA() {
 			return METADATA;
@@ -54,7 +54,6 @@ public class Path {
         public static final String LOGIN = "/login/";
         public static final String LOGOUT = "/logout/";
         public static final String ACCOUNT = "/account/";
-        public static final String BOOKS = "/books/";
         public static final String DATA = "/data/";
         public static final String DATA_ADD = "/data/add/:type/";
         public static final String DATUM = "/data/:id/";
@@ -63,9 +62,10 @@ public class Path {
         public static final String APPS_ADD = "/apps/add/";
         public static final String APP = "/apps/:id/";
         public static final String MAPPINGS = "/mappings/";
+        public static final String MAPPINGS_ADD = "/mappings/add/";
+        public static final String MAPPING = "/mappings/:id/";
         public static final String QUERY_STORE = "/query/";
         public static final String QUERY_STREAM = "/query_stream/";
-        public static final String ONE_BOOK = "/books/:isbn/";
     }
 
     public static class Template {
@@ -80,6 +80,8 @@ public class Path {
         public final static String APPS = "/velocity/apps/apps.vm";
         public final static String APPS_ADD = "/velocity/apps/add.vm";
         public final static String APP = "/velocity/apps/app.vm";
+        public final static String MAPPING = "/velocity/mappings/mapping.vm";
+        public final static String MAPPINGS_ADD = "/velocity/mappings/add.vm";
         public final static String QUERY_STORE = "/velocity/query/sparql.vm";
         public final static String QUERY_STREAM = "/velocity/query/stream.vm";
         public final static String MAPPINGS = "/velocity/mappings/mappings.vm";
@@ -92,8 +94,6 @@ public class Path {
         public final static String APPS = "Applications";
         public final static String MAPPINGS = "Mappings";
         public final static String LOGIN = "Login";
-        public static final String BOOKS_ALL = "Books";
-		public static final String BOOKS_ONE = "Book";
 		public final static String QUERY_STORE = "SPARQL";
         public final static String QUERY_STREAM = "Stream Queries";
         public static final String NOT_FOUND = "Not Found";
@@ -114,12 +114,6 @@ public class Path {
 		}
 		public static String getLogin() {
 			return LOGIN;
-		}
-		public static String getBooksAll() {
-			return BOOKS_ALL;
-		}
-		public static String getBooksOne() {
-			return BOOKS_ONE;
 		}
 		public static String getNotFound() {
 			return NOT_FOUND;

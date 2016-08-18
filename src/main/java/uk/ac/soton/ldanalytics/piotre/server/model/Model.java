@@ -98,6 +98,18 @@ public class Model {
             	.bind(app)
             	.executeUpdate());
 			
+			//create mappings table and add sample mappings
+			conn.createQuery("CREATE TABLE mappings (id uuid primary key,name varchar,author varchar,content clob,format clob);")
+        		.executeUpdate();
+			
+			//create mappings-data relations table and add sample relations
+			conn.createQuery("CREATE TABLE rel_mappings_data (mappingsId uuid,dataId uuid);")
+    			.executeUpdate();
+			
+			//create apps-data relations table and add sample relations
+			conn.createQuery("CREATE TABLE rel_apps_data (appId uuid,dataId uuid);")
+    			.executeUpdate();
+			
 			conn.commit();
 		}
 	}
