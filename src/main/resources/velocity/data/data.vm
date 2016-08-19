@@ -8,6 +8,17 @@
 <div class="container page-container">
 	<div class="row">
     #foreach($dataItem in $data)
+    	<ul id="dropdown_$dataItem.getId()" class="dropdown-content">
+    		#foreach($mapping in $mappings)
+    			#if($mapping.getDataRelId()==$dataItem.getId())
+					<li><a href="$WebPath.getMAPPINGS()$mapping.getId()" class="well-padded">$mapping.getName()</a></li>
+					<li class="divider"></li>
+				#end
+		  	#end
+		  	<li>
+		  		<a href="$WebPath.getMAPPINGS_ADD()" class="well-padded">Create New</a>
+		  	</li>
+		</ul>
         <div class="col s12 m12 l6">
 	        <div class="card horizontal">
 	        	<div class="card-image">
@@ -25,7 +36,7 @@
 		            </div>
 		            <div class="card-action">
 		            	<a href="$WebPath.getDATA()$dataItem.getId()">View</a>
-		              	<a href="$WebPath.getDATA()$dataItem.getId()">Map</a>
+		              	<a class="dropdown-button" href="#!" data-constrainwidth="false" data-activates="dropdown_$dataItem.getId()">Mapping<i class="material-icons vcenter">arrow_drop_down</i></a>
 		              	<a href="$WebPath.getDATA()$dataItem.getId()">Query</a>
 		            </div>
 	            </div>

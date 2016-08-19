@@ -10,7 +10,7 @@
 		    <div class="col s12">
 		      <ul class="tabs tabs-demo">
 		        <li class="tab col s6"><a class="active" href="#metadata">Metadata</a></li>
-		        <li class="tab col s6"><a href="#data">Data</a></li>
+		        <li class="tab col s6"><a href="#mappings">Mappings</a></li>
 		      </ul>
 		    </div>
 		   	<div id="metadata" class="col s12">
@@ -45,11 +45,15 @@
 					<a href="$WebPath.getDATA()" class="waves-effect waves-light btn">Cancel</a>
 			    </form>
 			</div>
-		    <div id="data" class="col s12"><p class="caption">Can't connect</p></div>
+		    <div id="mappings" class="col s12">
+				<div class="row">
+					<div class="collection">
+				    #foreach($mapping in $mappings)
+				        <a href="$WebPath.getMAPPINGS()$mapping.getId()" class="collection-item">$mapping.getName()</a>
+				    #end
+				    </div>
+			    </div>
+		   </div>
   </div>
-        
-	<div class="row">
-		
-	</div>
 </div>
 #end

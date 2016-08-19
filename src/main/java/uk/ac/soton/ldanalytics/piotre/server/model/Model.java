@@ -107,9 +107,12 @@ public class Model {
 			conn.createQuery("CREATE TABLE mappings (id uuid primary key,name varchar,author varchar,uri varchar,content clob,format clob);")
         		.executeUpdate();
 			String smarthomeEnvironmentContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("mappings/smarthome_environment.nt").getFile()));
+			String smarthomeMeterContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("mappings/smarthome_meter.nt").getFile()));
 			List<Mapping> mappings = new ArrayList<Mapping>();
 			UUID sampleSmarthomeEnvironmentId = UUID.randomUUID();
+			UUID sampleSmarthomeMeterId = UUID.randomUUID();
 			mappings.add(new Mapping(sampleSmarthomeEnvironmentId,"smarthome_environment",adminName,"http://iot.soton.ac.uk/smarthome/environment#",smarthomeEnvironmentContent,null));
+			mappings.add(new Mapping(sampleSmarthomeMeterId,"smarthome_meter",adminName,"http://iot.soton.ac.uk/smarthome/meter#",smarthomeMeterContent,null));
 			mappings.forEach((mapping) -> conn.createQuery("insert into mappings(id, name, author, uri, content,format) VALUES (:id, :name, :author, :uri, :content, :format)")
             	.bind(mapping)
             	.executeUpdate());

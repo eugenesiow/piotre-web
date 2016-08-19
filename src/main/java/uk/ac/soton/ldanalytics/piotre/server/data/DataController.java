@@ -23,6 +23,7 @@ public class DataController {
         if (clientAcceptsHtml(request)) {
             HashMap<String, Object> model = new HashMap<>();
             model.put("data", dataDao.getAllData());
+            model.put("mappings", dataDao.getAllMappings());
             model.put("displayTool", new DisplayTool());
             return ViewUtil.render(request, model, Path.Template.DATA, Path.PageNames.DATA);
         }
@@ -39,6 +40,7 @@ public class DataController {
             HashMap<String, Object> model = new HashMap<>();
             Data datum = dataDao.getDatum(id);
             model.put("datum", datum);
+            model.put("mappings", dataDao.getMappingsByDatum(id));
             model.put("schema", dataDao.getAllSchema("data", datum.getType().toString().toLowerCase()));
             model.put("metadata", dataDao.getMetadata(id));
             return ViewUtil.render(request, model, Path.Template.DATUM, Path.PageNames.DATA);

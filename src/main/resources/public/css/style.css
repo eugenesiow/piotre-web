@@ -90,6 +90,7 @@ a.button-collapse.top-nav {
 }
 .well-padded {
 	padding: 14px 16px !important;
+	text-transform: initial !important;
 }
 
 .caption {
@@ -108,4 +109,8 @@ a.button-collapse.top-nav {
 }
 .page-container {
 	margin-top: 15px;
+}
+
+.vcenter {
+	vertical-align: sub;
 }

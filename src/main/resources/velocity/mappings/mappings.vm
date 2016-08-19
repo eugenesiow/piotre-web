@@ -13,8 +13,10 @@
 	        <div class="title">$mapping.getName()</div>	        
 	        <div class="grey-text">By $mapping.getAuthor()<br>
 	        Data source: $mapping.getDataRelName()</div>
+	        <div class="secondary-content">&lt;$mapping.getUri()&gt;</div>
     	</a>
     #end
+    </div>
     </div>
 </div>
 <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">

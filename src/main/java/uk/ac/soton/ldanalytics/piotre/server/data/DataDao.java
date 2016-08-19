@@ -10,6 +10,7 @@ import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
 import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
+import uk.ac.soton.ldanalytics.piotre.server.mapping.Mapping;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.SchemaItem;
 
@@ -42,6 +43,22 @@ public class DataDao {
 	                .executeAndFetch(Data.class);
 	        return data.get(0);
 		}
+	}
+	
+	public  Iterable<Mapping> getAllMappings() {
+		try (Connection conn = sql2o.open()) {
+            List<Mapping> mappings = conn.createQuery("select t2.name, t2.id, t1.id2 AS dataRelId from rel_mappings_data t1, mappings t2 where t2.id=t1.id1")
+                    .executeAndFetch(Mapping.class);
+            return mappings;
+        }
+	}
+	
+	public  Iterable<Mapping> getMappingsByDatum(String id) {
+		try (Connection conn = sql2o.open()) {
+            List<Mapping> mappings = conn.createQuery("select t2.name, t2.author, t2.id, t2.uri from rel_mappings_data t1, mappings t2 where t1.id2='"+id+"' AND t2.id=t1.id1")
+                    .executeAndFetch(Mapping.class);
+            return mappings;
+        }
 	}
 	
 	public Map<String,String> getMetadata(String id) {
