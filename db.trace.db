@@ -31,3 +31,66 @@ CREATE TABLE data (id uuid primary key,name varchar,author varchar, description 
 2016-08-19 15:55:56 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
 CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 16:50:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 16:50:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT T1.ID, T1.NAME, T1.AUTHOR, T1.URI, T1.CONTENT, T1.FORMAT, T2.ID2 AS DATARELID, T3.NAME AS DATARELNAME FROM MAPPINGS T1, REL_MAPPINGS_DATA T2, DATA T3 WHERE T1.ID='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' T1[*].ID=T2.ID1 AND T2.ID2=T3.ID "; SQL statement:
+select t1.id, t1.name, t1.author, t1.uri, t1.content, t1.format, t2.id2 as dataRelId, t3.name as dataRelName from mappings t1, rel_mappings_data t2, data t3 where t1.id='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' t1.id=t2.id1 AND t2.id2=t3.id [42000-192]
+2016-08-19 16:50:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT T1.ID, T1.NAME, T1.AUTHOR, T1.URI, T1.CONTENT, T1.FORMAT, T2.ID2 AS DATARELID, T3.NAME AS DATARELNAME FROM MAPPINGS T1, REL_MAPPINGS_DATA T2, DATA T3 WHERE T1.ID='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' T1[*].ID=T2.ID1 AND T2.ID2=T3.ID "; SQL statement:
+select t1.id, t1.name, t1.author, t1.uri, t1.content, t1.format, t2.id2 as dataRelId, t3.name as dataRelName from mappings t1, rel_mappings_data t2, data t3 where t1.id='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' t1.id=t2.id1 AND t2.id2=t3.id [42000-192]
+2016-08-19 16:50:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT T1.ID, T1.NAME, T1.AUTHOR, T1.URI, T1.CONTENT, T1.FORMAT, T2.ID2 AS DATARELID, T3.NAME AS DATARELNAME FROM MAPPINGS T1, REL_MAPPINGS_DATA T2, DATA T3 WHERE T1.ID='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' T1[*].ID=T2.ID1 AND T2.ID2=T3.ID "; SQL statement:
+select t1.id, t1.name, t1.author, t1.uri, t1.content, t1.format, t2.id2 as dataRelId, t3.name as dataRelName from mappings t1, rel_mappings_data t2, data t3 where t1.id='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' t1.id=t2.id1 AND t2.id2=t3.id [42000-192]
+2016-08-19 16:50:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Syntax error in SQL statement "SELECT T1.ID, T1.NAME, T1.AUTHOR, T1.URI, T1.CONTENT, T1.FORMAT, T2.ID2 AS DATARELID, T3.NAME AS DATARELNAME FROM MAPPINGS T1, REL_MAPPINGS_DATA T2, DATA T3 WHERE T1.ID='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' T1[*].ID=T2.ID1 AND T2.ID2=T3.ID "; SQL statement:
+select t1.id, t1.name, t1.author, t1.uri, t1.content, t1.format, t2.id2 as dataRelId, t3.name as dataRelName from mappings t1, rel_mappings_data t2, data t3 where t1.id='ab86e41c-a4d2-4496-b9fb-ae4596444c0c' t1.id=t2.id1 AND t2.id2=t3.id [42000-192]
+2016-08-19 16:51:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 17:06:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 17:11:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 17:14:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 17:15:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 17:15:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 17:17:56 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 21:27:18 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 21:28:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 21:30:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 21:31:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 21:32:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 21:42:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 21:47:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 22:03:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-19 22:12:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]

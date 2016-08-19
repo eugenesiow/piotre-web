@@ -4,10 +4,9 @@ import static uk.ac.soton.ldanalytics.piotre.server.Application.mappingDao;
 import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.dataToJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsHtml;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getParamId;
 
 import java.util.HashMap;
-
-import org.apache.velocity.tools.generic.DisplayTool;
 
 import spark.Request;
 import spark.Response;
@@ -22,11 +21,26 @@ public class MappingController {
         if (clientAcceptsHtml(request)) {
             HashMap<String, Object> model = new HashMap<>();
             model.put("mappings", mappingDao.getAllMappings());
-            model.put("displayTool", new DisplayTool());
             return ViewUtil.render(request, model, Path.Template.MAPPINGS, Path.PageNames.MAPPINGS);
         }
         if (clientAcceptsJson(request)) {
             return dataToJson(mappingDao.getAllMappings());
+        }
+		return ViewUtil.notAcceptable.handle(request, response);
+	};
+	
+	public static Route editMapping = (Request request, Response response) -> {
+		LoginController.ensureUserIsLoggedIn(request, response);
+		String id = getParamId(request);
+        if (clientAcceptsHtml(request)) {
+        	 HashMap<String, Object> model = new HashMap<>();
+        	 Mapping mapping = mappingDao.getMapping(id);
+             model.put("mapping", mapping);
+             model.put("mappingJson", mappingDao.convertMappingContent(mapping.getContent()));
+             return ViewUtil.render(request, model, Path.Template.MAPPING, Path.PageNames.MAPPINGS);
+        }
+        if (clientAcceptsJson(request)) {
+            return dataToJson(mappingDao.getMapping(id));
         }
 		return ViewUtil.notAcceptable.handle(request, response);
 	};

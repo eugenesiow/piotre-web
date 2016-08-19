@@ -67,6 +67,7 @@ public class Application {
         get(Path.Web.APPS_ADD,		AppController.addApps);
         get(Path.Web.APP,			AppController.fetchApp);
         get(Path.Web.MAPPINGS,		MappingController.fetchMappings);
+        get(Path.Web.MAPPING,		MappingController.editMapping);
         get(Path.Web.LOGIN,			LoginController.serveLoginPage);
         post(Path.Web.LOGIN,		LoginController.handleLoginPost);
         post(Path.Web.DATA_ADD,		DataController.handleAddDataPost);
