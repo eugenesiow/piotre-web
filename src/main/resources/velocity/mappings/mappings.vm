@@ -1,0 +1,25 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<nav class="top-nav">
+	<div class="container">
+  		<div class="nav-wrapper"><a class="page-title">Mappings</a></div>
+    </div>
+</nav>
+<div class="container page-container">
+	<div class="row">
+	<div class="collection">
+    #foreach($mapping in $mappings)
+        <a href="$WebPath.getMAPPINGS()$mapping.getId()" class="collection-item avatar">
+	        <div class="title">$mapping.getName()</div>	        
+	        <div class="grey-text">By $mapping.getAuthor()<br>
+	        Data source: $mapping.getDataRelName()</div>
+    	</a>
+    #end
+    </div>
+</div>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+	<a href="$WebPath.getMAPPINGS_ADD()" class="btn-floating btn-large waves-effect waves-light blue">
+		<i class="material-icons">add</i>
+	</a>
+</div>
+#end

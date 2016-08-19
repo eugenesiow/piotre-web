@@ -13,7 +13,7 @@ public class AppDao {
 		this.sql2o = sql2o;
 	}
 	
-	public Iterable<App> getAllData() {
+	public Iterable<App> getAllApps() {
 		try (Connection conn = sql2o.open()) {
             List<App> apps = conn.createQuery("select * from apps")
                     .executeAndFetch(App.class);

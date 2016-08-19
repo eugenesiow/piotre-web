@@ -1,9 +1,12 @@
 package uk.ac.soton.ldanalytics.piotre.server.model;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
+import org.apache.commons.io.FileUtils;
 import org.mindrot.jbcrypt.BCrypt;
 import org.sql2o.Connection;
 import org.sql2o.Query;
@@ -13,8 +16,10 @@ import org.sql2o.Sql2oException;
 import uk.ac.soton.ldanalytics.piotre.server.app.App;
 import uk.ac.soton.ldanalytics.piotre.server.data.Data;
 import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
+import uk.ac.soton.ldanalytics.piotre.server.mapping.Mapping;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.SchemaItem;
+import uk.ac.soton.ldanalytics.piotre.server.relation.Relation;
 
 public class Model {	
 	public static void prepareDB(Sql2o sql2o) {
@@ -99,18 +104,32 @@ public class Model {
             	.executeUpdate());
 			
 			//create mappings table and add sample mappings
-			conn.createQuery("CREATE TABLE mappings (id uuid primary key,name varchar,author varchar,content clob,format clob);")
+			conn.createQuery("CREATE TABLE mappings (id uuid primary key,name varchar,author varchar,uri varchar,content clob,format clob);")
         		.executeUpdate();
+			String smarthomeEnvironmentContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("mappings/smarthome_environment.nt").getFile()));
+			List<Mapping> mappings = new ArrayList<Mapping>();
+			UUID sampleSmarthomeEnvironmentId = UUID.randomUUID();
+			mappings.add(new Mapping(sampleSmarthomeEnvironmentId,"smarthome_environment",adminName,"http://iot.soton.ac.uk/smarthome/environment#",smarthomeEnvironmentContent,null));
+			mappings.forEach((mapping) -> conn.createQuery("insert into mappings(id, name, author, uri, content,format) VALUES (:id, :name, :author, :uri, :content, :format)")
+            	.bind(mapping)
+            	.executeUpdate());
 			
 			//create mappings-data relations table and add sample relations
-			conn.createQuery("CREATE TABLE rel_mappings_data (mappingsId uuid,dataId uuid);")
+			conn.createQuery("CREATE TABLE rel_mappings_data (id1 uuid,id2 uuid);")
     			.executeUpdate();
+			List<Relation> relations = new ArrayList<Relation>();
+			relations.add(new Relation(sampleSmarthomeEnvironmentId,sampleStoreId));
+			relations.forEach((relation) -> conn.createQuery("insert into rel_mappings_data(id1, id2) VALUES (:id1, :id2)")
+	            	.bind(relation)
+	            	.executeUpdate());
 			
 			//create apps-data relations table and add sample relations
-			conn.createQuery("CREATE TABLE rel_apps_data (appId uuid,dataId uuid);")
+			conn.createQuery("CREATE TABLE rel_apps_data (id1 uuid,id2 uuid);")
     			.executeUpdate();
 			
 			conn.commit();
+		} catch (IOException e) {
+			e.printStackTrace();
 		}
 	}
 }

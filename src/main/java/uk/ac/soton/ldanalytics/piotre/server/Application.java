@@ -16,6 +16,8 @@ import uk.ac.soton.ldanalytics.piotre.server.data.DataController;
 import uk.ac.soton.ldanalytics.piotre.server.data.DataDao;
 import uk.ac.soton.ldanalytics.piotre.server.index.IndexController;
 import uk.ac.soton.ldanalytics.piotre.server.login.LoginController;
+import uk.ac.soton.ldanalytics.piotre.server.mapping.MappingController;
+import uk.ac.soton.ldanalytics.piotre.server.mapping.MappingDao;
 import uk.ac.soton.ldanalytics.piotre.server.model.Model;
 import uk.ac.soton.ldanalytics.piotre.server.user.UserDao;
 import uk.ac.soton.ldanalytics.piotre.server.util.Filters;
@@ -30,6 +32,7 @@ public class Application {
     public static UserDao userDao;
     public static DataDao dataDao;
     public static AppDao appDao;
+    public static MappingDao mappingDao;
 
     public static void main(String[] args) {
     	CommandLineOptions options = new CommandLineOptions();
@@ -43,6 +46,7 @@ public class Application {
         userDao = new UserDao();
         dataDao = new DataDao(sql2o);
         appDao = new AppDao(sql2o);
+        mappingDao = new MappingDao(sql2o);
 
         // Configure Spark
         port(4567);
@@ -62,6 +66,7 @@ public class Application {
         get(Path.Web.APPS,			AppController.fetchApps);
         get(Path.Web.APPS_ADD,		AppController.addApps);
         get(Path.Web.APP,			AppController.fetchApp);
+        get(Path.Web.MAPPINGS,		MappingController.fetchMappings);
         get(Path.Web.LOGIN,			LoginController.serveLoginPage);
         post(Path.Web.LOGIN,		LoginController.handleLoginPost);
         post(Path.Web.DATA_ADD,		DataController.handleAddDataPost);

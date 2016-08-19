@@ -9,6 +9,8 @@ public class Mapping {
     String uri;
     String content;
     String format;
+    String dataRelName;
+    String dataRelId;
 	public Mapping(UUID id, String name, String author, String uri) {
 		super();
 		this.id = id;
@@ -38,6 +40,12 @@ public class Mapping {
 	public void setFormat(String format) {
 		this.format = format;
 	}
+	public void setDataRelName(String dataRelName) {
+		this.dataRelName = dataRelName;
+	}
+	public void setDataRelId(String dataRelId) {
+		this.dataRelId = dataRelId;
+	}
 	public UUID getId() {
 		return id;
 	}
@@ -49,5 +57,11 @@ public class Mapping {
 	}
 	public String getUri() {
 		return uri;
+	}
+	public String getDataRelName() {
+		return dataRelName;
+	}
+	public String getDataRelId() {
+		return dataRelId;
 	}
 }

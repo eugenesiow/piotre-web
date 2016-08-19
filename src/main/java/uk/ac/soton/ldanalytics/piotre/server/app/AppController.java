@@ -26,12 +26,12 @@ public class AppController {
 		LoginController.ensureUserIsLoggedIn(request, response);
         if (clientAcceptsHtml(request)) {
             HashMap<String, Object> model = new HashMap<>();
-            model.put("apps", appDao.getAllData());
+            model.put("apps", appDao.getAllApps());
             model.put("displayTool", new DisplayTool());
             return ViewUtil.render(request, model, Path.Template.APPS, Path.PageNames.APPS);
         }
         if (clientAcceptsJson(request)) {
-            return dataToJson(appDao.getAllData());
+            return dataToJson(appDao.getAllApps());
         }
 		return ViewUtil.notAcceptable.handle(request, response);
 	};
