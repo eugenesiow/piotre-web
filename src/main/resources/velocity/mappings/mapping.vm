@@ -2,12 +2,100 @@
 #@mainLayout()
 <div class="container page-container">
 	<div class="row">
-		<div id="mapping-body">
+		<div class="col s12 tabs-container">
+			<ul class="tabs">
+				<li class="tab col s6"><a class="active" href="#editor">Editor</a></li>
+    			<li class="tab col s6"><a href="#source">Source</a></li>
+    			<li class="tab col s6"><a href="#metadata">Metadata</a></li>
+  			</ul>
+		</div>
+		<div id="editor" class="col s12">
+			<div id="mapping-body">
+			</div>
+			<div id="mapping-footer">
+				<a class="btn-floating btn-small grey modal-trigger" href="#addStatement">
+			      <i class="material-icons">add</i>
+			    </a>
+			</div>
+		</div>
+		<div id="source" class="col s12">
+			<form id="mappingSourceEditForm" class="col s12">
+				<textarea name="source-content" class="materialize-textarea">$mapping.getContent()</textarea>
+			</form>
+		</div>
+		<div id="metadata" class="col s12">
+			<form id="mappingMetadataEditForm" class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<input name="name" value="$mapping.getName()" type="text" class="validate" required>
+						<label for="name">Name</label>
+				  	</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input disabled value="$mapping.getAuthor()" type="text" class="validate">
+						<input type="hidden" name="author" value="$mapping.getAuthor()">
+						<label for="author">Author</label>
+				  	</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<input name="uri" value="$mapping.getUri()" type="text" class="validate" required>
+						<label for="uri">Name</label>
+				  	</div>
+				</div>
+			</form>
 		</div>
     </div>
 </div>
+<div id="addStatement" class="modal bottom-sheet">
+	<div class="modal-content">
+		<h4>Add a Statement</h4>
+		<ul class="collapsible popout" data-collapsible="accordion">
+	    	<li>
+		      <div class="collapsible-header active">Subject</div>
+		      <div class="collapsible-body">
+			      <div class="row">
+			        <div class="input-field col s6">
+						<select>
+					      <option value="" disabled selected>Choose Node Type</option>
+					      <option value="1">Blank Node</option>
+					      <option value="2">URI</option>
+					    </select>
+			        </div>
+			      </div>
+			   </div>
+		    </li>
+		    <li>
+		      <div class="collapsible-header">Predicate</div>
+		      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+		    </li>
+		    <li>
+		      <div class="collapsible-header">Object</div>
+		      <div class="collapsible-body">
+		      	<div class="row">
+			        <div class="input-field col s6">
+						<select>
+					      <option value="" disabled selected>Choose Node Type</option>
+					      <option value="1">Blank Node</option>
+					      <option value="2">URI</option>
+					      <option value="3">Literal</option>
+					      <option value="4">Binding</option>
+					    </select>
+			        </div>
+		      	</div>
+				</div>
+		    </li>
+		</ul>
+  	</div>
+  	<div class="modal-footer">
+    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Add</a>
+  	</div>
+</div>
 #end
 <script type="text/javascript">
+	$('.modal-trigger').leanModal();
+	$('select').material_select();
 	var mapping = $mappingJson;
 	loadMapping(mapping);
 	function loadMapping(mapping) {
@@ -22,10 +110,11 @@
 				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip"}).html(subjectVal));
 			}
 			previousVal = subjectVal;
-			var predicate = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip white"}).html(triples[i].p.val));
+			var predicate = $('<div>',{"class":"col s4"}).append("&#8594;").append($('<div>',{"class":"chip white"}).html(triples[i].p.val)).append("&#8594;");
 			var object = $('<div>',{"class":"col s3"}).append($('<div>',{"class":"chip grey white-text"}).html(triples[i].o.val));
 			var row = $('<div>',{"class":"row"}).append(subject).append(predicate).append(object);
 			$('#mapping-body').append(row);
 		}
 	}
+	
 </script>

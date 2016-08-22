@@ -117,3 +117,6 @@ a.button-collapse.top-nav {
 .hidden {
 	visibility: hidden;
 }
+.tabs-container {
+	margin-bottom: 20px;
+}

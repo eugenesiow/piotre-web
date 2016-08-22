@@ -13,6 +13,7 @@ public class Prefixes {
 			prefixes.put("http://www.w3.org/2006/time", "owl-time");
 			prefixes.put("http://purl.oclc.org/NET/ssnx/ssn", "ssn");
 			prefixes.put("http://www.w3.org/2001/XMLSchema#", "xsd");
+			prefixes.put("http://purl.oclc.org/NET/iot", "iot");
 			return prefixes;
 		}
 	}
