@@ -94,3 +94,12 @@ CREATE TABLE data (id uuid primary key,name varchar,author varchar, description 
 2016-08-19 22:12:29 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
 CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-22 12:53:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-22 14:08:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]
+2016-08-22 15:10:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "DATA" already exists; SQL statement:
+CREATE TABLE data (id uuid primary key,name varchar,author varchar, description varchar, type varchar); [42101-192]

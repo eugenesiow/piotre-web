@@ -15,6 +15,7 @@ import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
 import org.apache.jena.riot.Lang;
 import org.apache.jena.riot.RDFDataMgr;
+import org.json.JSONArray;
 import org.json.JSONObject;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -56,16 +57,22 @@ public class MappingDao {
 		uriReference.putAll(Prefixes.Common.getMap());
 		
 		JSONObject mappingJson = new JSONObject();
+		JSONArray triples = new JSONArray();
 		Model model = ModelFactory.createDefaultModel();
 		RDFDataMgr.read(model, IOUtils.toInputStream(content), Lang.NTRIPLES);
 		StmtIterator stmts = model.listStatements();
 		while(stmts.hasNext()) {
+			JSONObject triple = new JSONObject();
 			Statement st = stmts.next();
 			JSONObject s = convertSubject(st.getSubject(),bNodeReference,uriReference);
 			JSONObject p = convertPredicate(st.getPredicate(),uriReference);
 			JSONObject o = convertObject(st.getObject(),bNodeReference,uriReference);
-			System.out.println(s + ", "+p+","+o);
+			triple.put("s", s);
+			triple.put("p", p);
+			triple.put("o", o);
+			triples.put(triple);
 		}
+		mappingJson.put("content", triples);
 		return mappingJson.toString();
 	}
 

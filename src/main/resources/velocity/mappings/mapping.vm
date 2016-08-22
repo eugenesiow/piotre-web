@@ -2,6 +2,30 @@
 #@mainLayout()
 <div class="container page-container">
 	<div class="row">
+		<div id="mapping-body">
+		</div>
     </div>
 </div>
 #end
+<script type="text/javascript">
+	var mapping = $mappingJson;
+	loadMapping(mapping);
+	function loadMapping(mapping) {
+		var triples = mapping.content;
+		var previousVal = "";
+		for(i in triples) {
+			var subjectVal = triples[i].s.val;
+			if(subjectVal==previousVal) {
+				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip hidden"}).html(subjectVal));
+			}
+			else {
+				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip"}).html(subjectVal));
+			}
+			previousVal = subjectVal;
+			var predicate = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip white"}).html(triples[i].p.val));
+			var object = $('<div>',{"class":"col s3"}).append($('<div>',{"class":"chip grey white-text"}).html(triples[i].o.val));
+			var row = $('<div>',{"class":"row"}).append(subject).append(predicate).append(object);
+			$('#mapping-body').append(row);
+		}
+	}
+</script>

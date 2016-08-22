@@ -114,3 +114,6 @@ a.button-collapse.top-nav {
 .vcenter {
 	vertical-align: sub;
 }
+.hidden {
+	visibility: hidden;
+}
