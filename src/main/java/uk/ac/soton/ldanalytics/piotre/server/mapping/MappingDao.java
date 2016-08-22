@@ -1,6 +1,7 @@
 package uk.ac.soton.ldanalytics.piotre.server.mapping;
 
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -24,6 +25,7 @@ import uk.ac.soton.ldanalytics.piotre.server.util.Prefixes;
 
 public class MappingDao {
 	final String baseUri = "http://iot.soton.ac.uk/";
+	final String CLASS_URI = "rdf:type";
 	
 	private Sql2o sql2o;
 	
@@ -54,6 +56,7 @@ public class MappingDao {
 	public String convertMappingContent(String content) {
 		Map<String,Integer> bNodeReference = new HashMap<String,Integer>();
 		Map<String,String> uriReference = new HashMap<String,String>();
+		Map<String,JSONObject> classSimplification = new HashMap<String,JSONObject>();
 		uriReference.putAll(Prefixes.Common.getMap());
 		
 		JSONObject mappingJson = new JSONObject();
@@ -70,10 +73,33 @@ public class MappingDao {
 			triple.put("s", s);
 			triple.put("p", p);
 			triple.put("o", o);
-			triples.put(triple);
+			if(p.getString("val").equals(CLASS_URI)) {
+				addClassSimplification(classSimplification,s,o);
+			} else {
+				triples.put(triple);
+			}
 		}
-		mappingJson.put("content", triples);
+		JSONArray newTriples = new JSONArray();
+		for (Object triple:triples) {
+			JSONObject obj = (JSONObject) triple;
+		    JSONObject sReplace = classSimplification.get(obj.getJSONObject("s").getString("val"));
+		    JSONObject oReplace = classSimplification.get(obj.getJSONObject("o").getString("val"));
+		    if(sReplace!=null) {
+		    	obj.put("s", sReplace);
+//		    	System.out.println(sReplace.toString());
+		    }
+		    if(oReplace!=null) {
+		    	obj.put("o", oReplace);
+		    }
+		    newTriples.put(obj);
+		}
+		mappingJson.put("content", newTriples);
 		return mappingJson.toString();
+	}
+
+	private void addClassSimplification(Map<String, JSONObject> classSimplification, JSONObject s, JSONObject o) {
+		s.put("sem_class", o.getString("val"));
+		classSimplification.put(s.getString("val"), s);
 	}
 
 	private JSONObject convertObject(RDFNode object,

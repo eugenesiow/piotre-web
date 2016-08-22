@@ -48,7 +48,7 @@
 		</div>
     </div>
 </div>
-<div id="addStatement" class="modal bottom-sheet">
+<div id="addStatement" class="modal">
 	<div class="modal-content">
 		<h4>Add a Statement</h4>
 		<ul class="collapsible popout" data-collapsible="accordion">
@@ -102,16 +102,30 @@
 		var triples = mapping.content;
 		var previousVal = "";
 		for(i in triples) {
+			color = "";
 			var subjectVal = triples[i].s.val;
+			if(typeof triples[i].s.sem_class != "undefined") {
+				subjectVal = triples[i].s.sem_class; 
+				color = "black white-text";
+			}
 			if(subjectVal==previousVal) {
-				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip hidden"}).html(subjectVal));
+				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip hidden "+color}).html(subjectVal));
 			}
 			else {
-				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip"}).html(subjectVal));
+				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip "+color}).html(subjectVal));
 			}
 			previousVal = subjectVal;
 			var predicate = $('<div>',{"class":"col s4"}).append("&#8594;").append($('<div>',{"class":"chip white"}).html(triples[i].p.val)).append("&#8594;");
-			var object = $('<div>',{"class":"col s3"}).append($('<div>',{"class":"chip grey white-text"}).html(triples[i].o.val));
+			var objVal = triples[i].o.val;
+			color = "grey";
+			if(typeof triples[i].o.sem_class != "undefined") {
+				objVal = triples[i].o.sem_class;
+				color = "black white-text"; 
+			}
+			if(triples[i].o.type == "binding") {
+				color = "grey darken-1";
+			}
+			var object = $('<div>',{"class":"col s3"}).append($('<div>',{"class":"chip "+color+" white-text"}).html(objVal));
 			var row = $('<div>',{"class":"row"}).append(subject).append(predicate).append(object);
 			$('#mapping-body').append(row);
 		}
