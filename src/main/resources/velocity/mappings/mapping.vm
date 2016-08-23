@@ -13,7 +13,7 @@
 			<div id="mapping-body">
 			</div>
 			<div id="mapping-footer">
-				<a class="btn-floating btn-small grey modal-trigger" href="#addStatement">
+				<a id="addStatementBtn" class="btn-floating btn-small grey" href="#">
 			      <i class="material-icons">add</i>
 			    </a>
 			</div>
@@ -48,54 +48,10 @@
 		</div>
     </div>
 </div>
-<div id="addStatement" class="modal">
-	<div class="modal-content">
-		<h4>Add a Statement</h4>
-		<ul class="collapsible popout" data-collapsible="accordion">
-	    	<li>
-		      <div class="collapsible-header active">Subject</div>
-		      <div class="collapsible-body">
-			      <div class="row">
-			        <div class="input-field col s6">
-						<select>
-					      <option value="" disabled selected>Choose Node Type</option>
-					      <option value="1">Blank Node</option>
-					      <option value="2">URI</option>
-					    </select>
-			        </div>
-			      </div>
-			   </div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header">Predicate</div>
-		      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
-		    </li>
-		    <li>
-		      <div class="collapsible-header">Object</div>
-		      <div class="collapsible-body">
-		      	<div class="row">
-			        <div class="input-field col s6">
-						<select>
-					      <option value="" disabled selected>Choose Node Type</option>
-					      <option value="1">Blank Node</option>
-					      <option value="2">URI</option>
-					      <option value="3">Literal</option>
-					      <option value="4">Binding</option>
-					    </select>
-			        </div>
-		      	</div>
-				</div>
-		    </li>
-		</ul>
-  	</div>
-  	<div class="modal-footer">
-    	<a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Add</a>
-  	</div>
-</div>
 #end
 <script type="text/javascript">
-	$('.modal-trigger').leanModal();
 	$('select').material_select();
+	$('#addStatementBtn').click(addStatement);
 	var mapping = $mappingJson;
 	loadMapping(mapping);
 	function loadMapping(mapping) {
@@ -109,26 +65,60 @@
 				color = "black white-text";
 			}
 			if(subjectVal==previousVal) {
-				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip hidden "+color}).html(subjectVal));
+				var subject = $('<div>',{"class":"col s4 scol"}).append($('<div>',{"class":"chip hidden "+color}).html(subjectVal));
 			}
 			else {
-				var subject = $('<div>',{"class":"col s4"}).append($('<div>',{"class":"chip "+color}).html(subjectVal));
+				var subject = $('<div>',{"class":"col s4 scol"}).append($('<div>',{"class":"chip "+color}).html(subjectVal));
 			}
 			previousVal = subjectVal;
-			var predicate = $('<div>',{"class":"col s4"}).append("&#8594;").append($('<div>',{"class":"chip white"}).html(triples[i].p.val)).append("&#8594;");
+			var predicate = $('<div>',{"class":"col s4 pcol"}).append("&#8594;").append($('<div>',{"class":"chip white"}).html(triples[i].p.val)).append("&#8594;");
 			var objVal = triples[i].o.val;
 			color = "grey";
+			var icon = "";
 			if(typeof triples[i].o.sem_class != "undefined") {
 				objVal = triples[i].o.sem_class;
 				color = "black white-text"; 
 			}
 			if(triples[i].o.type == "binding") {
 				color = "grey darken-1";
+				icon = "<i class='chip-icon material-icons'>view_module</i>";
 			}
-			var object = $('<div>',{"class":"col s3"}).append($('<div>',{"class":"chip "+color+" white-text"}).html(objVal));
+			var object = $('<div>',{"class":"col s4 ocol"}).append($('<div>',{"class":"chip "+color+" white-text"}).html(objVal+icon));
 			var row = $('<div>',{"class":"row"}).append(subject).append(predicate).append(object);
 			$('#mapping-body').append(row);
 		}
 	}
-	
+	function addStatement() {
+		var stRow = $('<div>',{class:"row"});
+		var sCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("s")));
+		var pCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("p")));
+		var oCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("o")));
+		stRow.append($("<div>", {class:"col s4"}).append(sCard));
+		stRow.append($("<div>", {class:"col s4"}).append(pCard));
+		stRow.append($("<div>", {class:"col s4"}).append(oCard));
+		$('#mapping-body').append(stRow);
+		initialiseAutocomplete();
+	}
+	function initialiseAutocomplete() {
+		$('input.p-uri-autocomplete').autocomplete({
+		  data: {
+		    "Apple": null,
+		    "Microsoft": null,
+		    "Google": null
+		  }
+		});
+	}
+	function createCard(cardType) {
+		var cardContent = $('<div>',{class:"card-content"});
+		if(cardType=="p") {
+			cardContent.append(createUriBox());
+		}
+		var cardAction = $('<div>',{class:"card-action"}).append($('<a>',{href:"#"}).html('Done'));
+		var card = $('<div>',{class:"card"}).append(cardContent).append(cardAction);
+		return card;
+	}
+	function createUriBox() {
+		var box = $('<input>',{class:"autocomplete p-uri-autocomplete",type:"text",placeholder:"URI or Prefix & URI"});
+		return $('<div>',{class:"row"}).append($('<div>',{class:"input-field col s12"}).append(box));
+	}
 </script>
