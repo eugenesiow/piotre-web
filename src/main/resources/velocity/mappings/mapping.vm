@@ -93,32 +93,68 @@
 		var sCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("s")));
 		var pCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("p")));
 		var oCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("o")));
-		stRow.append($("<div>", {class:"col s4"}).append(sCard));
-		stRow.append($("<div>", {class:"col s4"}).append(pCard));
-		stRow.append($("<div>", {class:"col s4"}).append(oCard));
+		stRow.append($("<div>", {class:"col s4 scol"}).append(sCard));
+		stRow.append($("<div>", {class:"col s4 pcol"}).append(pCard));
+		stRow.append($("<div>", {class:"col s4 ocol"}).append(oCard));
 		$('#mapping-body').append(stRow);
 		initialiseAutocomplete();
+		$('select').material_select();
 	}
 	function initialiseAutocomplete() {
+		var predicates = JSON.parse(JSON.stringify(mapping.predicates)); //clone object
+		for(i in predicates) { //prepare predicates
+			predicates[i] = null;
+		}
 		$('input.p-uri-autocomplete').autocomplete({
-		  data: {
-		    "Apple": null,
-		    "Microsoft": null,
-		    "Google": null
-		  }
+		  data: predicates
 		});
 	}
 	function createCard(cardType) {
 		var cardContent = $('<div>',{class:"card-content"});
+		var doneBtn = $('<a>',{href:"#"+cardType}).html('Done');
 		if(cardType=="p") {
-			cardContent.append(createUriBox());
+			cardContent.append(createUriBox("p-uri-autocomplete"));
+		} else {
+			cardContent.append(createSelection(cardType));
+			cardContent.append(createUriBox("uri"));
 		}
-		var cardAction = $('<div>',{class:"card-action"}).append($('<a>',{href:"#"}).html('Done'));
+		doneBtn.click(doneClick);
+		var cardAction = $('<div>',{class:"card-action close"}).append(doneBtn);
 		var card = $('<div>',{class:"card"}).append(cardContent).append(cardAction);
 		return card;
 	}
-	function createUriBox() {
-		var box = $('<input>',{class:"autocomplete p-uri-autocomplete",type:"text",placeholder:"URI or Prefix & URI"});
+	function doneClick() {
+		var cardType = $(this).attr('href').slice(1); //remove #
+		var col = $(this).parent().parent().parent().parent().parent();
+		var autocomplete = col.find('.autocomplete');
+		var value = autocomplete.val();
+		var sel = col.find('select').val();
+		if(value!="") {
+			col.html('');
+			if(cardType=="p") {
+				var chip = $('<div>',{"class":"chip white"}).html(value).data('raw',mapping.predicates[value]);
+				col.append("&#8594;").append(chip).append("&#8594;");
+			} else {
+				if(sel=="uri") {
+					var chip = $('<div>',{"class":"chip grey white-text"}).html(value);
+					col.append(chip);
+				}				
+			}
+		}
+	}
+	function createSelection(cardType) {
+		var select = $('<select>',{class:cardType+"-select"}).append('<option value="" disabled>Choose a Node Type</option>');
+		select.append('<option value="bnode_class">Blank Node with Class</option>');
+		select.append('<option value="bnode_exist">Existing Blank Node</option>');
+		select.append('<option value="uri" selected>URI</option>');
+		if(cardType=="o") {
+			select.append('<option value="literal">Literal</option>');
+			select.append('<option value="binding">Binding</option>');
+		}
+		return $('<div>',{class:"row"}).append($('<div>',{class:"input-field col s12"}).append(select));
+	}
+	function createUriBox(class_name) {
+		var box = $('<input>',{class:"autocomplete "+class_name,type:"text",placeholder:"URI or Prefix & URI"});
 		return $('<div>',{class:"row"}).append($('<div>',{class:"input-field col s12"}).append(box));
 	}
 </script>

@@ -59,6 +59,7 @@ public class MappingDao {
 		Map<String,JSONObject> classSimplification = new HashMap<String,JSONObject>();
 		uriReference.putAll(Prefixes.Common.getMap());
 		
+		JSONObject predicates = new JSONObject();
 		JSONObject mappingJson = new JSONObject();
 		JSONArray triples = new JSONArray();
 		Model model = ModelFactory.createDefaultModel();
@@ -72,6 +73,7 @@ public class MappingDao {
 			JSONObject o = convertObject(st.getObject(),bNodeReference,uriReference);
 			triple.put("s", s);
 			triple.put("p", p);
+			predicates.put(p.getString("val"),p.get("raw"));
 			triple.put("o", o);
 			if(p.getString("val").equals(CLASS_URI)) {
 				addClassSimplification(classSimplification,s,o);
@@ -94,6 +96,7 @@ public class MappingDao {
 		    newTriples.put(obj);
 		}
 		mappingJson.put("content", newTriples);
+		mappingJson.put("predicates", predicates);
 		return mappingJson.toString();
 	}
 
@@ -153,6 +156,7 @@ public class MappingDao {
 	private JSONObject resolvePrefix(String string, Map<String, String> uriReference) {
 		JSONObject node = new JSONObject(); 
 		node.put("type", "uri");
+		node.put("raw", string);
 		// extract prefix
 		String[] parts = string.split("#");
 		if(parts.length>1) {
