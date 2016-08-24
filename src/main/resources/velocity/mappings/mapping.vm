@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="/css/codemirror.css">
 #parse("/velocity/layout.vm")
 #@mainLayout()
 <div class="container page-container">
@@ -20,7 +21,7 @@
 		</div>
 		<div id="source" class="col s12">
 			<form id="mappingSourceEditForm" class="col s12">
-				<textarea name="source-content" class="materialize-textarea">$mapping.getContent()</textarea>
+				<textarea id="code" name="source-content">$mapping.getContent()</textarea>
 			</form>
 		</div>
 		<div id="metadata" class="col s12">
@@ -49,11 +50,16 @@
     </div>
 </div>
 #end
+<script src="/js/codemirror-compressed.js"></script>
 <script type="text/javascript">
 	$('select').material_select();
 	$('#addStatementBtn').click(addStatement);
 	var mapping = $mappingJson;
 	loadMapping(mapping);
+	var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+	    mode: "ntriples",
+	    viewportMargin: Infinity
+	});
 	function loadMapping(mapping) {
 		var triples = mapping.content;
 		var previousVal = "";
@@ -151,10 +157,10 @@
 			select.append('<option value="literal">Literal</option>');
 			select.append('<option value="binding">Binding</option>');
 		}
-		return $('<div>',{class:"row"}).append($('<div>',{class:"input-field col s12"}).append(select));
+		return $('<p>').append(select);
 	}
 	function createUriBox(class_name) {
 		var box = $('<input>',{class:"autocomplete "+class_name,type:"text",placeholder:"URI or Prefix & URI"});
-		return $('<div>',{class:"row"}).append($('<div>',{class:"input-field col s12"}).append(box));
+		return $('<p>').append(box);
 	}
 </script>

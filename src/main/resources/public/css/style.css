@@ -127,3 +127,6 @@ a.button-collapse.top-nav {
     line-height: 32px;
     padding-left: 8px;
 }
+.CodeMirror {
+  height: auto;
+}
