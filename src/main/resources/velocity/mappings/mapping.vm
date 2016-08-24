@@ -90,9 +90,16 @@
 				icon = "<i class='chip-icon material-icons'>view_module</i>";
 			}
 			var object = $('<div>',{"class":"col s4 ocol"}).append($('<div>',{"class":"chip "+color+" white-text"}).html(objVal+icon));
-			var row = $('<div>',{"class":"row"}).append(subject).append(predicate).append(object);
+			var row = $('<div>',{"class":"row add-btn"}).append(subject).append(predicate).append(object);
 			$('#mapping-body').append(row);
 		}
+		$('.add-btn').hover(function() {
+			var btn = $('<a>', {class:"btn-floating grey btn-add",href:"#"}).append('<i class="material-icons">add</i>');
+			$(this).children().last().append(btn);
+		},
+		function() {
+			$(this).children().last().find('.btn-add').remove();
+		});
 	}
 	function addStatement() {
 		var stRow = $('<div>',{class:"row"});
@@ -103,16 +110,25 @@
 		stRow.append($("<div>", {class:"col s4 pcol"}).append(pCard));
 		stRow.append($("<div>", {class:"col s4 ocol"}).append(oCard));
 		$('#mapping-body').append(stRow);
-		initialiseAutocomplete();
+		initialiseAutocomplete('p-uri-autocomplete');
 		$('select').material_select();
 	}
-	function initialiseAutocomplete() {
-		var predicates = JSON.parse(JSON.stringify(mapping.predicates)); //clone object
-		for(i in predicates) { //prepare predicates
-			predicates[i] = null;
+	function initialiseAutocomplete(atype) {
+		$('input.'+atype).each(function() { //remove any existing dropdowns 
+			$(this).next().remove();
+		});
+		var dataMap = null;
+		if(atype=="p-uri-autocomplete") {
+			dataMap = JSON.parse(JSON.stringify(mapping.predicates)); //clone object
 		}
-		$('input.p-uri-autocomplete').autocomplete({
-		  data: predicates
+		if(atype=="bnode_class") {
+			dataMap = JSON.parse(JSON.stringify(mapping.classes)); //clone object;
+		}
+		for(i in dataMap) {	//prepare the datamap
+			dataMap[i] = null;
+		}
+		$('input.'+atype).autocomplete({
+		  data: dataMap
 		});
 	}
 	function createCard(cardType) {
@@ -144,19 +160,36 @@
 				if(sel=="uri") {
 					var chip = $('<div>',{"class":"chip grey white-text"}).html(value);
 					col.append(chip);
-				}				
+				} else if(sel=="bnode_class") {
+					var chip = $('<div>',{"class":"chip black white-text"}).html(value);
+					col.append(chip);
+				} else if(sel=="binding") {
+					var chip = $('<div>',{"class":"chip grey darken-1 white-text"}).html(value+"<i class='chip-icon material-icons'>view_module</i>");
+					col.append(chip);
+				}					
 			}
 		}
 	}
 	function createSelection(cardType) {
 		var select = $('<select>',{class:cardType+"-select"}).append('<option value="" disabled>Choose a Node Type</option>');
 		select.append('<option value="bnode_class">Blank Node with Class</option>');
-		select.append('<option value="bnode_exist">Existing Blank Node</option>');
 		select.append('<option value="uri" selected>URI</option>');
 		if(cardType=="o") {
 			select.append('<option value="literal">Literal</option>');
 			select.append('<option value="binding">Binding</option>');
 		}
+		select.change(function() {
+			var placeHolder = {"uri":"URI or Prefix & URI",
+								"bnode_class":"Class Name",
+								"literal":"Literal Value",
+								"binding":"table.column from Store"};
+			var newVal = $(this).val();
+			var inputBox = $(this).parent().parent().next().find('input');
+			inputBox.attr('class','autocomplete '+newVal);
+			inputBox.attr('placeholder',placeHolder[newVal]);
+			inputBox.val('');
+			initialiseAutocomplete(newVal);
+		});
 		return $('<p>').append(select);
 	}
 	function createUriBox(class_name) {

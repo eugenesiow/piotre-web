@@ -130,3 +130,11 @@ a.button-collapse.top-nav {
 .CodeMirror {
   height: auto;
 }
+.btn-add {
+	width:32px;
+	height:32px;
+}
+.btn-add i{
+	font-size:1em;
+	line-height:34px;
+}

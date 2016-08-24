@@ -59,6 +59,7 @@ public class MappingDao {
 		uriReference.putAll(Prefixes.Common.getMap());
 		
 		JSONObject predicates = new JSONObject();
+		JSONObject classes = new JSONObject();
 		JSONObject mappingJson = new JSONObject();
 		JSONArray triples = new JSONArray();
 		Model model = ModelFactory.createDefaultModel();
@@ -72,9 +73,10 @@ public class MappingDao {
 			JSONObject o = convertObject(st.getObject(),bNodeReference,uriReference);
 			triple.put("s", s);
 			triple.put("p", p);
-			predicates.put(p.getString("val"),p.get("raw"));
+			predicates.put(p.getString("val"),p.getString("raw"));
 			triple.put("o", o);
 			if(p.getString("val").equals(CLASS_URI)) {
+				classes.put(o.getString("val"),o.getString("raw"));
 				addClassSimplification(classSimplification,s,o);
 			} else {
 				triples.put(triple);
@@ -96,6 +98,7 @@ public class MappingDao {
 		}
 		mappingJson.put("content", newTriples);
 		mappingJson.put("predicates", predicates);
+		mappingJson.put("classes", classes);
 		return mappingJson.toString();
 	}
 
