@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="/css/codemirror.css">
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<nav class="top-nav">
+	<div class="container">
+  		<div class="nav-wrapper"><a class="page-title">SPARQL Query</a></div>
+    </div>
+</nav>
+<div class="container page-container">
+	<div class="row">
+    	<form id="querySparqlForm" class="col s12">
+			<textarea id="code" name="source-content">
+PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX iotsn: <http://iot.soton.ac.uk/smarthome/sensor#>
+PREFIX iot: <http://purl.oclc.org/NET/iot#>
+
+SELECT (avg(?val) as ?sval) ?hours
+WHERE {
+  ?instant time:inXSDDateTime ?date.
+  ?obs ssn:observationSamplingTime ?instant;
+  	ssn:observedBy iotsn:environmental1;
+    ssn:observationResult ?snout.
+  ?snout ssn:hasValue ?obsval.
+  ?obsval a iot:{type};
+    iot:hasQuantityValue ?val.
+  FILTER (?date > "{startDate}"^^xsd:dateTime && ?date < "{endDate}"^^xsd:dateTime)
+} GROUP BY (hours(xsd:dateTime(?date)) as ?hours)
+			</textarea>
+		</form>
+    </div>
+</div>
+#end
+<script src="/js/codemirror-compressed.js"></script>
+<script type="text/javascript">
+	var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+	    mode: "sparql",
+	    viewportMargin: Infinity
+	});
+</script>

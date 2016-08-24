@@ -19,6 +19,7 @@ import uk.ac.soton.ldanalytics.piotre.server.login.LoginController;
 import uk.ac.soton.ldanalytics.piotre.server.mapping.MappingController;
 import uk.ac.soton.ldanalytics.piotre.server.mapping.MappingDao;
 import uk.ac.soton.ldanalytics.piotre.server.model.Model;
+import uk.ac.soton.ldanalytics.piotre.server.query.QueryController;
 import uk.ac.soton.ldanalytics.piotre.server.user.UserDao;
 import uk.ac.soton.ldanalytics.piotre.server.util.Filters;
 import uk.ac.soton.ldanalytics.piotre.server.util.Path;
@@ -66,6 +67,8 @@ public class Application {
         get(Path.Web.APPS,			AppController.fetchApps);
         get(Path.Web.APPS_ADD,		AppController.addApps);
         get(Path.Web.APP,			AppController.fetchApp);
+        get(Path.Web.QUERY_STORE,	QueryController.serveQueryStorePage);
+        get(Path.Web.QUERY_STREAM,	QueryController.serveQueryStreamPage);
         get(Path.Web.MAPPINGS,		MappingController.fetchMappings);
         get(Path.Web.MAPPING,		MappingController.editMapping);
         get(Path.Web.LOGIN,			LoginController.serveLoginPage);
