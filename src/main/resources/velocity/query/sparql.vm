@@ -11,14 +11,17 @@
     	<form id="querySparqlForm" class="col s12">
     		<div class="row">
     			<div class="input-field col s12">
-    				<select>
+    				<select id="dataSourceSel">
     					<option value="" disabled selected>Choose Data Source to Query</option>
+    					#set ($count=0)
     					#foreach($dataItem in $data)
     						#if($dataItem.getType()=="STORE" ||$dataItem.getType()=="HISTORICAL")
-    							<option value="$dataItem.getId()">$dataItem.getName()</option>
+    							<option #if($count==0) selected #end value="$dataItem.getId()">$dataItem.getName()</option>
 			      			#end
+			      			#set ($count=$count+1)
 			      		#end
 			    	</select>
+			    	<label>Query</label>
 			  	</div>
 			</div>
 			<div class="row">
@@ -45,7 +48,7 @@ WHERE {
 		</form>
     </div>
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    	<a class="btn-floating btn-large red tooltipped" data-position="left" data-tooltip="Execute Query"><i class="large material-icons">play_arrow</i></a>
+    	<a id="submitQuery" class="btn-floating btn-large red tooltipped" data-position="left" data-tooltip="Execute Query"><i class="large material-icons">play_arrow</i></a>
     </div>
 </div>
 #end
@@ -56,4 +59,9 @@ WHERE {
 	    mode: "sparql",
 	    viewportMargin: Infinity
 	});
+	$('#submitQuery').click(submitQuery);
+	function submitQuery() {
+		$(this).html('<div class="preloader-wrapper small active"><div class="spinner-layer spinner-yellow-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
+		$(this).css('padding-top','9px');
+	}
 </script>
