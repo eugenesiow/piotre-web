@@ -49,6 +49,14 @@
 		</div>
     </div>
 </div>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+	<a class="btn-floating btn-large red">
+  		<i class="large material-icons">menu</i>
+	</a>
+	<ul>
+		<li><a class="btn-floating blue"><i class="material-icons">save</i></a></li>
+    </ul>
+</div>
 #end
 <script src="/js/codemirror-compressed.js"></script>
 <script type="text/javascript">
@@ -93,16 +101,37 @@
 			var row = $('<div>',{"class":"row add-btn"}).append(subject).append(predicate).append(object);
 			$('#mapping-body').append(row);
 		}
+		initialiseAddBtn();
+	}
+	function initialiseAddBtn() {
 		$('.add-btn').hover(function() {
-			var btn = $('<a>', {class:"btn-floating grey btn-add",href:"#"}).append('<i class="material-icons">add</i>');
-			$(this).children().last().append(btn);
+			var lastCol = $(this).children().last();
+			if(lastCol.find('.btn-add').length==0) {
+				var btn = $('<a>', {class:"btn-floating grey btn-add",href:"#"}).append('<i class="material-icons">add</i>');
+				lastCol.append(btn);
+				btn.click(addToSubject);
+			}
 		},
 		function() {
 			$(this).children().last().find('.btn-add').remove();
 		});
 	}
+	function addToSubject() {
+		var parentRow = $(this).parent().parent();
+		var subject = $(this).parent().prev().prev().find('.chip').clone().addClass('hidden');
+		var stRow = $('<div>',{class:"row add-btn"});
+		var pCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("p")));
+		var oCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("o")));
+		stRow.append($("<div>", {class:"col s4 scol"}).append(subject));
+		stRow.append($("<div>", {class:"col s4 pcol"}).append(pCard));
+		stRow.append($("<div>", {class:"col s4 ocol"}).append(oCard));
+		parentRow.after(stRow);	
+		initialiseAutocomplete('p-uri-autocomplete');
+		$('select').material_select();	
+		initialiseAddBtn();
+	}
 	function addStatement() {
-		var stRow = $('<div>',{class:"row"});
+		var stRow = $('<div>',{class:"row add-btn"});
 		var sCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("s")));
 		var pCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("p")));
 		var oCard = $('<div>',{class:"row"}).append($("<div>", {class:"col s12"}).append(createCard("o")));
@@ -112,6 +141,7 @@
 		$('#mapping-body').append(stRow);
 		initialiseAutocomplete('p-uri-autocomplete');
 		$('select').material_select();
+		initialiseAddBtn();
 	}
 	function initialiseAutocomplete(atype) {
 		$('input.'+atype).each(function() { //remove any existing dropdowns 
