@@ -82,9 +82,9 @@ public class Model {
 			
 			//create sample metadata for the data
 			List<MetadataItem> metadata = new ArrayList<MetadataItem>();
-			metadata.add(new MetadataItem(sampleStoreId,"jdbc_url","jdbc:postgresql://localhost:5432/sample"));
+			metadata.add(new MetadataItem(sampleStoreId,"jdbc_url","jdbc:h2:./smarthome"));
 			metadata.add(new MetadataItem(sampleStoreId,"username","sa"));
-			metadata.add(new MetadataItem(sampleStoreId,"password","pgsample"));
+			metadata.add(new MetadataItem(sampleStoreId,"password",""));
 			metadata.add(new MetadataItem(sampleStreamId,"stream_uri","http://www.cwi.nl/SRBench/observations"));
 			metadata.forEach((metadatum) -> conn.createQuery("insert into metadata(itemId, name, data) VALUES (:itemId, :name, :data)")
 	            	.bind(metadatum)

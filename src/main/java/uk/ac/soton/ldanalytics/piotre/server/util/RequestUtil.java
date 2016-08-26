@@ -23,6 +23,14 @@ public class RequestUtil {
         return request.queryParams("type");
     }
     
+    public static String getQueryId(Request request) {
+        return request.queryParams("id");
+    }
+    
+    public static String getQueryQuery(Request request) {
+        return request.queryParams("query");
+    }
+    
     public static String getQueryName(Request request) {
         return request.queryParams("name");
     }
