@@ -61,12 +61,20 @@ WHERE {
 	});
 	$('#submitQuery').click(submitQuery);
 	function submitQuery() {
-		$(this).html('<div class="preloader-wrapper small active"><div class="spinner-layer spinner-yellow-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>');
-		$(this).css('padding-top','9px');
+		$(this).html('<div class="preloader-wrapper small active"><div class="spinner-layer spinner-yellow-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>')
+			.css('padding-top','9px');
 		var dataId = $('#dataSourceSel').val();
 		var query = $('#code').val();
 		$.post( "$WebPath.getQUERY()", { 'id':dataId, 'query':query }, function( data ) {
-			
+			$('#submitQuery').html('<i class="large material-icons">play_arrow</i>')
+				.css('padding-top','0px');
+			if(data==null) {
+				Materialize.toast('Error!', 2000);
+			} else {
+				if(data.errorMessage!=null) {
+					Materialize.toast(data.errorMessage, 6000);
+				}
+			}
 		}, "json");
 	}
 </script>

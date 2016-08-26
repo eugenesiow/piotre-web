@@ -1,4 +1,10 @@
 # Created by https://www.gitignore.io
+smarthome.mv.db
+smarthome.trace.db
+db.mv.db
+db.trace.db
+velocity.log
+logging.log
 
 ### Windows ###
 # Windows image file caches
@@ -131,3 +137,5 @@ gradle-app.setting
 
 # # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
 # gradle/wrapper/gradle-wrapper.properties
+*.db
+logging.log

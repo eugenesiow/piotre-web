@@ -45,7 +45,10 @@ public class QueryDao {
 			//DB connection
 	    	Sql2o querySql2o = new Sql2o(metadata.get("jdbc_url"), metadata.get("username"), metadata.get("password"));
 	    	try (Connection conn = querySql2o.open()) {
-	    		new ResultsSet(conn.createQuery(v.getSQL()).executeAndFetchTable().asList());
+	    		return new ResultsSet(conn.createQuery(v.getSQL()).executeAndFetchTable().asList());
+	        } catch(Exception e) {
+	        	e.printStackTrace();
+	        	return new ResultsSet(e.getMessage());
 	        }
 		} catch(Exception e) {
 			e.printStackTrace();
