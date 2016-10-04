@@ -1,7 +1,17 @@
 package uk.ac.soton.ldanalytics.piotre.server.util;
 
-import com.fasterxml.jackson.databind.*;
-import java.io.*;
+import java.io.IOException;
+import java.io.StringWriter;
+import java.util.Map;
+import java.util.Map.Entry;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import uk.ac.soton.ldanalytics.piotre.server.query.ResultsSet;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 
 public class JsonUtil {
     public static String dataToJson(Object data) {
@@ -14,5 +24,24 @@ public class JsonUtil {
         } catch (IOException e) {
             throw new RuntimeException("IOEXception while mapping object (" + data + ") to JSON");
         }
+    }
+    
+    public static String resultSetToJson(ResultsSet results) {
+    	JSONObject resultSet = new JSONObject();
+    	JSONArray header = new JSONArray();
+    	for(String resultHead:results.getHeader()) {
+    		header.put(resultHead);
+    	}
+    	resultSet.put("header", header);
+    	JSONArray resultsArr = new JSONArray();
+    	for(Map<String, Object> result:results.getResults()) {
+    		JSONObject resultObj = new JSONObject();
+    		for(String resultHead:results.getHeader()) {
+    			resultObj.put(resultHead, result.get(resultHead));
+        	}
+    		resultsArr.put(resultObj);
+    	}
+    	resultSet.put("data", resultsArr);
+		return resultSet.toString();
     }
 }

@@ -2,7 +2,7 @@ package uk.ac.soton.ldanalytics.piotre.server.query;
 
 import static uk.ac.soton.ldanalytics.piotre.server.Application.dataDao;
 import static uk.ac.soton.ldanalytics.piotre.server.Application.queryDao;
-import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.dataToJson;
+import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.resultSetToJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryQuery;
@@ -39,7 +39,7 @@ public class QueryController {
     	Map<String,String> metadata = dataDao.getMetadata(dataId);
     	ResultsSet results = queryDao.queryStore(metadata, mappings,getQueryQuery(request));
     	if (clientAcceptsJson(request)) {
-    		return dataToJson(results);
+    		return resultSetToJson(results);
         }
         return ViewUtil.notAcceptable.handle(request, response);
     };

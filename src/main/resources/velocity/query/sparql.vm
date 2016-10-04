@@ -64,17 +64,48 @@ WHERE {
 		$(this).html('<div class="preloader-wrapper small active"><div class="spinner-layer spinner-yellow-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div>')
 			.css('padding-top','9px');
 		var dataId = $('#dataSourceSel').val();
-		var query = $('#code').val();
+		var query = editor.getValue();
 		$.post( "$WebPath.getQUERY()", { 'id':dataId, 'query':query }, function( data ) {
 			$('#submitQuery').html('<i class="large material-icons">play_arrow</i>')
 				.css('padding-top','0px');
 			if(data==null) {
 				Materialize.toast('Error!', 2000);
 			} else {
+				createTable(data);
 				if(data.errorMessage!=null) {
 					Materialize.toast(data.errorMessage, 6000);
 				}
 			}
 		}, "json");
+	}
+	function createTable(data) {
+		var table = $('<table>',{"class":"striped"});
+		//create header
+		var head = data.header;
+		var headerRow = $('<tr>');
+		for(var i=0;i<head.length;i++) {
+			var th = $('<th>',{"data-field":head[i]});
+			th.html(head[i]);
+			headerRow.append(th);
+		}
+		table.append($('<thead>').append(headerRow));
+		//create body
+		var allData = data.data;
+		var tbody = $('<tbody>');
+		for(var i=0;i<allData.length;i++) {
+			var row = $('<tr>');
+			for(var j=0;j<head.length;j++) {
+				var td = $('<td>');
+				td.html(allData[i][head[j]]);
+				row.append(td);
+			}
+			tbody.append(row);
+		}
+		table.append(tbody);
+		var form = $('#querySparqlForm');
+		form.hide();
+		$('#submitQuery').hide();
+		$('.material-tooltip').remove();
+		form.parent().append(table);
 	}
 </script>
