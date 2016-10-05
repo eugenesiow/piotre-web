@@ -104,6 +104,7 @@ public class MappingDao {
 
 	private void addClassSimplification(Map<String, JSONObject> classSimplification, JSONObject s, JSONObject o) {
 		s.put("sem_class", o.getString("val"));
+		s.put("sem_class_raw", o.getString("raw"));
 		classSimplification.put(s.getString("val"), s);
 	}
 
