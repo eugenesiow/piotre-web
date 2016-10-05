@@ -51,8 +51,7 @@ public class QueryDao {
 	        	return new ResultsSet(e.getMessage());
 	        }
 		} catch(Exception e) {
-			e.printStackTrace();
+			return new ResultsSet(e.getMessage());
 		}
-		return null;
     }
 }

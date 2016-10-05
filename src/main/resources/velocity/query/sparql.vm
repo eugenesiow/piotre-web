@@ -71,7 +71,11 @@ WHERE {
 			if(data==null) {
 				Materialize.toast('Error!', 2000);
 			} else {
-				createTable(data);
+				if(data.error!=null) {
+					Materialize.toast('Error: '+data.error, 6000);
+				} else {
+					createTable(data);
+				}
 				if(data.errorMessage!=null) {
 					Materialize.toast(data.errorMessage, 6000);
 				}
@@ -107,5 +111,12 @@ WHERE {
 		$('#submitQuery').hide();
 		$('.material-tooltip').remove();
 		form.parent().append(table);
+		form.parent().append('<div class="fixed-action-btn" style="bottom: 45px; right: 24px;"><a id="done-btn" class="btn-floating btn-large waves-effect waves-light red"><i class="material-icons">done</i></a></div>');
+		$('#done-btn').click(function() {
+			table.remove();
+			this.remove();
+			$('#submitQuery').show();
+			form.show();
+		});
 	}
 </script>

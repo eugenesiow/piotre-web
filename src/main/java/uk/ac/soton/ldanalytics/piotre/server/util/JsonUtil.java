@@ -28,20 +28,25 @@ public class JsonUtil {
     
     public static String resultSetToJson(ResultsSet results) {
     	JSONObject resultSet = new JSONObject();
-    	JSONArray header = new JSONArray();
-    	for(String resultHead:results.getHeader()) {
-    		header.put(resultHead);
+    	if(results.getErrorMessage()!=null) {
+    		resultSet.put("error", results.getErrorMessage());
+    	} else {
+	    	JSONArray header = new JSONArray();
+	    	for(String resultHead:results.getHeader()) {
+	    		header.put(resultHead);
+	    	}
+	    	resultSet.put("header", header);
+	    	JSONArray resultsArr = new JSONArray();
+	    	for(Map<String, Object> result:results.getResults()) {
+	    		JSONObject resultObj = new JSONObject();
+	    		for(String resultHead:results.getHeader()) {
+	    			resultObj.put(resultHead, result.get(resultHead));
+	        	}
+	    		resultsArr.put(resultObj);
+	    	}
+	    	resultSet.put("data", resultsArr);
     	}
-    	resultSet.put("header", header);
-    	JSONArray resultsArr = new JSONArray();
-    	for(Map<String, Object> result:results.getResults()) {
-    		JSONObject resultObj = new JSONObject();
-    		for(String resultHead:results.getHeader()) {
-    			resultObj.put(resultHead, result.get(resultHead));
-        	}
-    		resultsArr.put(resultObj);
-    	}
-    	resultSet.put("data", resultsArr);
 		return resultSet.toString();
+		
     }
 }
