@@ -77,8 +77,14 @@
 	    	setTimeout(function() {
 			    editor.refresh();
 			},1);
+	    } else if(tabName=="EDITOR") {
+	    	$('#mapping-body').html('<div class="col s12 loading-spinner" style="text-align:center;"><div class="preloader-wrapper small active"><div class="spinner-layer spinner-red-only"><div class="circle-clipper left"><div class="circle"></div></div><div class="gap-patch"><div class="circle"></div></div><div class="circle-clipper right"><div class="circle"></div></div></div></div></div>');
+	    	$.post( "$WebPath.getMAPPING_TRANSLATE()", { 'content':editor.getValue() }, function( data ) {
+	    		$('.loading-spinner').remove();
+				loadMapping(data);
+			}, "json");
 	    }
-	});
+	});v
 	function parseMapping() {
 		var mappingCode = "";
 		var mappingBody = $('#mapping-body');

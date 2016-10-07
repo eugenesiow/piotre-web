@@ -63,25 +63,26 @@ public class Application {
         before("*",                  Filters.handleLocaleChange);
 
         // Set up routes
-        get(Path.Web.INDEX,			IndexController.serveIndexPage);
-        get(Path.Web.DATA,			DataController.fetchData);
-        get(Path.Web.DATUM,			DataController.fetchDatum);
-        get(Path.Web.DATA_ADD,		DataController.addData);
-        get(Path.Web.APPS,			AppController.fetchApps);
-        get(Path.Web.APPS_ADD,		AppController.addApps);
-        get(Path.Web.APP,			AppController.fetchApp);
-        get(Path.Web.QUERY_STORE,	QueryController.serveQueryStorePage);
-        get(Path.Web.QUERY_STREAM,	QueryController.serveQueryStreamPage);
-        get(Path.Web.MAPPINGS,		MappingController.fetchMappings);
-        get(Path.Web.MAPPING,		MappingController.editMapping);
-        get(Path.Web.LOGIN,			LoginController.serveLoginPage);
-        post(Path.Web.LOGIN,		LoginController.handleLoginPost);
-        post(Path.Web.DATA_ADD,		DataController.handleAddDataPost);
-        post(Path.Web.APPS_ADD,		AppController.handleAddAppPost);
-        post(Path.Web.DATUM,		DataController.handleUpdateDataPost);
-        post(Path.Web.QUERY_STORE,	QueryController.handleQueryStorePost);
-        post(Path.Web.APP,			AppController.handleUpdateAppPost);
-        post(Path.Web.LOGOUT,		LoginController.handleLogoutPost);
+        get(Path.Web.INDEX,				IndexController.serveIndexPage);
+        get(Path.Web.DATA,				DataController.fetchData);
+        get(Path.Web.DATUM,				DataController.fetchDatum);
+        get(Path.Web.DATA_ADD,			DataController.addData);
+        get(Path.Web.APPS,				AppController.fetchApps);
+        get(Path.Web.APPS_ADD,			AppController.addApps);
+        get(Path.Web.APP,				AppController.fetchApp);
+        get(Path.Web.QUERY_STORE,		QueryController.serveQueryStorePage);
+        get(Path.Web.QUERY_STREAM,		QueryController.serveQueryStreamPage);
+        get(Path.Web.MAPPINGS,			MappingController.fetchMappings);
+        get(Path.Web.MAPPING,			MappingController.editMapping);
+        get(Path.Web.LOGIN,				LoginController.serveLoginPage);
+        post(Path.Web.LOGIN,			LoginController.handleLoginPost);
+        post(Path.Web.DATA_ADD,			DataController.handleAddDataPost);
+        post(Path.Web.APPS_ADD,			AppController.handleAddAppPost);
+        post(Path.Web.DATUM,			DataController.handleUpdateDataPost);
+        post(Path.Web.QUERY_STORE,		QueryController.handleQueryStorePost);
+        post(Path.Web.APP,				AppController.handleUpdateAppPost);
+        post(Path.Web.LOGOUT,			LoginController.handleLogoutPost);
+        post(Path.Web.MAPPING_TRANSLATE,MappingController.translateMapping);
         get("*",                    ViewUtil.notFound);
 
         //Set up after-filters (called after each get/post)

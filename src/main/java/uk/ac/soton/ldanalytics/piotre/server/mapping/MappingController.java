@@ -5,6 +5,7 @@ import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.dataToJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsHtml;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getParamId;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryContent;
 
 import java.util.HashMap;
 
@@ -43,5 +44,14 @@ public class MappingController {
             return dataToJson(mappingDao.getMapping(id));
         }
 		return ViewUtil.notAcceptable.handle(request, response);
+	};
+	
+	public static Route translateMapping = (Request request, Response response) -> {
+		LoginController.ensureUserIsLoggedIn(request, response);
+		String content = getQueryContent(request);
+        if (clientAcceptsJson(request)) {
+            return mappingDao.convertMappingContent(content);
+        }
+		return ViewUtil.notAcceptable.handle(request, response);		
 	};
 }

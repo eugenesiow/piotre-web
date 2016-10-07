@@ -14,6 +14,10 @@ public class RequestUtil {
     public static String getParamId(Request request) {
         return request.params("id");
     }
+    
+    public static String getQueryContent(Request request) {
+        return request.queryParams("content");
+    }
   
     public static String getParamDataType(Request request) {
         return request.params("type");
