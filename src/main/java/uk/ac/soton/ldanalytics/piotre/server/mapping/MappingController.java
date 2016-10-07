@@ -60,4 +60,13 @@ public class MappingController {
         }
 		return ViewUtil.notAcceptable.handle(request, response);		
 	};
+	
+	public static Route saveMapping = (Request request, Response response) -> {
+		LoginController.ensureUserIsLoggedIn(request, response);
+		String content = getQueryContent(request);
+        if (clientAcceptsJson(request)) {
+            return "{'result':'done'}";
+        }
+		return ViewUtil.notAcceptable.handle(request, response);		
+	};
 }

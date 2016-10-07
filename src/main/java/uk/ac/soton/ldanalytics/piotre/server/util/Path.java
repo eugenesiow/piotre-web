@@ -41,6 +41,9 @@ public class Path {
 		public static String getMAPPING_TRANSLATE() {
 			return MAPPING_TRANSLATE;
 		}
+		public static String getMAPPING_SAVE() {
+			return MAPPING_SAVE;
+		}
 		public static String getMETADATA() {
 			return METADATA;
 		}
@@ -68,6 +71,7 @@ public class Path {
         public static final String MAPPINGS_ADD = "/mappings/add/";
         public static final String MAPPING = "/mappings/:id/";
         public static final String MAPPING_TRANSLATE = "/mappings/translate/";
+        public static final String MAPPING_SAVE = "/mappings/save/";
         public static final String QUERY_STORE = "/query/";
         public static final String QUERY_STREAM = "/query_stream/";
     }

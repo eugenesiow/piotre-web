@@ -83,6 +83,7 @@ public class Application {
         post(Path.Web.APP,				AppController.handleUpdateAppPost);
         post(Path.Web.LOGOUT,			LoginController.handleLogoutPost);
         post(Path.Web.MAPPING_TRANSLATE,MappingController.translateMapping);
+        post(Path.Web.MAPPING_SAVE,		MappingController.saveMapping);
         get("*",                    ViewUtil.notFound);
 
         //Set up after-filters (called after each get/post)
