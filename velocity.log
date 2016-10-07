@@ -1,0 +1,3 @@
+2016-10-07 16:45:27,181 - Prepend the reference with '$!' e.g., $!mapping.getAuthor() if you want Velocity to ignore the reference when it evaluates to null
+2016-10-07 16:45:27,183 - Exception rendering block bodyContent at /velocity/layout.vm[line 71, column 5]
+2016-10-07 16:45:27,183 - Exception in macro #mainLayout called at /velocity/mappings/mapping.vm[line 3, column 1]

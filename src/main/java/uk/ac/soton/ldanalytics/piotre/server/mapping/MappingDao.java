@@ -3,6 +3,7 @@ package uk.ac.soton.ldanalytics.piotre.server.mapping;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.UUID;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Literal;
@@ -50,6 +51,11 @@ public class MappingDao {
                     .executeAndFetch(Mapping.class);
             return mappings.get(0);
         }
+	}
+	
+	public Mapping createMapping(String author) {
+		UUID id = UUID.randomUUID();
+		return new Mapping(id, "", author, "","",null);
 	}
 	
 	public String convertMappingContent(String content) {

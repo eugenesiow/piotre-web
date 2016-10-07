@@ -6,6 +6,7 @@ import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAccep
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getParamId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryContent;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getSessionCurrentUser;
 
 import java.util.HashMap;
 
@@ -33,15 +34,20 @@ public class MappingController {
 	public static Route editMapping = (Request request, Response response) -> {
 		LoginController.ensureUserIsLoggedIn(request, response);
 		String id = getParamId(request);
+		Mapping mapping = null;
+		if(id.equals("add")) {
+			mapping = mappingDao.createMapping(getSessionCurrentUser(request));
+		} else {
+			mapping = mappingDao.getMapping(id);
+		}
         if (clientAcceptsHtml(request)) {
         	 HashMap<String, Object> model = new HashMap<>();
-        	 Mapping mapping = mappingDao.getMapping(id);
              model.put("mapping", mapping);
              model.put("mappingJson", mappingDao.convertMappingContent(mapping.getContent()));
              return ViewUtil.render(request, model, Path.Template.MAPPING, Path.PageNames.MAPPINGS);
         }
         if (clientAcceptsJson(request)) {
-            return dataToJson(mappingDao.getMapping(id));
+            return dataToJson(mapping);
         }
 		return ViewUtil.notAcceptable.handle(request, response);
 	};

@@ -42,7 +42,7 @@
 				<div class="row">
 					<div class="input-field col s12">
 						<input name="uri" value="$mapping.getUri()" type="text" class="validate" required>
-						<label for="uri">Name</label>
+						<label for="uri">URI</label>
 				  	</div>
 				</div>
 			</form>
@@ -241,8 +241,13 @@
 		if(value!="") {
 			col.html('');
 			if(cardType=="p") {
-				var chip = $('<div>',{"class":"chip white"}).html(value).data('raw',mapping.predicates[value]);
-				col.data('raw',"<"+mapping.predicates[value]+">");
+				var chip = $('<div>',{"class":"chip white"}).html(value);
+				var raw = value;
+				if(typeof mapping.predicates[value] != "undefined") {
+					raw = mapping.predicates[value];
+				}
+				chip.data('raw',raw);
+				col.data('raw',"<"+raw+">");
 				col.append("&#8594;").append(chip).append("&#8594;");
 			} else {
 				if(sel=="uri") {
@@ -253,7 +258,11 @@
 					var chip = $('<div>',{"class":"chip black white-text"}).html(value);
 					var bnName = "_:bn"+index++;
 					col.data('raw',bnName);
-					col.data('additional',bnName + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <" + mapping.classes[value] + ">.");
+					var raw = value;
+					if(typeof mapping.classes[value] != "undefined") {
+						raw = mapping.classes[value];
+					}
+					col.data('additional',bnName + " <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <" + raw + ">.");
 					col.append(chip);
 				} else if(sel=="binding") {
 					var chip = $('<div>',{"class":"chip grey darken-1 white-text"}).html(value+"<i class='chip-icon material-icons'>view_module</i>");
