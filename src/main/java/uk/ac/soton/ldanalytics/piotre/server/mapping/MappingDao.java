@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
+import java.util.Map.Entry;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Literal;
@@ -21,6 +22,9 @@ import org.json.JSONObject;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import uk.ac.soton.ldanalytics.piotre.server.data.Data;
+import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
+import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.util.Prefixes;
 
 public class MappingDao {
@@ -56,6 +60,19 @@ public class MappingDao {
 	public Mapping createMapping(String author) {
 		UUID id = UUID.randomUUID();
 		return new Mapping(id, "", author, "","",null);
+	}
+	
+	public boolean updateMapping(String strId, String name, String author, String uri, String content) {
+		UUID id = UUID.fromString(strId);
+		try (Connection conn = sql2o.open()) {
+			conn.createQuery("update mappings set name=:name,author=:author,uri=:uri,content=:content where id=:id")
+				.bind(new Mapping(id,name,author,uri,content,null))
+				.executeUpdate();
+		} catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
 	}
 	
 	public String convertMappingContent(String content) {

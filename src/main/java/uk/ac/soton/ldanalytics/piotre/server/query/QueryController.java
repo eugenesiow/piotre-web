@@ -4,11 +4,14 @@ import static uk.ac.soton.ldanalytics.piotre.server.Application.dataDao;
 import static uk.ac.soton.ldanalytics.piotre.server.Application.queryDao;
 import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.resultSetToJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getParamId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryQuery;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import org.sql2o.logging.SysOutLogger;
 
 import spark.Request;
 import spark.Response;
@@ -35,6 +38,16 @@ public class QueryController {
     public static Route handleQueryStorePost = (Request request, Response response) -> {
     	LoginController.ensureUserIsLoggedIn(request, response);
     	String dataId = getQueryId(request);
+    	Iterable<Mapping> mappings = dataDao.getMappingsByDatum(dataId);
+    	Map<String,String> metadata = dataDao.getMetadata(dataId);
+    	ResultsSet results = queryDao.queryStore(metadata, mappings,getQueryQuery(request));
+    	if (clientAcceptsJson(request)) {
+    		return resultSetToJson(results);
+        }
+        return ViewUtil.notAcceptable.handle(request, response);
+    };
+    public static Route handleSparqlPost = (Request request, Response response) -> {
+    	String dataId = getParamId(request);
     	Iterable<Mapping> mappings = dataDao.getMappingsByDatum(dataId);
     	Map<String,String> metadata = dataDao.getMetadata(dataId);
     	ResultsSet results = queryDao.queryStore(metadata, mappings,getQueryQuery(request));

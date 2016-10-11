@@ -53,6 +53,9 @@ public class Path {
 		public static String getQUERY() {
 			return QUERY_STORE;
 		}
+		public static String getSPARQL() {
+			return SPARQL;
+		}
 		public static String getQUERY_STREAM() {
 			return QUERY_STREAM;
 		}
@@ -73,6 +76,7 @@ public class Path {
         public static final String MAPPING_TRANSLATE = "/mappings/translate/";
         public static final String MAPPING_SAVE = "/mappings/save/";
         public static final String QUERY_STORE = "/query/";
+        public static final String SPARQL = "/sparql/:id/";
         public static final String QUERY_STREAM = "/query_stream/";
     }
 

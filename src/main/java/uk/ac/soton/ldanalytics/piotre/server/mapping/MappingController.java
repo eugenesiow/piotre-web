@@ -6,9 +6,17 @@ import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAccep
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getParamId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryContent;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryId;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryName;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryUri;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryAuthor;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getSessionCurrentUser;
 
 import java.util.HashMap;
+
+import org.json.JSONObject;
+
+import com.github.jsonldjava.utils.Obj;
 
 import spark.Request;
 import spark.Response;
@@ -63,9 +71,11 @@ public class MappingController {
 	
 	public static Route saveMapping = (Request request, Response response) -> {
 		LoginController.ensureUserIsLoggedIn(request, response);
-		String content = getQueryContent(request);
+		Boolean success = mappingDao.updateMapping(getQueryId(request), getQueryName(request), getQueryAuthor(request), getQueryUri(request), getQueryContent(request));
+		JSONObject o = new JSONObject();
+		o.put("success",success);
         if (clientAcceptsJson(request)) {
-            return "{'result':'done'}";
+            return o.toString();
         }
 		return ViewUtil.notAcceptable.handle(request, response);		
 	};

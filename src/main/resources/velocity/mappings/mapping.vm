@@ -26,22 +26,23 @@
 		</div>
 		<div id="metadata" class="col s12">
 			<form id="mappingMetadataEditForm" class="col s12">
+				<input id="meta-id" type="hidden" name="id" value="$mapping.getId()">
 				<div class="row">
 					<div class="input-field col s12">
-						<input name="name" value="$mapping.getName()" type="text" class="validate" required>
+						<input id="meta-name" name="name" value="$mapping.getName()" type="text" class="validate" required>
 						<label for="name">Name</label>
 				  	</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
 						<input disabled value="$mapping.getAuthor()" type="text" class="validate">
-						<input type="hidden" name="author" value="$mapping.getAuthor()">
+						<input id="meta-author" type="hidden" name="author" value="$mapping.getAuthor()">
 						<label for="author">Author</label>
 				  	</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
-						<input name="uri" value="$mapping.getUri()" type="text" class="validate" required>
+						<input id="meta-uri" name="uri" value="$mapping.getUri()" type="text" class="validate" required>
 						<label for="uri">URI</label>
 				  	</div>
 				</div>
@@ -80,8 +81,14 @@
 		else {
 			content = parseMapping();
 		}
-		$.post( "$WebPath.getMAPPING_SAVE()", { 'content':content }, function( data ) {
-			console.log(data);
+		var name = $('#meta-name').val();
+		var author = $('#meta-author').val();
+		var uri = $('#meta-uri').val();
+		var id = $('#meta-id').val();
+		$.post( "$WebPath.getMAPPING_SAVE()", { 'id':id, 'content':content, 'name':name, 'uri':uri, 'author':author }, function( data ) {
+			if(!data.success) {
+				Materialize.toast('Error saving!', 6000);
+			}
     		$('#btn-menu').html('<i class="large material-icons">menu</i>')
 				.css('padding-top','0px');	
 		},"json");

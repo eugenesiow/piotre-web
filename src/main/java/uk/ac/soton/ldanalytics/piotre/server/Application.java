@@ -79,6 +79,7 @@ public class Application {
         post(Path.Web.DATA_ADD,			DataController.handleAddDataPost);
         post(Path.Web.APPS_ADD,			AppController.handleAddAppPost);
         post(Path.Web.DATUM,			DataController.handleUpdateDataPost);
+        post(Path.Web.SPARQL,			QueryController.handleSparqlPost);
         post(Path.Web.QUERY_STORE,		QueryController.handleQueryStorePost);
         post(Path.Web.APP,				AppController.handleUpdateAppPost);
         post(Path.Web.LOGOUT,			LoginController.handleLogoutPost);

@@ -18,7 +18,8 @@ public class RequestUtil {
     public static String getQueryContent(Request request) {
         return request.queryParams("content");
     }
-  
+    
+ 
     public static String getParamDataType(Request request) {
         return request.params("type");
     }
