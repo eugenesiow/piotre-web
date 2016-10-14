@@ -4,7 +4,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-import java.util.Map.Entry;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.jena.rdf.model.Literal;
@@ -15,17 +14,13 @@ import org.apache.jena.rdf.model.RDFNode;
 import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.Statement;
 import org.apache.jena.rdf.model.StmtIterator;
-import org.apache.jena.riot.Lang;
-import org.apache.jena.riot.RDFDataMgr;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
-import uk.ac.soton.ldanalytics.piotre.server.data.Data;
-import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
-import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.util.Prefixes;
+import uk.ac.soton.ldanalytics.sparql2sql.riot.RDFReaderMap;
 
 public class MappingDao {
 	final String baseUri = "http://iot.soton.ac.uk/";
@@ -86,7 +81,9 @@ public class MappingDao {
 		JSONObject mappingJson = new JSONObject();
 		JSONArray triples = new JSONArray();
 		Model model = ModelFactory.createDefaultModel();
-		RDFDataMgr.read(model, IOUtils.toInputStream(content), Lang.NTRIPLES);
+		RDFReaderMap rd = new RDFReaderMap("N-Triples");
+		rd.read(model, IOUtils.toInputStream(content),"");
+//		RDFDataMgr.read(model, IOUtils.toInputStream(content), Lang.NTRIPLES);
 		StmtIterator stmts = model.listStatements();
 		while(stmts.hasNext()) {
 			JSONObject triple = new JSONObject();
@@ -183,6 +180,9 @@ public class MappingDao {
 		JSONObject node = new JSONObject(); 
 		node.put("type", "uri");
 		node.put("raw", string);
+		if(string.contains("{")) {
+			return node.put("val", "<"+string+">");
+		}
 		// extract prefix
 		String[] parts = string.split("#");
 		if(parts.length>1) {

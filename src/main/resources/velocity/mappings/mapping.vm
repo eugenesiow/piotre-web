@@ -159,7 +159,7 @@
 			}
 			previousVal = subjectVal;
 			var predicate = $('<div>',{"class":"col s4 pcol"}).append("&#8594;").append($('<div>',{"class":"chip white"}).html(triples[i].p.val)).append("&#8594;").data('raw',"<"+triples[i].p.raw+">");
-			var objVal = triples[i].o.val;	
+			var objVal = escapeHtml(triples[i].o.val);	
 			var objRaw = triples[i].o.val;
 			color = "grey";
 			var icon = "";
@@ -321,5 +321,22 @@
 	function createUriBox(class_name) {
 		var box = $('<input>',{class:"autocomplete "+class_name,type:"text",placeholder:"URI or Prefix & URI"});
 		return $('<p>').append(box);
+	}
+	
+	
+	function escapeHtml(string) {
+		var entityMap = {
+	  "&": "&amp;",
+	  "<": "&lt;",
+	  ">": "&gt;",
+	  '"': '&quot;',
+	  "'": '&#39;',
+	  "/": '&#x2F;',
+	  "{":'|',
+	  "}":'|'
+	};
+	  return String(string).replace(/[&<>"'\/{}]/g, function (s) {
+	    return entityMap[s];
+	  });
 	}
 </script>

@@ -107,11 +107,17 @@ public class Model {
         		.executeUpdate();
 			String smarthomeEnvironmentContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("mappings/smarthome_environment.nt").getFile()));
 			String smarthomeMeterContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("mappings/smarthome_meter.nt").getFile()));
+			String smarthomeMotionContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("mappings/smarthome_motion.nt").getFile()));
+			String smarthomeSensorsContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("mappings/smarthome_sensors.nt").getFile()));
 			List<Mapping> mappings = new ArrayList<Mapping>();
 			UUID sampleSmarthomeEnvironmentId = UUID.randomUUID();
 			UUID sampleSmarthomeMeterId = UUID.randomUUID();
+			UUID sampleSmarthomeMotionId = UUID.randomUUID();
+			UUID sampleSmarthomeSensorsId = UUID.randomUUID();
 			mappings.add(new Mapping(sampleSmarthomeEnvironmentId,"smarthome_environment",adminName,"http://iot.soton.ac.uk/smarthome/environment#",smarthomeEnvironmentContent,null));
 			mappings.add(new Mapping(sampleSmarthomeMeterId,"smarthome_meter",adminName,"http://iot.soton.ac.uk/smarthome/meter#",smarthomeMeterContent,null));
+			mappings.add(new Mapping(sampleSmarthomeMotionId,"smarthome_motion",adminName,"http://iot.soton.ac.uk/smarthome/motion#",smarthomeMotionContent,null));
+			mappings.add(new Mapping(sampleSmarthomeSensorsId,"smarthome_sensors",adminName,"http://iot.soton.ac.uk/smarthome/sensors#",smarthomeSensorsContent,null));
 			mappings.forEach((mapping) -> conn.createQuery("insert into mappings(id, name, author, uri, content,format) VALUES (:id, :name, :author, :uri, :content, :format)")
             	.bind(mapping)
             	.executeUpdate());
@@ -121,6 +127,9 @@ public class Model {
     			.executeUpdate();
 			List<Relation> relations = new ArrayList<Relation>();
 			relations.add(new Relation(sampleSmarthomeEnvironmentId,sampleStoreId));
+			relations.add(new Relation(sampleSmarthomeMeterId,sampleStoreId));
+			relations.add(new Relation(sampleSmarthomeMotionId,sampleStoreId));
+			relations.add(new Relation(sampleSmarthomeSensorsId,sampleStoreId));
 			relations.forEach((relation) -> conn.createQuery("insert into rel_mappings_data(id1, id2) VALUES (:id1, :id2)")
 	            	.bind(relation)
 	            	.executeUpdate());

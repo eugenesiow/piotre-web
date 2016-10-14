@@ -94,13 +94,13 @@ WHERE {
 		}
 		table.append($('<thead>').append(headerRow));
 		//create body
-		var allData = data.data;
+		var allData = data.results.bindings;
 		var tbody = $('<tbody>');
 		for(var i=0;i<allData.length;i++) {
 			var row = $('<tr>');
 			for(var j=0;j<head.length;j++) {
 				var td = $('<td>');
-				td.html(allData[i][head[j]]);
+				td.html(allData[i][head[j]].value);
 				row.append(td);
 			}
 			tbody.append(row);

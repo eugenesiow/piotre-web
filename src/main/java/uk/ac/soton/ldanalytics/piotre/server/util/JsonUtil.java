@@ -40,13 +40,16 @@ public class JsonUtil {
 	    	for(Map<String, Object> result:results.getResults()) {
 	    		JSONObject resultObj = new JSONObject();
 	    		for(String resultHead:results.getHeader()) {
-	    			resultObj.put(resultHead, result.get(resultHead));
+	    			JSONObject resultVal = new JSONObject();
+	    			resultVal.put("value",result.get(resultHead));
+	    			resultObj.put(resultHead, resultVal);
 	        	}
 	    		resultsArr.put(resultObj);
 	    	}
-	    	resultSet.put("data", resultsArr);
+	    	JSONObject bindings = new JSONObject();
+	    	bindings.put("bindings", resultsArr);
+	    	resultSet.put("results", bindings);
     	}
 		return resultSet.toString();
-		
     }
 }
