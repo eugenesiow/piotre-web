@@ -45,6 +45,14 @@ public class DataDao {
 		}
 	}
 	
+	public  Iterable<Schema> getAllStreamSchema() {
+		try (Connection conn = sql2o.open()) {
+            List<Schema> schema = conn.createQuery("select t2.name, t2.id, t1.id2 AS dataRelId, t2.content, t3.data AS dataStreamUri from rel_schema_data t1, schema t2, metadata t3 where t2.id=t1.id1 AND t1.id2=t3.itemId AND t3.name='stream_uri'")
+            		.executeAndFetch(Schema.class);
+            return schema;
+        }
+	}
+	
 	public  Iterable<Mapping> getAllMappings() {
 		try (Connection conn = sql2o.open()) {
             List<Mapping> mappings = conn.createQuery("select t2.name, t2.id, t1.id2 AS dataRelId from rel_mappings_data t1, mappings t2 where t2.id=t1.id1")

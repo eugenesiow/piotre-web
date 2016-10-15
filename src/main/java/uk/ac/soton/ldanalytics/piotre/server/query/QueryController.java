@@ -1,5 +1,6 @@
 package uk.ac.soton.ldanalytics.piotre.server.query;
 
+import static spark.Spark.webSocket;
 import static uk.ac.soton.ldanalytics.piotre.server.Application.dataDao;
 import static uk.ac.soton.ldanalytics.piotre.server.Application.queryDao;
 import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.resultSetToJson;
@@ -8,14 +9,29 @@ import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getParamId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryQuery;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Paths;
+import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Scanner;
 
-import org.sql2o.logging.SysOutLogger;
+import org.apache.commons.io.FilenameUtils;
+import org.zeromq.ZMQ.Context;
+
+import com.espertech.esper.client.EPServiceProvider;
 
 import spark.Request;
 import spark.Response;
 import spark.Route;
+import uk.ac.soton.ldanalytics.piotre.server.EventsWebSocket;
+import uk.ac.soton.ldanalytics.piotre.server.data.Schema;
+import uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver;
 import uk.ac.soton.ldanalytics.piotre.server.login.LoginController;
 import uk.ac.soton.ldanalytics.piotre.server.mapping.Mapping;
 import uk.ac.soton.ldanalytics.piotre.server.util.Path;
@@ -56,4 +72,52 @@ public class QueryController {
         }
         return ViewUtil.notAcceptable.handle(request, response);
     };
+    
+    public static void SetupStreams(EPServiceProvider epService) {
+    	Map<String,StreamReceiver> existingStreams = new HashMap<String,StreamReceiver>();
+    	for(Schema schema:dataDao.getAllStreamSchema()) {
+    		StreamReceiver srcReceiver = existingStreams.get(schema.getDataStreamUri());
+    		if(srcReceiver == null) {
+    			srcReceiver = new StreamReceiver(schema.getDataStreamUri());
+    			existingStreams.put(schema.getDataStreamUri(), srcReceiver);
+    			(new Thread(srcReceiver)).start();
+    		}
+    		loadSchema(schema.getName(),schema.getContent(),epService);
+        }
+    }
+    
+    public static void loadSchema(String name, String content, EPServiceProvider epService) {
+		Map<String,Object> dataSchema = new LinkedHashMap<String,Object>();
+		Scanner scanner = new Scanner(content);
+		while(scanner.hasNextLine()) {
+			String[] parts = scanner.nextLine().split(",");
+			if(parts.length>1) {
+				dataSchema.put(parts[0], classMap(parts[1]));
+			}
+		}
+		scanner.close();
+		epService.getEPAdministrator().getConfiguration().addEventType(name, dataSchema);
+	}
+    
+    private static Object classMap(String className) {
+		Object object = null;
+		switch(className.toLowerCase()) {
+			case "string":
+				object = String.class;
+				break;
+			case "float":
+				object = Float.class;
+				break;
+			case "double":
+				object = Double.class;
+				break;
+			case "integer":
+				object = Integer.class;
+				break;
+			case "timestamp":
+				object = Timestamp.class;
+				break;
+		}
+		return object;
+	}
 }

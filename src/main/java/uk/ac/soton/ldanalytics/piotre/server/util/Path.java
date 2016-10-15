@@ -8,6 +8,9 @@ public class Path {
         public static String getINDEX() {
 			return INDEX;
 		}
+        public static String getOVERVIEW() {
+			return OVERVIEW;
+		}
 		public static String getLOGIN() {
 			return LOGIN;
 		}
@@ -60,6 +63,7 @@ public class Path {
 			return QUERY_STREAM;
 		}
 		public static final String INDEX = "/index/";
+		public static final String OVERVIEW = "/overview/";
         public static final String LOGIN = "/login/";
         public static final String LOGOUT = "/logout/";
         public static final String ACCOUNT = "/account/";
@@ -82,7 +86,9 @@ public class Path {
 
     public static class Template {
         public final static String INDEX = "/velocity/index/index.vm";
+        public final static String OVERVIEW = "/velocity/overview/overview.vm";
         public final static String LOGIN = "/velocity/login/login.vm";
+        public final static String ACCOUNT = "/velocity/login/account.vm";
         public final static String BOOKS_ALL = "/velocity/book/all.vm";
         public static final String BOOKS_ONE = "/velocity/book/one.vm";
         public static final String NOT_FOUND = "/velocity/notFound.vm";
@@ -92,6 +98,7 @@ public class Path {
         public final static String APPS = "/velocity/apps/apps.vm";
         public final static String APPS_ADD = "/velocity/apps/add.vm";
         public final static String APP = "/velocity/apps/app.vm";
+        public final static String METADATA = "/velocity/metadata/metadata.vm";
         public final static String MAPPING = "/velocity/mappings/mapping.vm";
         public final static String MAPPINGS_ADD = "/velocity/mappings/add.vm";
         public final static String QUERY_STORE = "/velocity/query/sparql.vm";
@@ -100,6 +107,7 @@ public class Path {
     }
     
     public static class PageNames {
+    	public final static String OVERVIEW = "OVERVIEW";
         public final static String INDEX = "Getting Started";
         public final static String DATA = "Data";
         public final static String METADATA = "Metadata";
@@ -109,6 +117,9 @@ public class Path {
 		public final static String QUERY_STORE = "SPARQL";
         public final static String QUERY_STREAM = "Stream Queries";
         public static final String NOT_FOUND = "Not Found";
+        public static String getOverview() {
+			return OVERVIEW;
+		}
         public static String getIndex() {
 			return INDEX;
 		}

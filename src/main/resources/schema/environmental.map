@@ -1,0 +1,13 @@
+TimestampUTC,timestamp
+insideTemp,float
+outsideTemp,float
+insideHumidity,float
+outsideHumidity,float
+windSpeed,float
+windDirectionDegrees,float
+windGust,float
+windGustDirectionDegrees,float
+rainRate,float
+rain,float
+windChill,float
+heatindex,float

@@ -18,6 +18,11 @@ public class LoginController {
         model.put("loginRedirect", removeSessionAttrLoginRedirect(request));
         return ViewUtil.render(request, model, Path.Template.LOGIN, Path.PageNames.LOGIN);
     };
+    
+    public static Route serveAccountPage = (Request request, Response response) -> {
+        Map<String, Object> model = new HashMap<>();
+        return ViewUtil.render(request, model, Path.Template.ACCOUNT, Path.PageNames.LOGIN);
+    };
 
     public static Route handleLoginPost = (Request request, Response response) -> {
         Map<String, Object> model = new HashMap<>();

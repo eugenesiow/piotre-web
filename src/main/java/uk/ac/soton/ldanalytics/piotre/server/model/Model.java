@@ -15,6 +15,7 @@ import org.sql2o.Sql2oException;
 import uk.ac.soton.ldanalytics.piotre.server.app.App;
 import uk.ac.soton.ldanalytics.piotre.server.data.Data;
 import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
+import uk.ac.soton.ldanalytics.piotre.server.data.Schema;
 import uk.ac.soton.ldanalytics.piotre.server.mapping.Mapping;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.SchemaItem;
@@ -85,7 +86,7 @@ public class Model {
 			metadata.add(new MetadataItem(sampleStoreId,"jdbc_url","jdbc:h2:./smarthome"));
 			metadata.add(new MetadataItem(sampleStoreId,"username","sa"));
 			metadata.add(new MetadataItem(sampleStoreId,"password",""));
-			metadata.add(new MetadataItem(sampleStreamId,"stream_uri","http://www.cwi.nl/SRBench/observations"));
+			metadata.add(new MetadataItem(sampleStreamId,"stream_uri","tcp://localhost:5700"));
 			metadata.forEach((metadatum) -> conn.createQuery("insert into metadata(itemId, name, data) VALUES (:itemId, :name, :data)")
 	            	.bind(metadatum)
 	            	.executeUpdate());
@@ -122,6 +123,23 @@ public class Model {
             	.bind(mapping)
             	.executeUpdate());
 			
+			//create stream schema table and add sample schema
+			conn.createQuery("CREATE TABLE schema (id uuid primary key,name varchar,author varchar,content clob);")
+				.executeUpdate();
+			String environmentalContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("schema/environmental.map").getFile()));
+			String meterContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("schema/meter.map").getFile()));
+			String motionContent = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("schema/motion.map").getFile()));
+			List<Schema> schemaList = new ArrayList<Schema>();
+			UUID environmentalId = UUID.randomUUID();
+			UUID meterId = UUID.randomUUID();
+			UUID motionId = UUID.randomUUID();
+			schemaList.add(new Schema(environmentalId,"environmental",adminName,environmentalContent));
+			schemaList.add(new Schema(meterId,"meter",adminName,meterContent));
+			schemaList.add(new Schema(motionId,"motion",adminName,motionContent));
+			schemaList.forEach((schemaEntry) -> conn.createQuery("insert into schema(id, name, author, content) VALUES (:id, :name, :author, :content)")
+	            	.bind(schemaEntry)
+	            	.executeUpdate());
+			
 			//create mappings-data relations table and add sample relations
 			conn.createQuery("CREATE TABLE rel_mappings_data (id1 uuid,id2 uuid);")
     			.executeUpdate();
@@ -132,6 +150,17 @@ public class Model {
 			relations.add(new Relation(sampleSmarthomeSensorsId,sampleStoreId));
 			relations.forEach((relation) -> conn.createQuery("insert into rel_mappings_data(id1, id2) VALUES (:id1, :id2)")
 	            	.bind(relation)
+	            	.executeUpdate());
+			
+			//create mappings-data relations table and add sample relations
+			conn.createQuery("CREATE TABLE rel_schema_data (id1 uuid,id2 uuid);")
+    			.executeUpdate();
+			List<Relation> schemaRelations = new ArrayList<Relation>();
+			schemaRelations.add(new Relation(environmentalId,sampleStreamId));
+			schemaRelations.add(new Relation(meterId,sampleStreamId));
+			schemaRelations.add(new Relation(motionId,sampleStreamId));
+			schemaRelations.forEach((schemaRelation) -> conn.createQuery("insert into rel_schema_data(id1, id2) VALUES (:id1, :id2)")
+	            	.bind(schemaRelation)
 	            	.executeUpdate());
 			
 			//create apps-data relations table and add sample relations

@@ -117,3 +117,326 @@
 2016-10-14 18:04:50 INFO  Server:345 - jetty-9.3.6.v20151106
 2016-10-14 18:04:50 INFO  ServerConnector:270 - Started ServerConnector@7afabfa0{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
 2016-10-14 18:04:50 INFO  Server:397 - Started @656ms
+2016-10-15 10:31:50 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 10:31:51 INFO  log:186 - Logging initialized @1557ms
+2016-10-15 10:31:51 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 10:31:51 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 10:31:51 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 10:31:51 INFO  ServerConnector:270 - Started ServerConnector@513ce699{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 10:31:51 INFO  Server:397 - Started @1664ms
+2016-10-15 10:40:57 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 10:40:58 INFO  log:186 - Logging initialized @1203ms
+2016-10-15 10:40:58 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 10:40:58 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 10:40:58 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 10:40:58 ERROR EmbeddedJettyServer:132 - ignite failed
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:437)
+	at sun.nio.ch.Net.bind(Net.java:429)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:326)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:244)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:384)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at spark.embeddedserver.jetty.EmbeddedJettyServer.ignite(EmbeddedJettyServer.java:128)
+	at spark.Service.lambda$init$0(Service.java:349)
+	at spark.Service$$Lambda$4/477289012.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 10:41:05 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 10:41:05 INFO  log:186 - Logging initialized @1081ms
+2016-10-15 10:41:05 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 10:41:05 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 10:41:05 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 10:41:05 INFO  ServerConnector:270 - Started ServerConnector@5883a30c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 10:41:05 INFO  Server:397 - Started @1161ms
+2016-10-15 10:42:14 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 10:42:14 INFO  log:186 - Logging initialized @1047ms
+2016-10-15 10:42:14 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 10:42:14 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 10:42:14 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 10:42:14 INFO  ServerConnector:270 - Started ServerConnector@36cbb9f8{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 10:42:14 INFO  Server:397 - Started @1153ms
+2016-10-15 10:45:50 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 10:45:50 INFO  log:186 - Logging initialized @856ms
+2016-10-15 10:45:51 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 10:45:51 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 10:45:51 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 10:45:51 INFO  ServerConnector:270 - Started ServerConnector@6882f420{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 10:45:51 INFO  Server:397 - Started @947ms
+2016-10-15 10:51:04 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 10:51:04 INFO  log:186 - Logging initialized @805ms
+2016-10-15 10:51:04 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 10:51:04 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 10:51:04 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 10:51:04 INFO  ServerConnector:270 - Started ServerConnector@6882f420{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 10:51:05 INFO  Server:397 - Started @893ms
+2016-10-15 11:28:57 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 11:28:57 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 11:28:57 INFO  log:186 - Logging initialized @1102ms
+2016-10-15 11:28:57 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 11:28:57 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 11:28:57 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 11:28:57 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2b032d84{/,null,AVAILABLE}
+2016-10-15 11:28:57 INFO  ServerConnector:270 - Started ServerConnector@4c7f27a4{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 11:28:57 INFO  Server:397 - Started @1314ms
+2016-10-15 11:32:33 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 11:32:33 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 11:32:33 INFO  log:186 - Logging initialized @1122ms
+2016-10-15 11:32:33 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 11:32:33 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 11:32:33 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 11:32:33 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@397b670e{/,null,AVAILABLE}
+2016-10-15 11:32:33 INFO  ServerConnector:270 - Started ServerConnector@6f56767{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 11:32:33 INFO  Server:397 - Started @1288ms
+2016-10-15 12:27:51 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 12:27:51 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 12:27:52 INFO  log:186 - Logging initialized @1177ms
+2016-10-15 12:27:52 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 12:27:52 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 12:27:52 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 12:27:52 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@422e3ce0{/,null,AVAILABLE}
+2016-10-15 12:27:52 ERROR EmbeddedJettyServer:132 - ignite failed
+java.net.BindException: Address already in use
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:437)
+	at sun.nio.ch.Net.bind(Net.java:429)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:223)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.eclipse.jetty.server.ServerConnector.open(ServerConnector.java:326)
+	at org.eclipse.jetty.server.AbstractNetworkConnector.doStart(AbstractNetworkConnector.java:80)
+	at org.eclipse.jetty.server.ServerConnector.doStart(ServerConnector.java:244)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at org.eclipse.jetty.server.Server.doStart(Server.java:384)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at spark.embeddedserver.jetty.EmbeddedJettyServer.ignite(EmbeddedJettyServer.java:128)
+	at spark.Service.lambda$init$0(Service.java:349)
+	at spark.Service$$Lambda$4/717176949.run(Unknown Source)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 12:28:11 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 12:28:12 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 12:28:12 INFO  log:186 - Logging initialized @1119ms
+2016-10-15 12:28:12 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 12:28:12 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 12:28:12 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 12:28:12 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@5035f778{/,null,AVAILABLE}
+2016-10-15 12:28:12 INFO  ServerConnector:270 - Started ServerConnector@44a4e314{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 12:28:12 INFO  Server:397 - Started @1261ms
+2016-10-15 12:33:11 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 12:33:11 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 12:33:12 INFO  log:186 - Logging initialized @1178ms
+2016-10-15 12:33:12 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 12:33:12 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 12:33:12 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 12:33:12 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@4ba7b8eb{/,null,AVAILABLE}
+2016-10-15 12:33:12 INFO  ServerConnector:270 - Started ServerConnector@4bb16552{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 12:33:12 INFO  Server:397 - Started @1320ms
+2016-10-15 12:33:22 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 12:33:22 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 12:46:14 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 12:46:14 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 12:46:15 INFO  StatementLifecycleSvcImpl:1145 - Failed to compile statement: Failed to resolve event type: Event type or class named 'environmental' was not found
+com.espertech.esper.epl.expression.core.ExprValidationException: Failed to resolve event type: Event type or class named 'environmental' was not found
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.resolveType(FilterStreamSpecRaw.java:211)
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.compile(FilterStreamSpecRaw.java:121)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.compile(StatementLifecycleSvcImpl.java:1139)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStopped(StatementLifecycleSvcImpl.java:277)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStoppedAssignName(StatementLifecycleSvcImpl.java:199)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createAndStart(StatementLifecycleSvcImpl.java:153)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPLStmt(EPAdministratorImpl.java:118)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPL(EPAdministratorImpl.java:67)
+	at uk.ac.soton.ldanalytics.piotre.server.Application.main(Application.java:85)
+2016-10-15 12:48:08 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 12:48:08 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 12:48:09 INFO  StatementLifecycleSvcImpl:1145 - Failed to compile statement: Failed to resolve event type: Event type or class named 'environmental' was not found
+com.espertech.esper.epl.expression.core.ExprValidationException: Failed to resolve event type: Event type or class named 'environmental' was not found
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.resolveType(FilterStreamSpecRaw.java:211)
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.compile(FilterStreamSpecRaw.java:121)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.compile(StatementLifecycleSvcImpl.java:1139)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStopped(StatementLifecycleSvcImpl.java:277)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStoppedAssignName(StatementLifecycleSvcImpl.java:199)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createAndStart(StatementLifecycleSvcImpl.java:153)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPLStmt(EPAdministratorImpl.java:118)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPL(EPAdministratorImpl.java:67)
+	at uk.ac.soton.ldanalytics.piotre.server.Application.main(Application.java:85)
+2016-10-15 12:48:27 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 12:48:27 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 12:48:28 INFO  StatementLifecycleSvcImpl:1145 - Failed to compile statement: Failed to resolve event type: Event type or class named 'environmental' was not found
+com.espertech.esper.epl.expression.core.ExprValidationException: Failed to resolve event type: Event type or class named 'environmental' was not found
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.resolveType(FilterStreamSpecRaw.java:211)
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.compile(FilterStreamSpecRaw.java:121)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.compile(StatementLifecycleSvcImpl.java:1139)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStopped(StatementLifecycleSvcImpl.java:277)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStoppedAssignName(StatementLifecycleSvcImpl.java:199)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createAndStart(StatementLifecycleSvcImpl.java:153)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPLStmt(EPAdministratorImpl.java:118)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPL(EPAdministratorImpl.java:67)
+	at uk.ac.soton.ldanalytics.piotre.server.Application.main(Application.java:85)
+2016-10-15 13:12:23 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 13:12:24 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 13:12:24 INFO  StatementLifecycleSvcImpl:1145 - Failed to compile statement: Failed to resolve event type: Event type or class named 'environmental' was not found
+com.espertech.esper.epl.expression.core.ExprValidationException: Failed to resolve event type: Event type or class named 'environmental' was not found
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.resolveType(FilterStreamSpecRaw.java:211)
+	at com.espertech.esper.epl.spec.FilterStreamSpecRaw.compile(FilterStreamSpecRaw.java:121)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.compile(StatementLifecycleSvcImpl.java:1139)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStopped(StatementLifecycleSvcImpl.java:277)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createStoppedAssignName(StatementLifecycleSvcImpl.java:199)
+	at com.espertech.esper.core.service.StatementLifecycleSvcImpl.createAndStart(StatementLifecycleSvcImpl.java:153)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPLStmt(EPAdministratorImpl.java:118)
+	at com.espertech.esper.core.service.EPAdministratorImpl.createEPL(EPAdministratorImpl.java:67)
+	at uk.ac.soton.ldanalytics.piotre.server.Application.main(Application.java:85)
+2016-10-15 13:12:42 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 13:12:42 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 13:12:43 INFO  log:186 - Logging initialized @1137ms
+2016-10-15 13:12:43 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 13:12:43 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 13:12:43 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 13:12:43 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@4a6bf15f{/,null,AVAILABLE}
+2016-10-15 13:12:43 INFO  ServerConnector:270 - Started ServerConnector@7c20425e{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 13:12:43 INFO  Server:397 - Started @1403ms
+2016-10-15 13:28:25 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 13:28:25 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 13:28:25 INFO  log:186 - Logging initialized @1351ms
+2016-10-15 13:28:26 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 13:28:26 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 13:28:26 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 13:28:26 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@4bee8f9{/,null,AVAILABLE}
+2016-10-15 13:28:26 INFO  ServerConnector:270 - Started ServerConnector@6026a309{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 13:28:26 INFO  Server:397 - Started @1512ms
+2016-10-15 14:11:30 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:11:30 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:11:30 INFO  log:186 - Logging initialized @1388ms
+2016-10-15 14:11:31 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 14:11:31 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 14:11:31 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 14:11:31 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@160cca61{/,null,AVAILABLE}
+2016-10-15 14:11:31 INFO  ServerConnector:270 - Started ServerConnector@16a14efd{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 14:11:31 INFO  Server:397 - Started @1532ms
+2016-10-15 14:12:37 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:12:37 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:12:37 INFO  log:186 - Logging initialized @1288ms
+2016-10-15 14:12:38 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 14:12:38 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 14:12:38 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 14:12:38 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@5b3fae64{/,null,AVAILABLE}
+2016-10-15 14:12:38 INFO  ServerConnector:270 - Started ServerConnector@46fb0792{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 14:12:38 INFO  Server:397 - Started @1472ms
+2016-10-15 14:14:41 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:14:41 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:14:48 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:14:48 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:15:08 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:15:08 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:15:14 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:15:15 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:15:15 INFO  log:186 - Logging initialized @1248ms
+2016-10-15 14:15:15 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 14:15:15 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 14:15:15 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 14:15:15 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@5f510fe2{/,null,AVAILABLE}
+2016-10-15 14:15:15 INFO  ServerConnector:270 - Started ServerConnector@138579c1{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 14:15:15 INFO  Server:397 - Started @1443ms
+2016-10-15 14:15:50 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:15:50 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:15:56 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:15:56 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:16:47 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:16:47 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:16:48 INFO  log:186 - Logging initialized @1245ms
+2016-10-15 14:16:48 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 14:16:48 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 14:16:48 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 14:16:48 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@7511a6f6{/,null,AVAILABLE}
+2016-10-15 14:16:48 INFO  ServerConnector:270 - Started ServerConnector@7d676ecd{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 14:16:48 INFO  Server:397 - Started @1423ms
+2016-10-15 14:17:10 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:17:11 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:17:11 INFO  log:186 - Logging initialized @1244ms
+2016-10-15 14:17:11 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 14:17:11 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 14:17:11 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 14:17:11 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2d5c85bd{/,null,AVAILABLE}
+2016-10-15 14:17:11 INFO  ServerConnector:270 - Started ServerConnector@68733dc2{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 14:17:11 INFO  Server:397 - Started @1442ms
+2016-10-15 14:17:47 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:17:47 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:17:48 INFO  log:186 - Logging initialized @1252ms
+2016-10-15 14:17:48 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 14:17:48 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 14:17:48 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 14:17:48 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2409d1d1{/,null,AVAILABLE}
+2016-10-15 14:17:48 INFO  ServerConnector:270 - Started ServerConnector@34a91b9{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 14:17:48 INFO  Server:397 - Started @1431ms
+2016-10-15 14:43:11 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 14:43:11 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 14:43:12 INFO  log:186 - Logging initialized @1721ms
+2016-10-15 14:43:12 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 14:43:12 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 14:43:12 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 14:43:12 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@4321b93e{/,null,AVAILABLE}
+2016-10-15 14:43:12 INFO  ServerConnector:270 - Started ServerConnector@436f1224{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 14:43:12 INFO  Server:397 - Started @1925ms
+2016-10-15 14:43:17 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:32)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:32)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 14:43:20 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:32)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:32)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 14:43:23 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.EventsWebSocket.sendMessage(EventsWebSocket.java:28)
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:50)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:32)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 14:43:26 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:32)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:32)
+	at java.lang.Thread.run(Thread.java:745)

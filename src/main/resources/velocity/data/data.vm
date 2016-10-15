@@ -37,7 +37,11 @@
 		            <div class="card-action">
 		            	<a href="$WebPath.getDATA()$dataItem.getId()">View</a>
 		              	<a class="dropdown-button" href="#!" data-constrainwidth="false" data-activates="dropdown_$dataItem.getId()">Mapping<i class="material-icons vcenter">arrow_drop_down</i></a>
-		              	<a href="$WebPath.getDATA()$dataItem.getId()">Query</a>
+		              	#if($dataItem.getType()=="STREAM")
+		              		<a href="$WebPath.getQUERY_STREAM()$dataItem.getId()">Query</a>
+		              	#elseif($dataItem.getType()=="STORE")
+	        				<a href="$WebPath.getQUERY()">Query</a>
+	        			#end
 		            </div>
 	            </div>
 			</div>
