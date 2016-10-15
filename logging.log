@@ -8785,3 +8785,1234 @@ java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integ
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
 	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:10:55 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:10:55 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:10:58 INFO  log:186 - Logging initialized @3614ms
+2016-10-15 17:10:58 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:10:58 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:10:58 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:10:58 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@6a646738{/,null,AVAILABLE}
+2016-10-15 17:10:58 INFO  ServerConnector:270 - Started ServerConnector@102b6f49{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:10:58 INFO  Server:397 - Started @4053ms
+2016-10-15 17:12:38 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:12:38 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:12:40 INFO  log:186 - Logging initialized @2763ms
+2016-10-15 17:12:41 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:12:41 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:12:41 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:12:41 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@79fd36e2{/,null,AVAILABLE}
+2016-10-15 17:12:41 INFO  ServerConnector:270 - Started ServerConnector@1149d17e{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:12:41 INFO  Server:397 - Started @2990ms
+2016-10-15 17:15:29 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:15:30 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:15:32 INFO  log:186 - Logging initialized @3023ms
+2016-10-15 17:15:32 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:15:32 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:15:32 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:15:32 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:15:32 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@18362499{/,null,AVAILABLE}
+2016-10-15 17:15:32 INFO  ServerConnector:270 - Started ServerConnector@6c91036{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:15:32 INFO  Server:397 - Started @3230ms
+2016-10-15 17:15:32 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:15:41 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:15:41 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:15:43 INFO  log:186 - Logging initialized @2739ms
+2016-10-15 17:15:43 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:15:43 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:15:43 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:15:43 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@7098174{/,null,AVAILABLE}
+2016-10-15 17:15:43 INFO  ServerConnector:270 - Started ServerConnector@6b8076c7{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:15:43 INFO  Server:397 - Started @2932ms
+2016-10-15 17:15:44 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:15:44 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:15:55 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:15:55 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:15:57 INFO  log:186 - Logging initialized @2698ms
+2016-10-15 17:15:57 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:15:57 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:15:57 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:15:57 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@1d0eb388{/,null,AVAILABLE}
+2016-10-15 17:15:57 INFO  ServerConnector:270 - Started ServerConnector@7d82af05{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:15:57 INFO  Server:397 - Started @2906ms
+2016-10-15 17:16:42 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:16:42 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:16:45 INFO  log:186 - Logging initialized @3020ms
+2016-10-15 17:16:45 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:16:45 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:16:45 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:16:45 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@ebd033{/,null,AVAILABLE}
+2016-10-15 17:16:45 INFO  ServerConnector:270 - Started ServerConnector@17b3b54b{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:16:45 INFO  Server:397 - Started @3226ms
+2016-10-15 17:17:55 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:17:55 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:17:58 INFO  log:186 - Logging initialized @3212ms
+2016-10-15 17:17:58 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:17:58 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:17:58 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:17:58 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@7b5389d7{/,null,AVAILABLE}
+2016-10-15 17:17:58 INFO  ServerConnector:270 - Started ServerConnector@4b3adf7a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:17:58 INFO  Server:397 - Started @3451ms
+2016-10-15 17:18:52 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:18:52 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:18:54 INFO  log:186 - Logging initialized @2654ms
+2016-10-15 17:18:54 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:18:54 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:18:54 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:18:54 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@9f828f2{/,null,AVAILABLE}
+2016-10-15 17:18:54 INFO  ServerConnector:270 - Started ServerConnector@5d3a758a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:18:54 INFO  Server:397 - Started @2853ms
+2016-10-15 17:19:38 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:19:39 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:19:41 INFO  log:186 - Logging initialized @2852ms
+2016-10-15 17:19:41 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:19:41 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:19:41 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:19:41 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@7e3eff25{/,null,AVAILABLE}
+2016-10-15 17:19:41 INFO  ServerConnector:270 - Started ServerConnector@52399d08{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:19:41 INFO  Server:397 - Started @3299ms
+2016-10-15 17:19:46 ERROR ExceptionHandlingService:49 - Exception encountered processing statement '7ff95089-2600-4d51-ac82-a6dee0164bb7' statement text 'SELECT motion.MotionSensorName as roomName, sum(motion.MotionOrNoMotion) as totalMotion FROM motion.win:time_batch(1 sec) GROUP BY motion.MotionSensorName' : java.lang.Double cannot be cast to java.lang.Integer
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+	at com.espertech.esper.epl.agg.aggregator.AggregatorSumInteger.enter(AggregatorSumInteger.java:32)
+	at com.espertech.esper.epl.agg.service.AggSvcGroupByRefcountedNoAccessImpl.applyEnter(AggSvcGroupByRefcountedNoAccessImpl.java:86)
+	at com.espertech.esper.epl.core.ResultSetProcessorRowPerGroup.processViewResult(ResultSetProcessorRowPerGroup.java:198)
+	at com.espertech.esper.epl.view.OutputProcessViewDirect.update(OutputProcessViewDirect.java:52)
+	at com.espertech.esper.view.ViewSupport.updateChildren(ViewSupport.java:115)
+	at com.espertech.esper.view.window.TimeBatchView.sendBatch(TimeBatchView.java:217)
+	at com.espertech.esper.view.window.TimeBatchView$1.scheduledTrigger(TimeBatchView.java:280)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processStatementScheduleSingle(EPRuntimeImpl.java:1149)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processScheduleHandles(EPRuntimeImpl.java:706)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processSchedule(EPRuntimeImpl.java:653)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:554)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:442)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:214)
+	at com.espertech.esper.core.service.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:188)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:20:36 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:20:36 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:20:38 INFO  log:186 - Logging initialized @3065ms
+2016-10-15 17:20:38 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:20:38 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:20:38 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:20:38 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@7a0479bb{/,null,AVAILABLE}
+2016-10-15 17:20:38 INFO  ServerConnector:270 - Started ServerConnector@962c489{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:20:38 INFO  Server:397 - Started @3254ms
+2016-10-15 17:21:25 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:21:25 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:21:28 INFO  log:186 - Logging initialized @3234ms
+2016-10-15 17:21:28 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:21:28 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:21:28 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:21:28 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@6dc4df3{/,null,AVAILABLE}
+2016-10-15 17:21:28 INFO  ServerConnector:270 - Started ServerConnector@3a7418f{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:21:28 INFO  Server:397 - Started @3473ms
+2016-10-15 17:21:33 ERROR ExceptionHandlingService:49 - Exception encountered processing statement 'a3494406-81f3-4b73-a2f8-d4a7c7ca6b35' statement text 'SELECT sum(motion.MotionOrNoMotion) as totalMotion FROM motion.win:time_batch(1 sec)' : java.lang.Double cannot be cast to java.lang.Integer
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+	at com.espertech.esper.epl.agg.aggregator.AggregatorSumInteger.enter(AggregatorSumInteger.java:32)
+	at com.espertech.esper.epl.agg.service.AggSvcGroupAllNoAccessImpl.applyEnter(AggSvcGroupAllNoAccessImpl.java:41)
+	at com.espertech.esper.epl.core.ResultSetProcessorUtil.applyAggViewResult(ResultSetProcessorUtil.java:30)
+	at com.espertech.esper.epl.core.ResultSetProcessorRowForAll.processViewResult(ResultSetProcessorRowForAll.java:112)
+	at com.espertech.esper.epl.view.OutputProcessViewDirect.update(OutputProcessViewDirect.java:52)
+	at com.espertech.esper.view.ViewSupport.updateChildren(ViewSupport.java:115)
+	at com.espertech.esper.view.window.TimeBatchView.sendBatch(TimeBatchView.java:217)
+	at com.espertech.esper.view.window.TimeBatchView$1.scheduledTrigger(TimeBatchView.java:280)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processStatementScheduleSingle(EPRuntimeImpl.java:1149)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processScheduleHandles(EPRuntimeImpl.java:706)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processSchedule(EPRuntimeImpl.java:653)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:554)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:442)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:214)
+	at com.espertech.esper.core.service.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:188)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:23:48 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:23:48 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:23:50 INFO  log:186 - Logging initialized @3051ms
+2016-10-15 17:23:51 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:23:51 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:23:51 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:23:51 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2da9d76d{/,null,AVAILABLE}
+2016-10-15 17:23:51 INFO  ServerConnector:270 - Started ServerConnector@5f842480{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:23:51 INFO  Server:397 - Started @3279ms
+2016-10-15 17:23:55 ERROR ExceptionHandlingService:49 - Exception encountered processing statement 'eb9c8874-700e-47a6-9af5-44cdbf45270c' statement text 'SELECT sum(motion.MotionOrNoMotion) as totalMotion FROM motion.win:time_batch(1 sec) GROUP BY motion.MotionSensorName' : java.lang.Double cannot be cast to java.lang.Integer
+java.lang.ClassCastException: java.lang.Double cannot be cast to java.lang.Integer
+	at com.espertech.esper.epl.agg.aggregator.AggregatorSumInteger.enter(AggregatorSumInteger.java:32)
+	at com.espertech.esper.epl.agg.service.AggSvcGroupByRefcountedNoAccessImpl.applyEnter(AggSvcGroupByRefcountedNoAccessImpl.java:86)
+	at com.espertech.esper.epl.core.ResultSetProcessorRowPerGroup.processViewResult(ResultSetProcessorRowPerGroup.java:198)
+	at com.espertech.esper.epl.view.OutputProcessViewDirect.update(OutputProcessViewDirect.java:52)
+	at com.espertech.esper.view.ViewSupport.updateChildren(ViewSupport.java:115)
+	at com.espertech.esper.view.window.TimeBatchView.sendBatch(TimeBatchView.java:217)
+	at com.espertech.esper.view.window.TimeBatchView$1.scheduledTrigger(TimeBatchView.java:280)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processStatementScheduleSingle(EPRuntimeImpl.java:1149)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processScheduleHandles(EPRuntimeImpl.java:706)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processSchedule(EPRuntimeImpl.java:653)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:554)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:442)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:214)
+	at com.espertech.esper.core.service.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:188)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:25:43 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:25:44 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:25:46 INFO  log:186 - Logging initialized @3062ms
+2016-10-15 17:25:46 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:25:46 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:25:46 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:25:46 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2410461d{/,null,AVAILABLE}
+2016-10-15 17:25:46 INFO  ServerConnector:270 - Started ServerConnector@6169e957{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:25:46 INFO  Server:397 - Started @3270ms
+2016-10-15 17:28:55 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:28:56 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:28:58 INFO  log:186 - Logging initialized @2764ms
+2016-10-15 17:28:58 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:28:58 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:28:58 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:28:58 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@3f497127{/,null,AVAILABLE}
+2016-10-15 17:28:58 INFO  ServerConnector:270 - Started ServerConnector@6447736e{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:28:58 INFO  Server:397 - Started @2995ms
+2016-10-15 17:33:47 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:33:47 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:33:50 INFO  log:186 - Logging initialized @3074ms
+2016-10-15 17:33:50 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:33:50 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:33:50 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:33:50 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@7296a3b5{/,null,AVAILABLE}
+2016-10-15 17:33:50 INFO  ServerConnector:270 - Started ServerConnector@5a77e88c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:33:50 INFO  Server:397 - Started @3343ms
+2016-10-15 17:34:15 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:34:15 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:34:17 INFO  log:186 - Logging initialized @2625ms
+2016-10-15 17:34:17 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:34:17 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:34:17 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:34:17 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@49e6c280{/,null,AVAILABLE}
+2016-10-15 17:34:17 INFO  ServerConnector:270 - Started ServerConnector@3a3184e5{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:34:17 INFO  Server:397 - Started @2865ms
+2016-10-15 17:34:33 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:34:33 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:34:36 INFO  log:186 - Logging initialized @3197ms
+2016-10-15 17:34:36 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:34:36 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:34:36 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:34:36 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@76fa15b5{/,null,AVAILABLE}
+2016-10-15 17:34:36 INFO  ServerConnector:270 - Started ServerConnector@10afb001{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:34:36 INFO  Server:397 - Started @3417ms
+2016-10-15 17:35:31 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:35:31 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:35:33 INFO  log:186 - Logging initialized @2841ms
+2016-10-15 17:35:33 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:35:33 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:35:33 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:35:33 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@7ee90037{/,null,AVAILABLE}
+2016-10-15 17:35:33 INFO  ServerConnector:270 - Started ServerConnector@735ccac8{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:35:33 INFO  Server:397 - Started @3086ms
+2016-10-15 17:35:42 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:35:42 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:35:45 INFO  log:186 - Logging initialized @2848ms
+2016-10-15 17:35:45 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:35:45 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:35:45 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:35:45 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2504a695{/,null,AVAILABLE}
+2016-10-15 17:35:45 INFO  ServerConnector:270 - Started ServerConnector@5369a35d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:35:45 INFO  Server:397 - Started @3099ms
+2016-10-15 17:38:21 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:38:21 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:38:24 INFO  log:186 - Logging initialized @3127ms
+2016-10-15 17:38:24 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:38:24 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:38:24 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:38:24 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@21dd3b62{/,null,AVAILABLE}
+2016-10-15 17:38:24 INFO  ServerConnector:270 - Started ServerConnector@3f3d7d82{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:38:24 INFO  Server:397 - Started @3435ms
+2016-10-15 17:39:10 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:39:10 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:39:12 INFO  log:186 - Logging initialized @3320ms
+2016-10-15 17:39:13 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:39:13 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:39:13 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:39:13 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@3b02d0cb{/,null,AVAILABLE}
+2016-10-15 17:39:13 INFO  ServerConnector:270 - Started ServerConnector@78f04ff9{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:39:13 INFO  Server:397 - Started @3620ms
+2016-10-15 17:39:17 ERROR ExceptionHandlingService:49 - Exception encountered processing statement '5b4a62e0-bcc1-4465-bcd6-6ce313c14d9e' statement text 'SELECT
+	motion.MotionSensorName as roomName,
+	sum(motion.MotionOrNoMotion) as totalMotion
+FROM
+	motion.win:time_batch(1 sec)
+GROUP BY
+	motion.MotionSensorName
+HAVING sum(motion.MotionOrNoMotion) > 0' : java.lang.Float cannot be cast to java.lang.Integer
+java.lang.ClassCastException: java.lang.Float cannot be cast to java.lang.Integer
+	at com.espertech.esper.epl.agg.aggregator.AggregatorSumInteger.enter(AggregatorSumInteger.java:32)
+	at com.espertech.esper.epl.agg.service.AggSvcGroupByRefcountedNoAccessImpl.applyEnter(AggSvcGroupByRefcountedNoAccessImpl.java:86)
+	at com.espertech.esper.epl.core.ResultSetProcessorRowPerGroup.processViewResult(ResultSetProcessorRowPerGroup.java:198)
+	at com.espertech.esper.epl.view.OutputProcessViewDirect.update(OutputProcessViewDirect.java:52)
+	at com.espertech.esper.view.ViewSupport.updateChildren(ViewSupport.java:115)
+	at com.espertech.esper.view.window.TimeBatchView.sendBatch(TimeBatchView.java:217)
+	at com.espertech.esper.view.window.TimeBatchView$1.scheduledTrigger(TimeBatchView.java:280)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processStatementScheduleSingle(EPRuntimeImpl.java:1149)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processScheduleHandles(EPRuntimeImpl.java:706)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processSchedule(EPRuntimeImpl.java:653)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:554)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:442)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:214)
+	at com.espertech.esper.core.service.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:188)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:39:48 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:39:48 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:39:50 INFO  log:186 - Logging initialized @3031ms
+2016-10-15 17:39:51 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:39:51 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:39:51 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:39:51 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2f1a3e18{/,null,AVAILABLE}
+2016-10-15 17:39:51 INFO  ServerConnector:270 - Started ServerConnector@3b3d6b08{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:39:51 INFO  Server:397 - Started @3241ms
+2016-10-15 17:41:14 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:41:14 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:41:21 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:41:21 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:41:24 INFO  log:186 - Logging initialized @3024ms
+2016-10-15 17:41:24 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:41:24 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:41:24 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:41:24 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@2b28ea8f{/,null,AVAILABLE}
+2016-10-15 17:41:24 INFO  ServerConnector:270 - Started ServerConnector@1880915c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:41:24 INFO  Server:397 - Started @3216ms
+2016-10-15 17:42:09 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:42:10 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:42:12 INFO  log:186 - Logging initialized @2915ms
+2016-10-15 17:42:12 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:42:12 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:42:12 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:42:12 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@74db7cf6{/,null,AVAILABLE}
+2016-10-15 17:42:12 INFO  ServerConnector:270 - Started ServerConnector@55ec4717{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:42:12 INFO  Server:397 - Started @3171ms
+2016-10-15 17:42:23 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processTimeEvent(EPRuntimeImpl.java:557)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processEvent(EPRuntimeImpl.java:442)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:214)
+	at com.espertech.esper.core.service.EPRuntimeImpl.timerCallback(EPRuntimeImpl.java:188)
+	at com.espertech.esper.timer.EPLTimerTask.run(EPLTimerTask.java:61)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:308)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:180)
+	at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:294)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:42:38 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:42:38 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:42:41 INFO  log:186 - Logging initialized @2973ms
+2016-10-15 17:42:41 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:42:41 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:42:41 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:42:41 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@a57af31{/,null,AVAILABLE}
+2016-10-15 17:42:41 INFO  ServerConnector:270 - Started ServerConnector@2b3b0489{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:42:41 INFO  Server:397 - Started @3304ms
+2016-10-15 17:43:30 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:43:30 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:43:32 INFO  log:186 - Logging initialized @2839ms
+2016-10-15 17:43:33 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:43:33 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:43:33 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:43:33 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@6067512f{/,null,AVAILABLE}
+2016-10-15 17:43:33 INFO  ServerConnector:270 - Started ServerConnector@250729ee{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:43:33 INFO  Server:397 - Started @3111ms
+2016-10-15 17:43:35 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:43:38 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:43:44 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:43:56 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:43:59 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:02 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:05 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:08 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:11 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:14 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:17 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:20 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:23 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:26 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:29 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:32 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:35 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:38 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:41 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:44:44 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:45:42 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-15 17:45:43 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-15 17:45:45 INFO  log:186 - Logging initialized @3290ms
+2016-10-15 17:45:45 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-15 17:45:45 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-15 17:45:45 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-15 17:45:46 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@74eca628{/,null,AVAILABLE}
+2016-10-15 17:45:46 INFO  ServerConnector:270 - Started ServerConnector@a594b2a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-15 17:45:46 INFO  Server:397 - Started @3748ms
+2016-10-15 17:45:46 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:45:49 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:45:55 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:07 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:10 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:13 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:16 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:19 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:22 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:25 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:28 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:31 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:34 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:37 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:40 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:43 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:46 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:49 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:52 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:55 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:46:58 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:01 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:04 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:07 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:10 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:13 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:16 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:19 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:22 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:25 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:28 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:31 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:34 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:37 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:40 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:43 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)
+2016-10-15 17:47:49 ERROR StatementResultServiceImpl:377 - Unexpected exception invoking listener update method on listener class 'QueryListener' : NullPointerException : null
+java.lang.NullPointerException
+	at uk.ac.soton.ldanalytics.piotre.server.query.QueryListener.update(QueryListener.java:36)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.dispatchInternal(StatementResultServiceImpl.java:371)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.processDispatch(StatementResultServiceImpl.java:246)
+	at com.espertech.esper.core.service.StatementResultServiceImpl.execute(StatementResultServiceImpl.java:232)
+	at com.espertech.esper.core.service.UpdateDispatchViewBase.execute(UpdateDispatchViewBase.java:75)
+	at com.espertech.esper.core.service.UpdateDispatchFutureSpin.execute(UpdateDispatchFutureSpin.java:85)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatchFromQueue(DispatchServiceImpl.java:52)
+	at com.espertech.esper.dispatch.DispatchServiceImpl.dispatch(DispatchServiceImpl.java:31)
+	at com.espertech.esper.core.service.EPRuntimeImpl.dispatch(EPRuntimeImpl.java:1335)
+	at com.espertech.esper.core.service.EPRuntimeImpl.processWrappedEvent(EPRuntimeImpl.java:497)
+	at com.espertech.esper.core.service.EPRuntimeImpl.sendEvent(EPRuntimeImpl.java:286)
+	at uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver.run(StreamReceiver.java:48)
+	at java.lang.Thread.run(Thread.java:745)

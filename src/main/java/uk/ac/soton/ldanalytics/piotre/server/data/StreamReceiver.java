@@ -39,10 +39,16 @@ public class StreamReceiver implements Runnable  {
             Type type = new TypeToken<Map<String, Object>>(){}.getType();
             try {
             	Map<String,Object> dataMap = gson.fromJson(data,type);
+            	if(name.equals("motion")) {
+            		Float f = Float.parseFloat(dataMap.get("MotionOrNoMotion").toString());
+            		Integer s = Math.round(f);
+            		dataMap.put("MotionOrNoMotion", s);
+            	}
 //              System.out.println(name + " " + dataMap);
                 epService.getEPRuntime().sendEvent(dataMap, name);
             } catch(Exception e) {
             	System.out.println("Error!"+data);
+            	e.printStackTrace();
             }
         }
         receiver.close();

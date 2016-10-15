@@ -91,18 +91,18 @@ public class Application {
         		"		environmental.windGustDirectionDegrees AS currentWindDirection \n" + 
         		"   FROM\n" + 
         		"        environmental.std:lastevent()";
-//        EPStatement statement = epService.getEPAdministrator().createEPL(stmtStr);
-//        statement.addListener(new QueryListener("tempQuery",sender));
-//        stmtStr = "    SELECT\n" + 
-//        		"        avg(meter.RealPowerWatts) as averagePower, meter.MeterName as meterName \n" + 
-//        		"   FROM\n" + 
-//        		"        meter.win:time(30 sec)" +
-//        		"	GROUP BY\n" + 
-//        		"		meter.MeterName" +
-//        		"	HAVING avg(meter.RealPowerWatts) > 0";
-//		EPStatement hstatement = epService.getEPAdministrator().createEPL(stmtStr);
-//		hstatement.addListener(new QueryListener("meterQuery",sender));
-        		
+        EPStatement statement = epService.getEPAdministrator().createEPL(stmtStr);
+        statement.addListener(new QueryListener("tempQuery",sender));
+        stmtStr = "    SELECT\n" + 
+        		"        avg(meter.RealPowerWatts) as averagePower, meter.MeterName as meterName \n" + 
+        		"   FROM\n" + 
+        		"        meter.win:time(30 sec)" +
+        		"	GROUP BY\n" + 
+        		"		meter.MeterName" +
+        		"	HAVING avg(meter.RealPowerWatts) > 0";
+		EPStatement hstatement = epService.getEPAdministrator().createEPL(stmtStr);
+		hstatement.addListener(new QueryListener("meterQuery",sender));
+        
 		stmtStr = "SELECT\n" + 
 				"	motion.MotionSensorName as roomName,\n" + 
 				"	sum(motion.MotionOrNoMotion) as totalMotion\n" + 

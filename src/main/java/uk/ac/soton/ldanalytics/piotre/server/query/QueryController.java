@@ -82,6 +82,7 @@ public class QueryController {
     			existingStreams.put(schema.getDataStreamUri(), srcReceiver);
     			(new Thread(srcReceiver)).start();
     		}
+//    		System.out.println(schema.getName() + " " + schema.getContent());
     		loadSchema(schema.getName(),schema.getContent(),epService);
         }
     }
