@@ -97,8 +97,8 @@ public class Model {
 			List<App> apps = new ArrayList<App>();
 			UUID sampleStoreAppId = UUID.randomUUID();
 			UUID sampleStreamAppId = UUID.randomUUID();			
-			apps.add(new App(sampleStoreAppId,"Smart Home Historical Analytics",adminName,"Visual Analytics for Historical Smart Home Data","http://pi.webobservatory.me/"));
-			apps.add(new App(sampleStreamAppId,"Smart Home Real-time Dashboard",adminName,"An example, highly extensible, real-time dashboard based on FreeBoard.","http://freeboard.io/"));
+			apps.add(new App(sampleStoreAppId,"Smart Home Historical Analytics",adminName,"Visual Analytics for Historical Smart Home Data","http://localhost/"));
+			apps.add(new App(sampleStreamAppId,"Smart Home Real-time Dashboard",adminName,"An example, highly extensible, real-time dashboard based on FreeBoard.","http://localhost:9090/"));
 			apps.forEach((app) -> conn.createQuery("insert into apps(id, name, author, description, uri) VALUES (:id, :name, :author, :description, :uri)")
             	.bind(app)
             	.executeUpdate());

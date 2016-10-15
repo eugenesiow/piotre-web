@@ -138,3 +138,15 @@ a.button-collapse.top-nav {
 	font-size:1em;
 	line-height:34px;
 }
+
+.header {
+	color: #ee6e73;
+    font-weight: 300;
+}
+
+.promo-caption {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-top: 5px;
+    margin-bottom: 0;
+}

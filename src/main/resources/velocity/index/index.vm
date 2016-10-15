@@ -1,3 +1,4 @@
+<link href="/css/prism.css" rel="stylesheet" />
 #parse("/velocity/layout.vm")
 #@mainLayout()
 <div class="section" id="index-banner">
@@ -11,9 +12,49 @@
   </div>
 </div>
 <div class="container">
-  <!--  Outer row  -->
-  <div class="row">
-  </div>
+	<div class="row">
+		<div class="section col s12 m10 l10">
+			<h3 class="col s12 header">Add some Data</h2>
+			<p class="caption col s12">Store or stream your personal Internet of Things data to PIOTRe. Whether its smart home data like your thermostat readings and motion sensor data or its mobile data from your wearables, you just need to choose between either a historical store or a streaming source.</p>
+			<div class="col s12 m6">
+	          <p class="promo-caption">Historical Data</p>
+	          <p>You want to keep all of these data within a historical store so that you can perform analytics on it, visualise and investigate it afterwards.</p>
+	          <a class="btn waves-effect waves-light" href="$WebPath.getDATA()add/store/"><i class="material-icons right">work</i>Add a Store</a>
+	        </div>
+	        <div class="col s12 m6">
+	          <p class="promo-caption">Streaming Data</p>
+	          <p>You want to process this data on the go and install or build apps that work on the most recent windows of this data (from a few seconds to a few days).</p>
+	          <a class="btn waves-effect waves-light" href="$WebPath.getDATA()add/stream/">Add a Stream<i class="material-icons right">trending_flat</i></a>
+	        </div>
+			<h3 class="col s12 header">Weave Mappings</h2>
+			<p class="caption col s12">Mappings allow the abstraction of rich metadata and information about sensors themselves to be stored separately from the data. Find out more the general idea <a href="https://github.com/eugenesiow/sparql2sql">here</a>. PIOTRe provides a graphical editor to work with mappings or if you prefer you can work with code in <a href="https://www.w3.org/TR/n-triples/">N-triples</a> or other RDF languages.</p>
+			<pre><code class="language-css">_:b0 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://www.w3.org/2006/time#Instant&gt;.
+	_:b0 &lt;http://www.w3.org/2006/time#inXSDDateTime&gt; &quot;environment.TimestampUTC&quot;^^&lt;http://iot.soton.ac.uk/s2s/s2sml#literalMap&gt;.
+_:b1 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://purl.oclc.org/NET/iot#ExternalTemperatureValue&gt;.
+	_:b1 &lt;http://purl.oclc.org/NET/iot#hasQuantityValue&gt; &quot;environment.outsideTemp&quot;^^&lt;http://iot.soton.ac.uk/s2s/s2sml#literalMap&gt;.
+_:b2 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://purl.oclc.org/NET/iot#WeatherObservation&gt;.
+	_:b2 &lt;http://purl.oclc.org/NET/ssnx/ssn#observedBy&gt; &lt;http://iot.soton.ac.uk/smarthome/sensor#environmental1&gt;.
+	_:b2 &lt;http://purl.oclc.org/NET/ssnx/ssn#observationSamplingTime&gt; _:b0.
+	_:b2 &lt;http://purl.oclc.org/NET/ssnx/ssn#observationResult&gt; _:b3.
+_:b4 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://purl.oclc.org/NET/iot#InternalTemperatureValue&gt;.
+	_:b4 &lt;http://purl.oclc.org/NET/iot#hasQuantityValue&gt; &quot;environment.insideTemp&quot;^^&lt;http://iot.soton.ac.uk/s2s/s2sml#literalMap&gt;.
+_:b3 &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#type&gt; &lt;http://purl.oclc.org/NET/iot#WeatherSensorOutput&gt;.
+	_:b3 &lt;http://purl.oclc.org/NET/ssnx/ssn#isProducedBy&gt; &lt;http://iot.soton.ac.uk/smarthome/sensor#environmental1&gt;.
+	_:b3 &lt;http://purl.oclc.org/NET/ssnx/ssn#hasValue&gt; _:b1.
+	_:b3 &lt;http://purl.oclc.org/NET/ssnx/ssn#hasValue&gt; _:b4.</code></pre>
+			
+	
+			<h3 class="col s12 header">Build some Apps</h2>
+			<div class="col s12 m6">
+				<p class="caption">Apps can be built on historical or streaming data in any language and using any framework you like. Apps communicate with PIOTRe through a <a href="http://semanticweb.org/wiki/SPARQL_endpoint.html">SPARQL endpoint</a> for historical store data and through <a href="http://zeromq.org/">ZeroMQ sockets</a> via TCP for streams.</p>
+				<a class="btn waves-effect waves-light" href="$WebPath.getAPPS()">View/Add Apps</a>
+			</div>
+			<div class="col s12 m6">
+				<p class="caption">Linked Data, a term coined by Sir Tim Berners-Lee, is a way of publishing data online so it can be easily interlinked and managed using semantic queries. For IoT Apps, using Linked Data helps with interoperability and understanding each other.</p>
+				<a class="btn waves-effect waves-light" href="https://www.futurelearn.com/courses/linked-data">Learn</a>
+			</div>
+  		</div>
+  	</div>
 </div>
 #end
 <footer class="page-footer">
@@ -23,3 +64,4 @@
     </div>
   </div>
 </footer>
+<script src="/js/prism.js"></script>
