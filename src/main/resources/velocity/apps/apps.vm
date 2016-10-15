@@ -11,7 +11,7 @@
         <div class="col s12 m12 l6">
 	        <div class="card horizontal">
 	      		<div class="card-stacked">
-		            <div class="card-content">
+		            <div class="card-content" itemscope itemtype="http://schema.org/WebPage">
 		              <span class="card-title">$app.getName()</span>&nbsp;
 		              <span class="card-subtitle grey-text">By $app.getAuthor()</span>
 		              <p #if($app.getDescription().length()>70) class="tooltipped" data-tooltip="$app.getDescription()"#end>$displayTool.truncate($app.getDescription(),70)</p>

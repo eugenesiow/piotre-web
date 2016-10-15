@@ -1,0 +1,13 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<nav class="top-nav">
+	<div class="container">
+  		<div class="nav-wrapper"><a class="page-title">Account</div>
+    </div>
+</nav>
+<div class="container page-container">
+	<div class="row">
+		
+	</div>
+</div>
+#end

@@ -1,0 +1,28 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<nav class="top-nav">
+	<div class="container">
+  		<div class="nav-wrapper"><a class="page-title">Metadata</a></div>
+    </div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="section col s12 m10 l10">
+			<h3 class="col s12 header">Web Observatory</h3>
+			<p class="caption col s12">A Web Observatory is a global catalogue of datasets, applications and projects related to research on the Web. The Web Observatory helps people discover datasets from distributed nodes using the meta-data of the datasets/applications and projects. </p>
+			<div class="col s12 m6">
+	          <p class="promo-caption">Schema.org</p>
+	          <p>PIOTRe publishes all data and apps with schema.org microdata. This enables not only search engines and the like but also catalogues like the Web Observatory to understand and index metadata.</p>
+	          <a class="btn waves-effect waves-light" href="http://schema.org/docs/gs.html" target="_blank">Learn more<i class="material-icons right">open_in_new</i></a>
+	        </div>
+	        <div class="col s12 m6">
+	          <p class="promo-caption">Adding to the WO</p>
+	          <p>If you'd like to add PIOTRe to the Web Observatory, we recommend that you add the metadata to a <a href="https://webobservatory.soton.ac.uk/">Web Observatory Node</a> (part of a decentralised infrastructure) and then you can put up your PIOTRe data on your lightweight computer with Dynamic DNS.</p>
+	          <a class="btn waves-effect waves-light" target="_blank" href="https://github.com/eugenesiow/ldanalytics-PiSmartHome/wiki/Putting-Linked-Data-Raspberry-Pis'-on-a-Web-Observatory">Get PIOTRe Online<i class="material-icons right">open_in_new</i></a>
+	        </div>
+	        <h3 class="col s12 header">Hypercat</h3>
+	        <p class="caption col s12">The Hypercat specification allows Internet of Things (IoT) clients to discover information about IoT assets over the web. With Hypercat developers can write applications that will work across many servers, breaking down the walls between vertical silos.</p> 
+	   </div>
+	</div>
+</div>
+#end

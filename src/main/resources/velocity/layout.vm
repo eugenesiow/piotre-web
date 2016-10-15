@@ -1,6 +1,6 @@
 #macro(mainLayout)
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/PIOTRe">
 <head>
     <title>$msg.get("COMMON_TITLE")</title>
     <!--Import Google Icon Font-->
@@ -47,7 +47,7 @@
       </div>
     </div>
     </li>
-    <li class="bold #if("Overview" == $currentPage)active#end"><a href="/overview/" class="waves-effect waves-teal">Overview</a></li>
+    <!--<li class="bold #if("Overview" == $currentPage)active#end"><a href="/overview/" class="waves-effect waves-teal">Overview</a></li>-->
     <li class="bold #if($PageNames.getIndex() == $currentPage)active#end"><a href="$WebPath.getINDEX()" class="waves-effect waves-teal">$PageNames.getIndex()</a></li>
     <li class="bold #if($PageNames.getData() == $currentPage)active#end"><a href="$WebPath.getDATA()" class="waves-effect waves-teal">$PageNames.getData()</a></li>
     <li class="bold #if($PageNames.getMappings() == $currentPage)active#end"><a href="$WebPath.getMAPPINGS()" class="waves-effect waves-teal">$PageNames.getMappings()</a></li>

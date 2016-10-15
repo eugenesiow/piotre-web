@@ -29,7 +29,7 @@
 	        		#end
 	      		</div>
 	      		<div class="card-stacked">
-		            <div class="card-content">
+		            <div class="card-content" itemscope itemtype="http://schema.org/Dataset/WebObservatoryDataset">
 		              <span class="card-title">$displayTool.truncate($dataItem.getName(),20)</span>&nbsp;
 		              <span class="card-subtitle grey-text">By $dataItem.getAuthor()</span>
 		              <p #if($dataItem.getDescription().length()>70) class="tooltipped" data-tooltip="$dataItem.getDescription()"#end>$displayTool.truncate($dataItem.getDescription(),70)</p>
