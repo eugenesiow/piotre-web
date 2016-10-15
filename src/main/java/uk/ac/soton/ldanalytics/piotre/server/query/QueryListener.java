@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import org.zeromq.ZMQ.Socket;
+
 import com.espertech.esper.client.EventBean;
 import com.espertech.esper.client.UpdateListener;
 import com.google.gson.JsonArray;
@@ -14,8 +16,10 @@ import uk.ac.soton.ldanalytics.piotre.server.EventsWebSocket;
 
 public class QueryListener implements UpdateListener {
 	private String queryName;
+	private Socket sender;
 	
-	public QueryListener(String queryName) {
+	public QueryListener(String queryName, Socket sender) {
+		this.sender = sender;
 		this.queryName = queryName;
 	}
 
@@ -45,12 +49,13 @@ public class QueryListener implements UpdateListener {
 					}
 				}
 			}
-			System.out.println(message.toString());
-			try {
-				EventsWebSocket.sendMessage(message.toString());
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+//			System.out.println(message.toString());
+			sender.send(message.toString());
+//			try {
+//				EventsWebSocket.sendMessage(message.toString());
+//			} catch (IOException e) {
+//				e.printStackTrace();
+//			}
 		}
 	}
 
