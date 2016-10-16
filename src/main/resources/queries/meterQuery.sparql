@@ -1,5 +1,16 @@
-    SELECT
-        avg(meter.RealPowerWatts) as averagePower, meter.MeterName as meterName 
-   FROM
-        meter.win:time(30 sec)	GROUP BY
-		meter.MeterName	HAVING avg(meter.RealPowerWatts) > 0
+PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX iotsn: <http://iot.soton.ac.uk/smarthome/sensor#>
+PREFIX iot: <http://purl.oclc.org/NET/iot#>
+
+SELECT (?meter as ?meterName) (avg(?meterval) as ?averagePower)
+FROM NAMED WINDOW :meter ON <http://iot.soton.ac.uk/smarthome/meter> [RANGE 30s]
+WHERE {
+	WINDOW :meter {
+		?meterobs ssn:observedBy ?meter;
+			ssn:observationResult ?metersnout.
+		?metersnout ssn:hasValue ?meterobsval.
+		?meterobsval a iot:EnergyValue;
+			iot:hasQuantityValue ?meterval.
+	}
+} GROUP BY ?meter 
+HAVING (avg(?meterval) > 0)

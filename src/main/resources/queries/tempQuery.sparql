@@ -1,8 +1,31 @@
-SELECT
-       environmental.insideTemp AS currentTemp, 
-		environmental.insideHumidity AS currentHumidity, 
-		environmental.windSpeed AS currentWindSpeed, 
-		environmental.windGust AS currentWindGust, 
-		environmental.windGustDirectionDegrees AS currentWindDirection 
-   FROM
-        environmental.std:lastevent()
+PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX iotsn: <http://iot.soton.ac.uk/smarthome/sensor#>
+PREFIX iot: <http://purl.oclc.org/NET/iot#>
+
+SELECT (?val as ?currentTemp) (?val2 as ?currentHumidity) (?val3 as ?currentWindSpeed) (?val4 as ?currentWindGust) (?val5 as ?currentWindDirection)
+FROM NAMED WINDOW :env ON <http://iot.soton.ac.uk/smarthome/environment> [LAST]
+WHERE {
+	WINDOW :env {
+	  ?obs ssn:observedBy iotsn:environmental1;
+	    ssn:observationResult ?snout;
+	    ssn:observationResult ?snout2;
+	    ssn:observationResult ?snout3;
+	    ssn:observationResult ?snout4;
+	    ssn:observationResult ?snout5.
+	  ?snout ssn:hasValue ?obsval.
+	  ?snout2 ssn:hasValue ?obsval2.
+	  ?snout3 ssn:hasValue ?obsval3.
+	  ?snout4 ssn:hasValue ?obsval4.
+	  ?snout5 ssn:hasValue ?obsval5.
+	  ?obsval a iot:InternalTemperatureValue;
+	    iot:hasQuantityValue ?val.
+	  ?obsval2 a iot:InternalHumidityValue;
+	    iot:hasQuantityValue ?val2.
+	  ?obsval3 a iot:WindSpeedValue;
+	    iot:hasQuantityValue ?val3.
+	  ?obsval4 a iot:WindGustValue;
+	    iot:hasQuantityValue ?val4.
+	  ?obsval5 a iot:WindGustDirectionValue;
+	    iot:hasQuantityValue ?val5.
+	}
+}

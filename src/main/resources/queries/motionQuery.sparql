@@ -1,8 +1,16 @@
-SELECT
-	motion.MotionSensorName as roomName,
-	sum(motion.MotionOrNoMotion) as totalMotion
-FROM
-	motion.win:time_batch(10 sec)
-GROUP BY
-	motion.MotionSensorName
-HAVING sum(motion.MotionOrNoMotion) > 0
+PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
+PREFIX iotsn: <http://iot.soton.ac.uk/smarthome/sensor#>
+PREFIX iot: <http://purl.oclc.org/NET/iot#>
+
+SELECT (?motion as ?roomName) (sum(?motionval) as ?totalMotion)
+FROM NAMED WINDOW :motion ON <http://iot.soton.ac.uk/smarthome/motion> [RANGE 10s STEP]
+WHERE {
+	WINDOW :motion {
+		?motionobs ssn:observedBy ?motion;
+			ssn:observationResult ?motionsnout.
+		?motionsnout ssn:hasValue ?motionobsval.
+		?motionobsval a iot:MotionValue;
+			iot:hasQuantityValue ?motionval.
+	}
+} GROUP BY ?motion 
+HAVING (sum(?motionval) > 0)
