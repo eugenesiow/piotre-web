@@ -1,0 +1,25 @@
+#parse("/velocity/layout.vm")
+#@mainLayout()
+<nav class="top-nav">
+	<div class="container">
+  		<div class="nav-wrapper"><a class="page-title">Stream Queries</a></div>
+    </div>
+</nav>
+<div class="container page-container">
+	<div class="row">
+	<div class="collection">
+    #foreach($query in $queries)
+        <a href="$WebPath.getQUERY_STREAM_CAT()$query.getId()" class="collection-item avatar">
+	        <div class="title">$query.getName()</div>	        
+	        <div class="grey-text">By $query.getAuthor()</div>
+    	</a>
+    #end
+    </div>
+    </div>
+</div>
+<div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
+	<a href="$WebPath.getQUERY_STREAM_CAT()add" class="btn-floating btn-large waves-effect waves-light blue">
+		<i class="material-icons">add</i>
+	</a>
+</div>
+#end

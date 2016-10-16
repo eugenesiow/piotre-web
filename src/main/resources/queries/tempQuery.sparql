@@ -1,0 +1,8 @@
+SELECT
+       environmental.insideTemp AS currentTemp, 
+		environmental.insideHumidity AS currentHumidity, 
+		environmental.windSpeed AS currentWindSpeed, 
+		environmental.windGust AS currentWindGust, 
+		environmental.windGustDirectionDegrees AS currentWindDirection 
+   FROM
+        environmental.std:lastevent()

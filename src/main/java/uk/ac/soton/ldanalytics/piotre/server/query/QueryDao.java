@@ -2,6 +2,7 @@ package uk.ac.soton.ldanalytics.piotre.server.query;
 
 import static uk.ac.soton.ldanalytics.piotre.server.Application.mappingDao;
 
+import java.util.List;
 import java.util.Map;
 
 import org.apache.jena.query.Query;
@@ -12,6 +13,8 @@ import org.apache.jena.sparql.algebra.OpWalker;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import uk.ac.soton.ldanalytics.piotre.server.data.Data;
+import uk.ac.soton.ldanalytics.piotre.server.data.Schema;
 import uk.ac.soton.ldanalytics.piotre.server.mapping.Mapping;
 import uk.ac.soton.ldanalytics.sparql2sql.model.RdfTableMapping;
 import uk.ac.soton.ldanalytics.sparql2sql.model.RdfTableMappingJena;
@@ -54,4 +57,20 @@ public class QueryDao {
 			return new ResultsSet(e.getMessage());
 		}
     }
+	
+	public  Iterable<QueryStreaming> getAllStreamQueries() {
+		try (Connection conn = sql2o.open()) {
+            List<QueryStreaming> queries = conn.createQuery("select * from stream_queries")
+            		.executeAndFetch(QueryStreaming.class);
+            return queries;
+        }
+	}
+	
+	public QueryStreaming getStreamQuery(String id) {
+		try (Connection conn = sql2o.open()) {
+			List<QueryStreaming> queries = conn.createQuery("select * from stream_queries where id='"+id+"'")
+	                .executeAndFetch(QueryStreaming.class);
+	        return queries.get(0);
+		}
+	}
 }

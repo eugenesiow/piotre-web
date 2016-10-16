@@ -1,3 +1,4 @@
+<link href="/css/prism.css" rel="stylesheet" />
 #parse("/velocity/layout.vm")
 #@mainLayout()
 <nav class="top-nav">
@@ -22,7 +23,11 @@
 	        </div>
 	        <h3 class="col s12 header">Hypercat</h3>
 	        <p class="caption col s12">The Hypercat specification allows Internet of Things (IoT) clients to discover information about IoT assets over the web. With Hypercat developers can write applications that will work across many servers, breaking down the walls between vertical silos.</p> 
+	        <p>PIOTRe automatically generates and makes <a href="$WebPath.getCAT()">available</a> a Hypercat catalogue:</p> 
+	        <pre><code class="language-json">$cat</code></pre>
+	        <p>Current research is investigating how sensor and device metadata can be extracted from mappings automatically to generate catalogues. See more <a href="https://github.com/eugenesiow/PIOTRe-web">here</a>.</p>
 	   </div>
 	</div>
 </div>
 #end
+<script src="/js/prism.js"></script>

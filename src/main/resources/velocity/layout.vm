@@ -57,7 +57,7 @@
           <div class="collapsible-body">
             <ul>
               <li class="#if($PageNames.getQuery() == $currentPage)active#end"><a href="$WebPath.getQUERY()">$PageNames.getQuery()</a></li>
-              <li class="#if($PageNames.getQueryStream() == $currentPage)active#end"><a href="$WebPath.getQUERY_STREAM()">$PageNames.getQueryStream()</a></li>
+              <li class="#if($PageNames.getQueryStream() == $currentPage)active#end"><a href="$WebPath.getQUERY_STREAM_CAT()">$PageNames.getQueryStream()</a></li>
             </ul>
           </div>
         </li>

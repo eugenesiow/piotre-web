@@ -10,13 +10,21 @@ public class User {
 	public String getHashedPassword() {
 		return hashedPassword;
 	}
-	public User(String username, String salt, String hashedPassword) {
+	public String getApiKey() {
+		return apiKey;
+	}
+	public void setApiKey(String apiKey) {
+		this.apiKey = apiKey;
+	}
+	public User(String username, String salt, String hashedPassword, String apiKey) {
 		super();
 		this.username = username;
 		this.salt = salt;
 		this.hashedPassword = hashedPassword;
+		this.apiKey = apiKey;
 	}
 	String username;
     String salt;
     String hashedPassword;
+    String apiKey;
 }

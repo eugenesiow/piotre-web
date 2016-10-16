@@ -20,6 +20,9 @@ public class Path {
 		public static String getAPPS() {
 			return APPS;
 		}
+		public static String getCAT() {
+			return CAT;
+		}
 		public static String getAPPS_ADD() {
 			return APPS_ADD;
 		}
@@ -62,6 +65,9 @@ public class Path {
 		public static String getQUERY_STREAM() {
 			return QUERY_STREAM;
 		}
+		public static String getQUERY_STREAM_CAT() {
+			return QUERY_STREAM_CAT;
+		}
 		public static final String INDEX = "/index/";
 		public static final String OVERVIEW = "/overview/";
         public static final String LOGIN = "/login/";
@@ -81,7 +87,9 @@ public class Path {
         public static final String MAPPING_SAVE = "/mappings/save/";
         public static final String QUERY_STORE = "/query/";
         public static final String SPARQL = "/sparql/:id/";
-        public static final String QUERY_STREAM = "/query_stream/";
+        public static final String QUERY_STREAM = "/query_stream/:id/";
+        public static final String QUERY_STREAM_CAT = "/query_stream/";
+        public static final String CAT = "/cat/";
     }
 
     public static class Template {
@@ -103,6 +111,7 @@ public class Path {
         public final static String MAPPINGS_ADD = "/velocity/mappings/add.vm";
         public final static String QUERY_STORE = "/velocity/query/sparql.vm";
         public final static String QUERY_STREAM = "/velocity/query/stream.vm";
+        public final static String QUERY_STREAMS = "/velocity/query/streams.vm";
         public final static String MAPPINGS = "/velocity/mappings/mappings.vm";
     }
     

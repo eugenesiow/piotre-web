@@ -3,12 +3,19 @@
 #@mainLayout()
 <nav class="top-nav">
 	<div class="container">
-  		<div class="nav-wrapper"><a class="page-title">Register Stream Query</a></div>
+  		<div class="nav-wrapper">
+  			#if($mode=="edit")
+  				<a class="page-title">Register Stream Query</a>
+  			#else
+  				<a class="page-title">$query.getName()</a>
+  			#end
+  		</div>
     </div>
 </nav>
 <div class="container page-container">
 	<div class="row">
     	<form id="queryStreamForm" class="col s12">
+    		#if($mode=="add")
     		<div class="row">
     			<div class="input-field col s12">
     				<select>
@@ -21,7 +28,13 @@
 			    	</select>
 			  	</div>
 			</div>
+			#end
 			<div class="row">
+#if($mode=="edit")
+	<textarea id="code" name="source-content">
+$query.getSparql()
+	</textarea>
+#else
 				<textarea id="code" name="source-content">
 PREFIX ssn: <http://purl.oclc.org/NET/ssnx/ssn#>
 PREFIX iotsn: <http://iot.soton.ac.uk/smarthome/sensor#>
@@ -37,10 +50,11 @@ WHERE {
     iot:hasQuantityValue ?val.
 }
 			</textarea>
+#end
 		</form>
     </div>
     <div class="fixed-action-btn" style="bottom: 45px; right: 24px;">
-    	<a class="btn-floating btn-large red tooltipped" data-position="left" data-tooltip="Register Streaming Query"><i class="large material-icons">playlist_add</i></a>
+    	<a class="btn-floating btn-large red tooltipped" data-position="left" data-tooltip="#if($mode=="add")Register Streaming Query#else Save#end"><i class="large material-icons">#if($mode=="add")playlist_add#else save #end</i></a>
     </div>
 </div>
 #end

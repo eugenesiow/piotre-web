@@ -19,6 +19,7 @@ import uk.ac.soton.ldanalytics.piotre.server.data.Schema;
 import uk.ac.soton.ldanalytics.piotre.server.mapping.Mapping;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.SchemaItem;
+import uk.ac.soton.ldanalytics.piotre.server.query.QueryStreaming;
 import uk.ac.soton.ldanalytics.piotre.server.relation.Relation;
 
 public class Model {	
@@ -40,12 +41,13 @@ public class Model {
 		
 		try (Connection conn = sql2o.beginTransaction()) {
 			//create user table and add admin
-			conn.createQuery("CREATE TABLE user (username varchar,salt varchar,hashedPassword varchar);")
+			conn.createQuery("CREATE TABLE user (username varchar,salt varchar,hashedPassword varchar, apiKey uuid);")
             	.executeUpdate();
-			conn.createQuery("insert into user(username, salt, hashedPassword) VALUES (:username, :salt, :hashedPassword)")
+			conn.createQuery("insert into user(username, salt, hashedPassword, apiKey) VALUES (:username, :salt, :hashedPassword, :apiKey)")
         		.addParameter("username",adminName)
         		.addParameter("salt",adminSalt)
         		.addParameter("hashedPassword",adminHashedPassword)
+        		.addParameter("apiKey",UUID.randomUUID())
         		.executeUpdate();
 			
 			//Add metadata schema store
@@ -121,6 +123,26 @@ public class Model {
 			mappings.add(new Mapping(sampleSmarthomeSensorsId,"smarthome_sensors",adminName,"http://iot.soton.ac.uk/smarthome/sensors#",smarthomeSensorsContent,null));
 			mappings.forEach((mapping) -> conn.createQuery("insert into mappings(id, name, author, uri, content,format) VALUES (:id, :name, :author, :uri, :content, :format)")
             	.bind(mapping)
+            	.executeUpdate());
+			
+			//create stream queries table and add samples
+			conn.createQuery("CREATE TABLE stream_queries (id uuid primary key,name varchar,author varchar,dataStream uuid, sparql clob,epl clob);")
+        		.executeUpdate();
+			String tempQuerySparql = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("queries/tempQuery.sparql").getFile()));
+			String meterQuerySparql = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("queries/meterQuery.sparql").getFile()));
+			String motionQuerySparql = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("queries/motionQuery.sparql").getFile()));
+			String tempQuery = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("queries/tempQuery.epl").getFile()));
+			String meterQuery = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("queries/meterQuery.epl").getFile()));
+			String motionQuery = FileUtils.readFileToString(new File(Model.class.getClassLoader().getResource("queries/motionQuery.epl").getFile()));
+			List<QueryStreaming> queries = new ArrayList<QueryStreaming>();
+			UUID tempQueryId = UUID.randomUUID();
+			UUID meterQueryId = UUID.randomUUID();
+			UUID motionQueryId = UUID.randomUUID();
+			queries.add(new QueryStreaming(tempQueryId,"tempQuery",adminName,sampleStreamId,tempQuerySparql,tempQuery));
+			queries.add(new QueryStreaming(meterQueryId,"meterQuery",adminName,sampleStreamId,meterQuerySparql,meterQuery));
+			queries.add(new QueryStreaming(motionQueryId,"motionQuery",adminName,sampleStreamId,motionQuerySparql,motionQuery));
+			queries.forEach((query) -> conn.createQuery("insert into stream_queries(id, name, author, dataStream, sparql,epl) VALUES (:id, :name, :author, :dataStream, :sparql, :epl)")
+            	.bind(query)
             	.executeUpdate());
 			
 			//create stream schema table and add sample schema

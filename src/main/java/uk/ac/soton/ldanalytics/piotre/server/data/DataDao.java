@@ -13,6 +13,7 @@ import uk.ac.soton.ldanalytics.piotre.server.data.Data.DataType;
 import uk.ac.soton.ldanalytics.piotre.server.mapping.Mapping;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.MetadataItem;
 import uk.ac.soton.ldanalytics.piotre.server.metadata.SchemaItem;
+import uk.ac.soton.ldanalytics.piotre.server.util.Path;
 
 public class DataDao {
 	private Sql2o sql2o;
@@ -34,6 +35,46 @@ public class DataDao {
             List<Data> data = conn.createQuery("select * from data")
                     .executeAndFetch(Data.class);
             return data;
+        }
+    }
+	
+	public String generateCat() {
+		try (Connection conn = sql2o.open()) {
+            List<Data> data = conn.createQuery("select * from data")
+                    .executeAndFetch(Data.class);
+            String head = "{\n" + 
+            		"    \"metadata\":[\n" + 
+            		"        {\n" + 
+            		"            \"rel\":\"urn:X-hypercat:rels:isContentType\",\n" + 
+            		"            \"val\":\"application/vnd.hypercat.catalogue+json\"\n" + 
+            		"        },\n" + 
+            		"        {\n" + 
+            		"            \"rel\":\"urn:X-hypercat:rels:hasDescription:en\",\n" + 
+            		"            \"val\":\"PIOTRe: Personal IoT Respository Catalogue\"\n" + 
+            		"        }\n" + 
+            		"    ],\n" + 
+            		"    \"items\":[\n";
+            String body = "";
+            for(Data datum:data) {
+            	if(!body.equals(""))
+            		body += ",\n";
+            	body += "		{\n" + 
+            			"            \"href\":\""+Path.Web.DATA+datum.getId()+"\",\n" + 
+            			"            \"metadata\":[\n" + 
+            			"                {\n" + 
+            			"                    \"rel\":\"urn:X-hypercat:rels:hasDescription:en\",\n" + 
+            			"                    \"val\":\""+datum.getDescription()+"\"\n" + 
+            			"                },\n" + 
+            			"                {\n" + 
+            			"                    \"rel\":\"http://ldanalytics.soton.ac.uk/iot#type\",\n" + 
+            			"                    \"val\":\""+datum.getType()+"\"\n" + 
+            			"                }\n" + 
+            			"            ]\n" + 
+            			"        }";
+            }
+            String footer = "]\n" + 
+            		"}";
+            return head + body + footer;
         }
     }
 	

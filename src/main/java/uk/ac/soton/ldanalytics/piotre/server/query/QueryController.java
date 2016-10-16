@@ -1,35 +1,31 @@
 package uk.ac.soton.ldanalytics.piotre.server.query;
 
-import static spark.Spark.webSocket;
 import static uk.ac.soton.ldanalytics.piotre.server.Application.dataDao;
 import static uk.ac.soton.ldanalytics.piotre.server.Application.queryDao;
+import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.dataToJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.JsonUtil.resultSetToJson;
+import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsHtml;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.clientAcceptsJson;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getParamId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryId;
 import static uk.ac.soton.ldanalytics.piotre.server.util.RequestUtil.getQueryQuery;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.nio.file.Paths;
 import java.sql.Timestamp;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.UUID;
 
-import org.apache.commons.io.FilenameUtils;
-import org.zeromq.ZMQ.Context;
+import org.apache.velocity.tools.generic.DisplayTool;
+import org.zeromq.ZMQ.Socket;
 
 import com.espertech.esper.client.EPServiceProvider;
+import com.espertech.esper.client.EPStatement;
 
 import spark.Request;
 import spark.Response;
 import spark.Route;
-import uk.ac.soton.ldanalytics.piotre.server.EventsWebSocket;
 import uk.ac.soton.ldanalytics.piotre.server.data.Schema;
 import uk.ac.soton.ldanalytics.piotre.server.data.StreamReceiver;
 import uk.ac.soton.ldanalytics.piotre.server.login.LoginController;
@@ -38,6 +34,19 @@ import uk.ac.soton.ldanalytics.piotre.server.util.Path;
 import uk.ac.soton.ldanalytics.piotre.server.util.ViewUtil;
 
 public class QueryController {
+	public static Route fetchQueryStreams = (Request request, Response response) -> {
+        LoginController.ensureUserIsLoggedIn(request, response);
+        if (clientAcceptsHtml(request)) {
+            HashMap<String, Object> model = new HashMap<>();
+            model.put("queries", queryDao.getAllStreamQueries());
+            return ViewUtil.render(request, model, Path.Template.QUERY_STREAMS, Path.PageNames.QUERY_STREAM);
+        }
+        if (clientAcceptsJson(request)) {
+            return dataToJson(queryDao.getAllStreamQueries());
+        }
+        return ViewUtil.notAcceptable.handle(request, response);
+    };
+	
 	public static Route serveQueryStorePage = (Request request, Response response) -> {
 		LoginController.ensureUserIsLoggedIn(request, response);
 		HashMap<String, Object> model = new HashMap<>();
@@ -47,8 +56,19 @@ public class QueryController {
 	
 	public static Route serveQueryStreamPage = (Request request, Response response) -> {
 		LoginController.ensureUserIsLoggedIn(request, response);
+		String id = getParamId(request);
 		HashMap<String, Object> model = new HashMap<>();
-        model.put("data", dataDao.getAllData());
+        if(id.equals("add")) {
+        	model.put("query", new QueryStreaming(UUID.randomUUID(),"Register Stream Query",""));
+        	model.put("data", dataDao.getAllData());
+        	model.put("mode", "add");
+        }
+        else {
+        	QueryStreaming query = queryDao.getStreamQuery(id);
+        	model.put("query", query);
+        	model.put("mode", "edit");
+        	model.put("data", dataDao.getDatum(query.getDataStream().toString()));
+        }
         return ViewUtil.render(request, model, Path.Template.QUERY_STREAM, Path.PageNames.QUERY_STREAM);
     };
     public static Route handleQueryStorePost = (Request request, Response response) -> {
@@ -85,6 +105,13 @@ public class QueryController {
 //    		System.out.println(schema.getName() + " " + schema.getContent());
     		loadSchema(schema.getName(),schema.getContent(),epService);
         }
+    }
+    
+    public static void RegisterStreams(EPServiceProvider epService, Socket sender) {
+    	for(QueryStreaming query:queryDao.getAllStreamQueries()) {
+    		EPStatement statement = epService.getEPAdministrator().createEPL(query.getEpl());
+            statement.addListener(new QueryListener(query.getName(),sender));
+    	}
     }
     
     public static void loadSchema(String name, String content, EPServiceProvider epService) {

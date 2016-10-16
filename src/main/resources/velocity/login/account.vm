@@ -2,12 +2,19 @@
 #@mainLayout()
 <nav class="top-nav">
 	<div class="container">
-  		<div class="nav-wrapper"><a class="page-title">Account</div>
+  		<div class="nav-wrapper"><a class="page-title">Account</a></div>
     </div>
 </nav>
 <div class="container page-container">
 	<div class="row">
-		
+		<form id="accountForm" class="col s12">
+			<div class="row">
+				<div class="input-field col s12">
+					<input name="apiKey" type="text" autofocus disabled value="$user.getApiKey()">
+					<label for="apiKey">API Key</label>
+			  	</div>
+			</div>
+	    </form>
 	</div>
 </div>
 #end

@@ -10025,3 +10025,139 @@ java.lang.NullPointerException
 2016-10-15 18:10:56 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@4b4cd6da{/,null,AVAILABLE}
 2016-10-15 18:10:56 INFO  ServerConnector:270 - Started ServerConnector@7d6b43ae{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
 2016-10-15 18:10:56 INFO  Server:397 - Started @2892ms
+2016-10-16 12:59:07 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 12:59:07 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 12:59:10 INFO  log:186 - Logging initialized @3975ms
+2016-10-16 12:59:10 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 12:59:10 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 12:59:10 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 12:59:10 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@6498e3e8{/,null,AVAILABLE}
+2016-10-16 12:59:10 INFO  ServerConnector:270 - Started ServerConnector@affecd7{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 12:59:10 INFO  Server:397 - Started @4265ms
+2016-10-16 13:11:43 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 13:11:43 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 13:11:45 INFO  log:186 - Logging initialized @2831ms
+2016-10-16 13:11:45 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 13:11:45 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 13:11:45 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 13:11:45 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@5c77d629{/,null,AVAILABLE}
+2016-10-16 13:11:45 INFO  ServerConnector:270 - Started ServerConnector@31b44dde{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 13:11:45 INFO  Server:397 - Started @3110ms
+2016-10-16 13:16:55 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 13:16:55 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 13:16:57 INFO  log:186 - Logging initialized @3025ms
+2016-10-16 13:16:57 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 13:16:57 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 13:16:57 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 13:16:57 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@5b6f973d{/,null,AVAILABLE}
+2016-10-16 13:16:57 INFO  ServerConnector:270 - Started ServerConnector@58d3f2b4{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 13:16:57 INFO  Server:397 - Started @3268ms
+2016-10-16 13:44:54 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 13:44:54 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 13:44:56 INFO  log:186 - Logging initialized @2936ms
+2016-10-16 13:44:56 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 13:44:56 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 13:44:56 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 13:44:56 INFO  ContextHandler:775 - Started o.e.j.s.ServletContextHandler@59d534bf{/,null,AVAILABLE}
+2016-10-16 13:44:56 INFO  ServerConnector:270 - Started ServerConnector@1d485968{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 13:44:56 INFO  Server:397 - Started @3176ms
+2016-10-16 13:51:09 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 13:51:09 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 13:51:11 INFO  log:186 - Logging initialized @2785ms
+2016-10-16 13:51:11 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 13:51:11 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 13:51:11 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 13:51:11 INFO  ServerConnector:270 - Started ServerConnector@543ad283{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 13:51:11 INFO  Server:397 - Started @2931ms
+2016-10-16 14:09:20 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 14:09:20 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 14:09:22 INFO  log:186 - Logging initialized @2983ms
+2016-10-16 14:09:22 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 14:09:22 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 14:09:22 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 14:09:22 INFO  ServerConnector:270 - Started ServerConnector@42192897{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 14:09:22 INFO  Server:397 - Started @3090ms
+2016-10-16 14:25:27 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 14:25:27 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 14:25:49 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 14:25:49 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 14:25:51 INFO  log:186 - Logging initialized @2880ms
+2016-10-16 14:25:51 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 14:25:51 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 14:25:51 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 14:25:51 INFO  ServerConnector:270 - Started ServerConnector@709ddfff{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 14:25:51 INFO  Server:397 - Started @2995ms
+2016-10-16 14:30:25 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 14:30:26 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 14:30:28 INFO  log:186 - Logging initialized @2947ms
+2016-10-16 14:30:28 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 14:30:28 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 14:30:28 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 14:30:28 INFO  ServerConnector:270 - Started ServerConnector@200970b8{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 14:30:28 INFO  Server:397 - Started @3059ms
+2016-10-16 14:31:26 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 14:31:26 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 14:31:28 INFO  log:186 - Logging initialized @3180ms
+2016-10-16 14:31:28 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 14:31:28 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 14:31:28 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 14:31:29 INFO  ServerConnector:270 - Started ServerConnector@6b25fc09{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 14:31:29 INFO  Server:397 - Started @3279ms
+2016-10-16 14:33:23 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 14:33:24 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 14:33:25 INFO  log:186 - Logging initialized @2810ms
+2016-10-16 14:33:26 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 14:33:26 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 14:33:26 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 14:33:26 INFO  ServerConnector:270 - Started ServerConnector@6b25fc09{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 14:33:26 INFO  Server:397 - Started @2906ms
+2016-10-16 14:40:17 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 14:40:17 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 14:40:19 INFO  log:186 - Logging initialized @3017ms
+2016-10-16 14:40:20 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 14:40:20 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 14:40:20 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 14:40:20 INFO  ServerConnector:270 - Started ServerConnector@1120ed2a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 14:40:20 INFO  Server:397 - Started @3126ms
+2016-10-16 15:15:28 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 15:15:28 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 15:15:35 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 15:15:35 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 15:15:37 INFO  log:186 - Logging initialized @3050ms
+2016-10-16 15:15:37 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 15:15:37 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 15:15:37 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 15:15:37 INFO  ServerConnector:270 - Started ServerConnector@4362d8a5{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 15:15:37 INFO  Server:397 - Started @3181ms
+2016-10-16 15:34:13 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 15:34:13 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 15:34:16 INFO  log:186 - Logging initialized @3023ms
+2016-10-16 15:34:16 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 15:34:16 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 15:34:16 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 15:34:16 INFO  ServerConnector:270 - Started ServerConnector@64b12d3c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 15:34:16 INFO  Server:397 - Started @3129ms
+2016-10-16 15:36:31 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 15:36:32 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 15:36:34 INFO  log:186 - Logging initialized @3005ms
+2016-10-16 15:36:34 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 15:36:34 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 15:36:34 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 15:36:34 INFO  ServerConnector:270 - Started ServerConnector@1565739e{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 15:36:34 INFO  Server:397 - Started @3117ms
+2016-10-16 15:39:35 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 15:39:36 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 15:39:38 INFO  log:186 - Logging initialized @2916ms
+2016-10-16 15:39:38 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 15:39:38 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 15:39:38 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 15:39:38 INFO  ServerConnector:270 - Started ServerConnector@3adfc909{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 15:39:38 INFO  Server:397 - Started @3023ms
+2016-10-16 15:42:21 INFO  StaticFilesConfiguration:170 - StaticResourceHandler configured with folder = /public
+2016-10-16 15:42:21 INFO  EPServiceProviderImpl:415 - Initializing engine URI 'default' version 5.3.0
+2016-10-16 15:42:23 INFO  log:186 - Logging initialized @2968ms
+2016-10-16 15:42:23 INFO  EmbeddedJettyServer:125 - == Spark has ignited ...
+2016-10-16 15:42:23 INFO  EmbeddedJettyServer:126 - >> Listening on 0.0.0.0:4567
+2016-10-16 15:42:23 INFO  Server:345 - jetty-9.3.6.v20151106
+2016-10-16 15:42:23 INFO  ServerConnector:270 - Started ServerConnector@3fd4dcd{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+2016-10-16 15:42:23 INFO  Server:397 - Started @3125ms

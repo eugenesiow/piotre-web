@@ -1,0 +1,8 @@
+SELECT
+	motion.MotionSensorName as roomName,
+	sum(motion.MotionOrNoMotion) as totalMotion
+FROM
+	motion.win:time_batch(10 sec)
+GROUP BY
+	motion.MotionSensorName
+HAVING sum(motion.MotionOrNoMotion) > 0
